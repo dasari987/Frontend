@@ -1,0 +1,20 @@
+.class{
+    border: 1px solid black;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+@media(max-width:720px){
+    .adjust{
+        display: flex;
+        column-gap: 10px;
+    }
+}
+
+@media(max-width:320px){
+    .adjust{
+        display: block;
+    }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="text-align: center; background-color: antiquewhite; font-size: 20px">
+    
+    <div style="margin-top: 100px">
+      
+        <label for="">NUM1: </label>
+         <input id="num1" type="text" name="firstname">
+         <br>
+         <label for="">NUM2: </label>
+         <input id="num2" type="text" name = "lastname">
+         <br>
+         <button type="submit" onclick="handleForm()">ADD</button>
+      
+      <h2 id="d1"></h2>
+
+
+      <script>
+        //  var ar = ["try", "sai", "ram"]
+        //  var arr = [1,2,3,4,5]
+        //  for(var i of arr){
+        //     console.log(i)
+        //  }
+
+
+        function handleForm(){
+            // var num1 = document.getElementById('num1').value;
+            // var num2 = document.getElementById('num2').value;
+            // var h1 = document.getElementById('d1')
+            // h1.innerHTML = parseInt(num1)+parseInt(num2)
+
+// method 2
+            var num1 = +document.getElementById('num1').value;
+            var num2 = +document.getElementById('num2').value;
+            var h1 = document.getElementById('d1')
+            h1.innerHTML = num1+num2
+        }
+
+        // var x = "10"
+        // var y = "10"
+        // console.log(x+y)
+        // console.log(parseInt(x)+parseInt(y))
+        // console.log(+x+ +y)
+
+      </script>
+    </div>
+  </body>
+</html>

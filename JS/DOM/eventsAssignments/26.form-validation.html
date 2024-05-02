@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <form action="" onsubmit="save(event)">
+      <table border="1px solid" cellspacing="0px" cellpadding="7px">
+        <tbody>
+            <tr>
+                <td>Firstname</td>
+                <td><input type="text" name="fname" placeholder="Firstname" id="fn"></td>
+            </tr>
+
+            <tr>
+                <td>Lastname</td>
+                <td><input type="text" name="lname" placeholder="Lastname" id="ln"></td>
+            </tr>
+
+            <tr>
+                <td>Date of Birth:</td>
+                <td><input type="date" id="dt"></td>
+            </tr>
+
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <input type="radio" name="gender" value="male" class="gen">:Male
+                    <input type="radio" name="gender" value="female" class="gen">:Female
+                    <input type="radio" name="gender" value="others" class="gen">:Others
+                </td>
+            </tr>
+
+            <tr>
+                <td>Technologies</td>
+                <td>
+                    <input type="checkbox" name="technologies" value="hyml">HTML
+                    <input type="checkbox" name="technologies" value="css">CSS
+                    <input type="checkbox" name="technologies" value="js">JS
+                    <input type="checkbox" name="technologies" value="react">REACT
+                    <input type="checkbox" name="technologies" value="node">NODE
+                </td>
+            </tr>
+
+            <tr>
+                <td>Country:</td>
+                <td>
+                  <select name="country" id="">
+                    <option value="ind">India</option>
+                    <option value="aus">Australia</option>
+                    <option value="eng">England</option>
+                   </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <button>Save</button>
+                </td>
+            </tr>
+        </tbody>
+      </table>
+   </form>
+
+      <script>
+        var fn = document.getElementById('fn').value
+        var ln = document.getElementById('ln').value
+        var dt = document.getElementById('dt').value
+        var gen = document.getElementsByClassName('gen').value
+          var people = []
+
+          function save(e) {
+            e.preventDefault()
+               console.log(e.target)
+
+               var person = {
+               }
+
+            if(fn && ln && dt && gen){
+
+               var formdta = new FormData(e.target)
+               for(var field of formdta.entries()){
+                // console.log(field)
+                var x = formdta.getAll(field[0]);
+                // console.log(x)
+                if(x.length>1){
+                    person[field[0]] = x
+                }
+                else{
+                    person[field[0]] = formdta.get(field[0])
+                }
+               }
+               people.push(person)
+            
+            }
+            
+          }
+      </script>
+</body>
+</html>

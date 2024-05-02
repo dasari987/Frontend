@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="text-align: center; background-color: antiquewhite; font-size: 20px;">
+  <div style="text-align: center; margin-top: 100px;">
+        <h1 style="color: red;">Image Carousel</h1>
+
+        <div id="div" style=" height: 430px;  margin-bottom: 20px;">
+            <img src="" alt="" id="image" height="420px" width="580px" style="border-radius: 7px;">
+        </div>
+    
+        <button id="btn1" onclick="prev(event,imgArr)" style=" background-color: orange; border: 0px; border-radius: 3px; padding: 7px 20px; margin-right: 15px ">Prev</button>
+        <button id="btn2" onclick="next(event,imgArr)" style=" background-color: orange; border: 0px; border-radius: 3px; padding: 7px 15px; margin-right: 15px;">Next</button>
+  </div>
+
+    <script>
+        var div = document.getElementById('div')
+        var img = document.getElementById('image')
+
+        var imgArr = [
+            "https://headsupfortails.com/cdn/shop/articles/2_large.jpg?v=1648029837",
+            "https://cdn.pixabay.com/photo/2015/11/17/13/13/puppy-1047521_640.jpg",
+            "https://i.guim.co.uk/img/media/891e0c9fb79e98c560b2f2008ebd8fafcf470468/0_0_2592_1555/master/2592.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=a525d7127395adb0b7cc4e1cd5179e05"
+        ]
+
+        var i = 0;
+        img.src = imgArr[i]
+        
+        function prev(event, ar){
+            if(i==0){
+                i=ar.length-1;
+                img.src = imgArr[i]
+            }
+            else{
+                i=i-1;
+                img.src = imgArr[i]
+            }
+        }
+
+        function next(event, ar){
+            if(i==ar.length-1){
+                i=0;
+                img.src = imgArr[i]
+            }
+            else{
+                i=i+1;
+                img.src = imgArr[i]
+            }
+        }
+        // https://cdn.pixabay.com/photo/2020/05/03/13/09/puppy-5124947_640.jpg
+        // https://cdn.pixabay.com/photo/2015/11/17/13/13/puppy-1047521_640.jpg
+        // https://cdn.pixabay.com/photo/2016/02/18/18/37/puppy-1207816_640.jpg
+             
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+      }
+      #nav {
+        background-color: blue;
+        /* box-sizing: border-box; */
+      }
+      li {
+        list-style: none;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        display: inline-block;
+        margin: -2px;
+        vertical-align: middle;
+        /* box-sizing: border-box; */
+      }
+      
+      ul {
+        padding: 20px;
+        display: flex;
+      }
+      #left,#right{
+        display: inline-block;
+        margin: -2px;
+      }
+      #right{
+       margin-left: auto;
+      }
+      #right li{
+        margin-left: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="nav">
+      <ul>
+        <div id="left">
+          <li>Mysite</li>
+        </div>
+        <div id="right">
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact</li>
+          <li>Signup</li>
+        </div>
+      </ul>
+    </div>
+  </body>
+</html>

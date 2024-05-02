@@ -1,0 +1,26 @@
+<html>
+    <head></head>
+    <body>
+        <!-- 1. Create one h1 element and put some text into it. -->
+           
+         <h1></h1>
+         <div id="d1">
+
+         </div>
+  
+        <script>
+            
+              var a = document.querySelector('h1');
+              a.innerText = "Hello DOM World!" 
+              console.log(a)
+
+
+              var x = document.createElement('h1')
+              x.innerHTML = "edupoly"
+              var y = document.getElementById('d1')
+              y.appendChild(x)
+              x.style.color = 'blue'
+
+        </script>
+    </body>
+</html>

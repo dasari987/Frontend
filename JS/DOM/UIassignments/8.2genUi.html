@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <!-- // 1.Display all male and female people in two separate tables.. -->
+
+  
+    <table  border="1px solid black" cellspacing="0px" cellpadding="15px" style=" margin-left: 450px; margin-top: 130px; background-color: antiquewhite; margin-bottom: 30px; ">
+        <thead id="head" align="left" valign="top">
+            <th>First-Name</th>
+            <th>Last-Name</th>
+            <th valign="bottom">Age</th>
+            <th>Gender</th>
+            <th>City</th>
+            <th>Salary</th>
+        </thead>
+
+        <tbody id="male">
+              
+        </tbody>
+    </table>
+
+
+
+
+    <table  border="1px solid black" cellspacing="0px" cellpadding="15px" style="margin-left: 450px; background-color: antiquewhite;">
+        <thead id="head" align="left" valign="top">
+            <th>First-Name</th>
+            <th>Last-Name</th>
+            <th valign="bottom">Age</th>
+            <th>Gender</th>
+            <th>City</th>
+            <th>Salary</th>
+        </thead>
+
+        <tbody id="female" >
+              
+        </tbody>
+    </table>
+ 
+
+
+
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////// -->
+    
+
+    <script>
+        var people = [
+                        {
+                        "firstname": "praveen",
+                        "lastname": "gubbala",
+                        "age": 36,
+                        "gender": "male",
+                        "city": "hyd",
+                        "salary": 10000
+                        },
+                        {
+                        "firstname": "srikanth",
+                        "lastname": "gubbala",
+                        "age": 32,
+                        "gender": "male",
+                        "city": "bengaluru",
+                        "salary": 20000
+                        },
+                        {
+                        "firstname": "pradeep",
+                        "lastname": "reddy",
+                        "age": 21,
+                        "gender": "male",
+                        "city": "hyd",
+                        "salary": 30000
+                        },
+                        {
+                        "firstname": "mounika",
+                        "lastname": "mudiraj",
+                        "age": 20,
+                        "gender": "female",
+                        "city": "nalgonda",
+                        "salary": 30000
+                        },
+                        {
+                        "firstname": "nikhil",
+                        "lastname": "m",
+                        "age": 22,
+                        "gender": "male",
+                        "city": "guntur",
+                        "salary": 2000
+                        },
+                        {
+                        "firstname": "riya",
+                        "lastname": "bhadouria",
+                        "age": 14,
+                        "gender": "female",
+                        "city": "indore",
+                        "salary": 40000
+                        }
+                        ];
+
+
+        // 1.Display all male and female people in two separate tables.
+
+        var mal =  people.filter(function(ob){
+            if(ob['gender']=="male"){
+                return true;
+            }
+        })
+        console.log(mal)
+
+
+        var fem =  people.filter(function(ob){
+            if(ob['gender']=="female"){
+                return true;
+            }
+        })
+        console.log(fem)
+
+
+
+
+    var x = document.getElementById('male')
+    var y = document.getElementById('female')
+      
+    function tableCreation(ar,gen){
+        ar.forEach(function(obj){
+                var tableRow = document.createElement("tr");
+                for(var key in obj){
+                    var tableData = document.createElement('td')
+                    tableData.innerHTML = obj[key]
+                    tableRow.appendChild(tableData)
+                }
+                gen.appendChild(tableRow)
+        })
+    }
+
+    tableCreation(mal,x);
+    tableCreation(fem,y);
+   
+
+
+    ///////////////////////////////////////////////////////////////////////////////////////////
+    </script>
+</body>
+</html>

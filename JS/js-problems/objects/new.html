@@ -1,0 +1,19 @@
+<script>
+    // copy object(properties) into another object
+
+    var ob1 = {
+        name: "sai",
+        age: 23,
+        gender: "male"
+    }
+    console.log(ob1);
+
+    var ob2 = {}
+
+    for (var k in ob1) {
+        ob2[k] = ob1[k]
+        // console.log(ob1[k])
+    }
+
+    console.log(ob2)
+</script>

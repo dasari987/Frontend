@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="text-align: center; background-color: antiquewhite; font-size: 20px;">
+    
+    <style>
+        img{
+            height: 300px;
+            width: 300px;
+            margin-right: 7px;
+            margin-top: 7px;
+            border-radius: 5px;
+        }
+    </style>
+  <div style="text-align: center; margin-top: 100px;">
+        <h1 style="color: red;">Show images using URL</h1>
+
+        <label for="url">Enter image URL:</label>
+        <input id="input" type="text">
+        
+       <br>
+        <button id="btn1" onclick="addImage()" style=" background-color: orange; border: 0px; border-radius: 3px; padding: 7px 20px; margin-right: 15px; margin-top: 19px;">Add image</button>
+
+        <div id="images">
+
+        </div>
+  </div>
+    <script>
+
+         
+          var divv = document.getElementById('images')
+          var imgArr = []
+          function addImage() {
+             var url = document.getElementById('input').value
+             imgArr.push(url)
+             divv.innerHTML = ""
+             imgArr.forEach(function(src){
+                 var img = document.createElement('img')
+                 img.src = src;
+                 divv.appendChild(img)
+             })
+          }
+
+
+
+/////////////////  
+
+        // var divv = document.getElementById("images")
+        // function addImage(){
+        //     var url = document.getElementById('input').value
+        //     // console.log(url)
+        //     var img = document.createElement('img')
+        //     img.src = url;
+        //     divv.appendChild(img)
+        // }
+
+        // https://cdn.pixabay.com/photo/2020/05/03/13/09/puppy-5124947_640.jpg
+        // https://cdn.pixabay.com/photo/2015/11/17/13/13/puppy-1047521_640.jpg
+        // https://cdn.pixabay.com/photo/2016/02/18/18/37/puppy-1207816_640.jpg
+             
+    </script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <h1 onclick="abc(event)" style="color: azure; background-color: black;">this is created by HTML</h1>
+
+    <div id="main">
+
+    </div>
+
+    <div id="root">
+
+    </div>
+
+    <div id="text">
+
+    </div>
+
+    <div id="inp">
+
+    </div>
+
+    <div id="text2">
+
+    </div>
+
+    <div id="li">
+
+    </div>
+
+    
+
+    <script type="text/babel">
+        // html element event binding vs jsx element event binding
+
+        var jh1 = <h1 onClick={xyz}> welcome to jsx world </h1>
+        ReactDOM.render(jh1,document.getElementById("main"))
+
+        function xyz(e) {
+            console.log(e)
+            console.log(e.target.innerHTML)
+            alert('jsx event binding')
+        }
+
+        function abc(e) {
+            console.log(e)
+            console.log(e.target.innerHTML)
+            alert("hiii")
+        }
+
+
+         
+        var jsxinp = <input type='text' onKeyUp={pqr}/>
+        ReactDOM.render(jsxinp, document.getElementById('root'))
+        function pqr(e) {
+            var jsxh1 = <h2>you have entered: {e.target.value}</h2>
+            ReactDOM.render(jsxh1, document.getElementById('text'))
+        }
+
+
+        // binding ananinomus function to onKeyUp (we can pass two values to lmn and do operations on them)
+        
+        // var jsxinp1 = <input type='text' onKeyUp={(e)=>lmn(e)}/>
+        // ReactDOM.render(jsxinp1, document.getElementById('inp'))
+        // function lmn(e) {
+        //     var jsxh12 = <h2>you have entered: {e.target.value}</h2>
+        //     ReactDOM.render(jsxh12, document.getElementById('text2'))
+        // }
+
+
+
+        // var ar = [12,13,14,15,16,17,18]
+        // var x = <ul>
+        //              {
+        //                 ar.map((a,i)=>{
+        //                     return <li>
+        //                                {a}
+        //                                <button onClick={()=>{listval(a,i)}}>see</button>
+        //                            </li>
+        //                 })
+        //              }
+        //         </ul>
+        // ReactDOM.render(x,document.getElementById('li'))
+
+        // function listval(a,i) {
+        //     console.log(a)
+        // }
+
+    </script>
+</body>
+</html>

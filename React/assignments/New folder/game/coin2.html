@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+     
+
+    
+<body>
+    <div id="one" style = " width:600px; height: 500px;">
+
+    </div>
+    
+    <style>
+        .sty{
+            border:1px solid;
+            background-color: red;
+            border-radius: 50%;
+            margin-right:20px;
+            margin-bottom:'15px';
+            padding: 20px;
+        }
+    </style>
+
+    <script type="text/babel">
+
+        function Comp1() {
+            var [ar1, setar1] = React.useState([
+            {
+                num: 1,
+                status: false
+            },
+            {
+                num: 2,
+                status: false
+            },
+            {
+                num: 3,
+                status: false
+            },
+            {
+                num: 4,
+                status: false
+            },
+            {
+                num: 5,
+                status: false
+            },
+            {
+                num: 6,
+                status: false
+            },
+            {
+                num: 7,
+                status: false
+            },
+
+        ])
+
+            
+
+        var [ar2, setar2] = React.useState([
+
+        ])
+
+        function upd(index) {
+            ar1[index].status = true;
+            ar2.push(ar1[index])
+            setar1([...ar1])
+            console.log(ar1)
+            console.log(ar2)
+        }
+
+        function upd2(index) {
+            ar2[index].status = false;
+            ar2.splice(index,1)
+            setar2([...ar2])
+            console.log(ar1)
+            console.log(ar2)
+        }
+
+            return <div>
+                     <div style={{display:'flex',flexWrap:'wrap',height:'80px', padding:'5px', border:'1px solid',marginBottom:'10px'}}>
+                        {
+                            ar1.map((obj,i)=>{
+                                return <div onClick={()=>{upd(i)}} className='sty' style={(obj.status==true)?{backgroundColor:'grey'}:{backgroundColor:'red'}} >{obj.num}</div>
+                            })
+                           
+                        }
+                    </div>
+
+                    <div style={{display:'flex',flexWrap:'wrap', padding:'5px', border:'1px solid',height:'80px'}}>
+                          {
+                            ar2?.map((ob,i)=>{
+                                return <div onClick={()=>{upd2(i)}} style={{border:'1px solid',backgroundColor: 'grey', borderRadius: '50%', marginRight:'20px',marginBottom:'15px', padding: '20px'}}>{ob.num}</div>
+                             })
+                         }
+                    </div>
+
+                        
+                   </div>
+        }
+
+        ReactDOM.render(<Comp1/>,document.getElementById('one'))
+
+        
+
+            
+    </script>
+</body>
+</html>

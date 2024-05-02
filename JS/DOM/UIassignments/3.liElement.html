@@ -1,0 +1,24 @@
+<html>
+    <head></head>
+    <body>
+        
+        <ul>
+            <li>Apple</li>
+            <li>Mango</li>
+            <li>Orange</li>
+        </ul>
+
+        <script>
+            var a = document.querySelectorAll('li')
+            console.log(a)
+            // for(var i = 0; i<=a.length-1; i++){
+            //     console.log(a[i].innerText)
+            // }
+
+            a.forEach(e=>{
+                console.log(e)
+                console.log(e.innerHTML)
+            })
+        </script>
+    </body>
+</html>

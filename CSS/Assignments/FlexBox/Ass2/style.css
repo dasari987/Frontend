@@ -1,0 +1,32 @@
+.content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 260px;
+    justify-content: space-between;
+    padding: 23px; 
+  
+}
+
+button{
+    background-color: rgb(58, 60, 183);
+    color: white;
+    border-radius: 8px;
+}
+
+
+#main-container{
+    border: 1px solid;
+    display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   height: 700px;
+}
+
+
+
+
+
+
+

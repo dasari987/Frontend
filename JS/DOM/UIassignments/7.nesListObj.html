@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <ol id="d1">
+
+     </ol>
+
+    <script>
+         var students = [		
+        {
+            "firstname": "praveen",
+            "age": 36,
+            "subjects":['angular','nodejs','reactjs','java']
+        }, 
+        {
+            "firstname": "srikanth",
+            "age": 32,
+            "subjects":['react','mongodb']
+        }, 
+        {
+            "firstname": "pradeep",
+            "age": 21,
+            "subjects":['express','mongoose','python']
+        }
+        ]
+
+        students.forEach(function(obj){
+            var ol1 = document.getElementById('d1')
+
+            var li1 = document.createElement('li')
+            li1.innerHTML = obj['firstname']
+
+            var ol2 = document.createElement('ol')
+            for(var i = 0; i<=obj['subjects'].length-1; i++){
+                var li2 = document.createElement('li');
+                li2.innerHTML = obj['subjects'][i]
+                ol2.appendChild(li2)
+            }
+
+            li1.appendChild(ol2)
+            ol1.appendChild(li1)
+            
+        })
+    </script>
+    
+</body>
+</html>

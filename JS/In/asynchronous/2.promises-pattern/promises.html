@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+</head>
+<body>
+     
+    <ul id="d1">
+
+    </ul>
+    
+
+    <script>
+        // in juery
+
+        //   https://restcountries.com/v2/all
+        //  $.get("https://fakestoreapi.com/products",function(data,status){
+        //     console.log(data)
+        //     console.log(status)
+        //  })
+
+      ////////////////////////////////////////////////////////////
+
+         // in js 
+        //  fetch('https://fakestoreapi.com/products')
+        //  .then(function(res){
+        //     res.json()
+        //     .then(function(res){
+        //      console.log(res)
+        //     })
+        //  })
+        //  .catch(function(err){
+        //     if(err){
+        //         console.log("something went wrong")
+        //     }
+        //  })
+
+        //////////////////////////////////////////////////////////
+
+        // using axios
+         
+        axios.get('https://fakestoreapi.com/products')
+        .then(function(res){
+            // console.log(res)
+            console.log(res.data)
+            res.data.forEach(function(obj,i){
+              var li = document.createElement('li')
+              li.innerHTML = obj['title']
+              document.getElementById('d1').appendChild(li)
+            })
+        })
+        .catch(function(err){
+            console.log(err)
+        })
+
+         //////////////////////////////////////////////////////////
+
+        //  function mul(a,b,cb) {
+        //     if(isNaN(a)||isNaN(b)){
+        //         cb("arguments should be a number", null)
+        //     }
+        //     else{
+        //         cb(null,a*b)
+        //     }
+        //  }
+
+        /////////////////////////////////////////////
+
+        // function div(a,b) {
+        //     if(isNaN(a)||isNaN(b)){
+        //       return Promise.reject("arguments should be a numbers")
+        //     }
+        //     if(b==0){
+        //        return Promise.reject("you should not have 0 as denominator")
+        //     }
+        //     return Promise.resolve(a/b)
+        // }
+
+        //  div(11,0)
+        //  .then(function(res){
+        //     console.log(res)
+        //  })
+        //  .catch(function(err){
+        //      console.log(err)
+        //  })
+
+        ///////////////////////////////////////////
+
+    </script>
+</body>
+</html>

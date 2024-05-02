@@ -1,0 +1,58 @@
+body{
+    margin: 0px;
+}
+
+#navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100vw;
+    height: 45px;
+    align-items: center;
+}
+
+#nav-right{
+    display: flex;
+    width: 45%;
+    justify-content: space-around;
+}
+
+#nav-left{
+    display: flex;
+    width: 9%;
+    justify-content: space-around;
+}
+
+li{
+    list-style: none;
+    display: flex;
+}
+
+#one{
+    width: 100vw;
+    height: 49vh;
+}
+
+#three{
+    
+    height: 204px;
+    
+}
+
+#four{
+    height: 204px;
+}
+
+#five{
+    height: 320px;
+    width: 500px;
+}
+
+#middle-content{
+    text-align: center;
+}
+
+p{
+    margin-top: -14px;
+}
+

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Date of Birth:<input type="date" id="dt">
+    <button onclick="save()">save</button>
+
+    <script>
+        function save() {
+        var x = document.getElementById('dt').value
+        console.log(x)
+        var d = new Date(x)
+        console.log(d)
+        var dob_year = d.getFullYear()
+        var dob_date = d.getDate()
+        var dob_month = d.getMonth()
+
+
+        var currdt = new Date()
+        console.log(currdt)
+        var curr_year = currdt.getFullYear()
+
+        var age_year = curr_year - dob_year
+    
+        console.log(age_year)
+       
+        }
+    </script>
+</body>
+</html>

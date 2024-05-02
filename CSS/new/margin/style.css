@@ -1,0 +1,32 @@
+#one{
+    border: 1px solid;
+    padding: 20px;
+    width: fit-content;
+    margin:5px auto;
+    color: blue;
+    /* border-color: black; */
+}
+
+#two{
+   border: 1px solid;
+   margin: 20px;
+}
+
+#three{
+   border: 1px solid;
+   margin: 30px;
+}
+
+
+#four{
+    border: 1px solid;
+    margin: 20px;
+    display: inline-block;
+ }
+
+ #five{
+    border: 1px solid;
+    margin: 70px;
+    display: inline-block;
+}
+ 

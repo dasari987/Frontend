@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1px solid black" cellSpacing="0px" cellPadding="5px">
+        <thead text-align="start">
+            <th>Country</th>
+            <th>Highlights</th>
+
+        </thead>
+
+        <tbody id="d1">
+
+        </tbody>
+    </table>
+
+    <script>
+
+        var ar = [
+            {
+                country : "India",
+                Highlights: "good country"
+            },
+            {
+                country : "England",
+                Highlights: "country of kings"
+            },
+            {
+                country : "Australia",
+                Highlights: "country of kangaroos"
+            }
+        ]
+
+         ar.forEach(function(obj){
+            var ele = document.createElement('tr');
+            var tdata1 = document.createElement('td')
+            var tdata2 = document.createElement('td')
+            tdata1.innerHTML = obj["country"]
+            tdata2.innerHTML = obj["Highlights"]
+            ele.appendChild(tdata1);
+            ele.appendChild(tdata2);
+            document.getElementById('d1').appendChild(ele)
+
+         })
+
+
+
+    </script>
+</body>
+</html>

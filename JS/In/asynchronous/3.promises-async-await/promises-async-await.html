@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+   <script>
+      
+    //   function getCountries(){
+    //     var x = axios.get("https://restcountries.com/v3/all")        // is asynchronous..// by making axios function call it will give us promise object before it gets data from api
+    //     console.log(x)                    // axios.get() immediately gives x promise object
+    //     console.log("sai")
+    //     return x
+
+    //     // or
+
+    //     // return axios.get("https://restcountries.com/v3/all") 
+    //   }
+
+    //   getCountries()               // getCountries() is giving a promise not data
+    //   .then(function(countries){
+    //     console.log(countries)
+    //     console.log(countries.data)
+    //   })
+    //   .catch(function(err){
+    //     console.log(err)
+    //   })
+    //   console.log("last line")
+
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+    //    function getCountries(){
+    //        var p = new Promise((resolve,reject)=>{
+    //            axios.get("https://restcountries.com/v3/all") 
+    //            .then(function(res){
+    //               console.log(res)
+    //               return resolve(res.data)
+    //            })
+    //            .catch(function(err){
+    //             console.log(err)
+    //            })
+               
+    //        })   
+    //        console.log(p)
+    //        return p;
+    //   }
+
+     
+    //   getCountries()
+    //   .then(function(countries){
+    //     console.log(countries)
+    //   })
+    //   .catch(function(err){
+    //     console.log(err)
+    //   })
+
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+        //  function getCountriesPopulations(){
+        //    var p = new Promise((resolve,reject)=>{
+        //        axios.get("https://restcountries.com/v3/all") 
+        //        .then(function(res){
+        //           var temp = res.data
+        //           var pops = temp.map(function(c){
+        //             return c.population
+        //           })
+        //           return resolve(pops)
+        //        })
+        //        .catch(function(err){
+        //         console.log(err)
+        //        })
+               
+        //    })   
+        //    return p;
+        //  }
+
+     
+        //     getCountriesPopulations()
+        //     .then(function(pops){
+        //         console.log(pops)
+        //     })
+        //     .catch(function(err){
+        //         console.log(err)
+        //     })
+
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+        // async function getCountries(){
+        //    var res = await axios.get("https://restcountries.com/v3/all")
+        //    return res.data
+        // }
+
+     
+        // getCountries()
+        // .then(function(data){
+        //     console.log(data)
+        // })
+        // .catch(function(err){
+        //     console.log(err)
+        // })
+
+
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+        // async function getPopulations(){
+        //    var res = await axios.get("https://restcountries.com/v3/all")
+        //    var pops = res.data.map(function(c){
+        //     return c.population
+        //    })
+        //    return pops
+        // }
+
+     
+        // getPopulations()
+        // .then(function(pops){
+        //     console.log(pops)
+        // })
+        // .catch(function(err){
+        //     console.log(err)
+        // })
+
+
+
+   </script>
+</body>
+</html>

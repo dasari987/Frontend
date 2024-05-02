@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root">
+
+    </div>
+     <script type="text/babel">
+        // 1.Bind event handler to alert something on button click in JSX
+
+        // var jsxExp = <button onClick={()=>{alert('hii')}}>click here to see alert</button>
+        // ReactDOM.render(jsxExp,document.getElementById('root'))
+
+
+        // 2.Console something on button click
+
+        // var jsxExp = <button onClick={()=>{console.log('hiii')}}>click and see console</button>
+        // ReactDOM.render(jsxExp,document.getElementById('root'))
+            
+
+        //3.Console event object on button click
+
+        // var jsxExp = <button onClick={(e)=>{console.log(e)}}>click and see console</button>
+        // ReactDOM.render(jsxExp,document.getElementById('root'))
+
+
+        // 4. Display the event object for a click on div with 300px width and 200px height with 2px border
+
+        // var jsxExp = <div onClick={abc} style={{width:'900px',height:'1000px',border:"2px solid"}}></div>
+        // ReactDOM.render(jsxExp,document.getElementById('root'))
+
+        // function abc(e){
+        //     console.log(e)
+        //     console.log(e.clientX)
+        //     console.log(e.clientY)
+        //     console.log(e.pageX)
+        //     console.log(e.pageY)
+        // }
+
+
+
+        // 5. Display the text of div on click in console
+
+    //     var jsxExp = <div onClick={(event)=>{abc(event)}}>Hello Dasari</div>
+    //     ReactDOM.render(jsxExp,document.getElementById('root'))
+
+    //    function abc(e){
+    //        console.log(e.target.innerHTML)
+    //    }
+
+
+
+    // 6. Console the id of div on click
+
+         // function abc(e){
+        //    console.log(e.target)
+        //    console.log(e.target.id)
+        //    console.log(e.target.innerHTML)
+        // }
+
+        // var jsxExp = <div onClick={abc} id='mydiv'>Hello Dasari</div>
+        // ReactDOM.render(jsxExp,document.getElementById('root'))
+
+
+    // 7.  Display the text of h1 on click in console
+
+
+     //     function abc(e){
+    //        console.log(e.target.innerHTML)
+    //        console.log(e.target)
+    //        console.log(e.target.id)
+    //     }
+
+    // var jsxExp = <h1 onClick={abc} id='mydiv'>Hello Dasari</h1>
+    // ReactDOM.render(jsxExp,document.getElementById('root'))
+
+
+
+
+    // 8.  Console respective button label click
+
+
+     //     function abc(e){
+    //        console.log(e)
+    //        console.log(e.target)
+    //        console.log(e.target.innerHTML)
+    //        console.log(e.target.id)
+    //     }
+    
+    // var jsxExp = <h1 onClick={abc} id='mydiv'>Hello Dasari</h1>
+    // ReactDOM.render(jsxExp,document.getElementById('root'))
+
+
+
+    // 9. Console text box value on button click
+
+    // function abc() {
+    //     if(document.getElementById('inp').value){
+    //         console.log(document.getElementById('inp').value)
+    //     }
+    // }
+
+    // var jsxExp = <div>
+    //                   <input type='text' id='inp'></input>
+    //                   <button onClick={abc}>click to see text</button>
+    //                   <h1 id='myh1'></h1>
+    //               </div>
+    // ReactDOM.render(jsxExp,document.getElementById('root'))
+
+
+
+
+    // 10. Display text box value in h1 on button click
+
+    // function abc(){
+    //   if(document.getElementById('inp').value){
+    //     document.getElementById('myh1').innerHTML = document.getElementById('inp').value
+    //   }
+    // }
+    
+    // var jsxExp = <div>
+    //                   <input type='text' id='inp'></input>
+    //                   <button onClick={abc}>click to see text</button>
+    //                   <h1 id='myh1'></h1>
+    //               </div>
+    // ReactDOM.render(jsxExp,document.getElementById('root'))
+
+
+
+    // 11. Display text box value in uppercase h1 on button click
+
+    
+    // function abc(){
+    //     if(document.getElementById('inp').value){
+    //     let x = document.getElementById('inp').value.toUpperCase()
+    //     document.getElementById('myh1').innerHTML = x
+    //     }
+    // }
+    // var jsxExp = <div>
+    //                   <input type='text' id='inp'></input>
+    //                   <button onClick={abc}>click to see text</button>
+    //                   <h1 id='myh1'></h1>
+    //               </div>
+    // ReactDOM.render(jsxExp,document.getElementById('root'))
+
+
+
+    // 12. Display text box value in uppercase h1 on textbox keyup
+
+
+    //  function abc(){
+    //     let x = document.getElementById('inp').value.toUpperCase()
+    //     document.getElementById('myh1').innerHTML = x
+    // }
+    // var jsxExp = <div>
+    //                   <input type='text' id='inp' onKeyUp={abc}></input>
+    //                   <h1 id='myh1'></h1>
+    //               </div>
+    // ReactDOM.render(jsxExp,document.getElementById('root'))
+
+
+
+    // 13. Display text box value in uppercase h1 on textbox blur
+
+    //   function abc(){
+    //     if(document.getElementById('inp').value){
+    //     let x = document.getElementById('inp').value.toUpperCase()
+    //     document.getElementById('myh1').innerHTML = x
+    //     }
+    // }
+    // var jsxExp = <div>
+    //                   <input type='text' id='inp' onBlur={()=>{abc()}}></input>
+    //                   <h1 id='myh1'></h1>
+    //               </div>
+    // ReactDOM.render(jsxExp,document.getElementById('root'))
+    
+
+
+    // 14. Display text box value in h1 on textbox onKeyDown event
+
+    //   function abc(){
+    //     let x = document.getElementById('inp').value
+    //     document.getElementById('myh1').innerHTML = x
+    //     console.log(x)
+    // }
+    // var jsxExp = <div>
+    //                   <input type='text' id='inp' onKeyDown={abc}></input>
+    //                   <h1 id='myh1'></h1>
+    //               </div>
+    // ReactDOM.render(jsxExp,document.getElementById('root'))
+
+
+
+    // 15. Reset the textbox text on a button click
+
+
+    //    function abc(){
+    //         let x = document.getElementById('inp').value
+    //         document.getElementById('myh1').innerHTML = x
+    //     }
+    //     function clear() {
+    //         document.getElementById('inp').value = "";
+    //         document.getElementById('myh1').innerHTML = "";
+    //     }
+    //     var jsxExp = <div>
+    //                   <input type='text' id='inp' onKeyUp={abc}></input>
+    //                   <button onClick={clear}>clear</button>
+    //                   <h1 id='myh1'></h1>
+    //                 </div>
+    //      ReactDOM.render(jsxExp,document.getElementById('root'))
+
+
+
+
+      // 16. Display addition of two text box values in h1 on textbox on buttonclick
+
+
+    //  function abc(){
+    //     if(document.getElementById('inp1').value && document.getElementById('inp2').value){
+    //     let x = +document.getElementById('inp1').value;
+    //     let y = +document.getElementById('inp2').value;
+    //     var z = x+y
+    //     document.getElementById('myh1').innerHTML = z
+    //     }
+    //  }
+    //  var jsxExp = <div>
+    //                   <input type='number' id='inp1'></input>
+    //                   <input type='number' id='inp2'></input>
+    //                   <button onClick={abc}>ADD</button>
+    //                   <h1 id='myh1'></h1>
+    //               </div>
+    //  ReactDOM.render(jsxExp,document.getElementById('root'))
+
+
+
+    // 17. Display substraction of two text box values in h1 on textbox on button click
+
+    //    function abc(){
+    //     if(document.getElementById('inp1').value && document.getElementById('inp2').value){
+    //     let x = +document.getElementById('inp1').value;
+    //     let y = +document.getElementById('inp2').value;
+    //     var z = x-y
+    //     document.getElementById('myh1').innerHTML = z
+    //     }
+    //  }
+    //  var jsxExp = <div>
+    //                   <input type='number' id='inp1'></input>
+    //                   <input type='number' id='inp2'></input>
+    //                   <button onClick={abc}>Subtract</button>
+    //                   <h1 id='myh1'></h1>
+    //               </div>
+    //  ReactDOM.render(jsxExp,document.getElementById('root'))
+
+
+
+    // 18. Display result of two text box values in h1 on textbox on multiplication and division buttons
+
+    // function mul(){
+    //     if(document.getElementById('inp1').value && document.getElementById('inp2').value){
+    //     let x = +document.getElementById('inp1').value;
+    //     let y = +document.getElementById('inp2').value;
+    //     var z = x*y
+    //     document.getElementById('myh1').innerHTML = z
+    //     }
+    //  }
+
+    //  function div(){
+    //     if(document.getElementById('inp1').value && document.getElementById('inp2').value){
+    //     let x = +document.getElementById('inp1').value;
+    //     let y = +document.getElementById('inp2').value;
+    //     var z = x/y
+    //     document.getElementById('myh1').innerHTML = z
+    //     }
+    //  }
+
+    //  var jsxExp = <div>
+    //                   <input type='number' id='inp1'></input>
+    //                   <input type='number' id='inp2'></input>
+    //                   <button onClick={mul}>Mul</button>
+    //                   <button onClick={div}>Div</button>
+    //                   <h1 id='myh1'></h1>
+    //               </div>
+    //  ReactDOM.render(jsxExp,document.getElementById('root'))
+
+
+
+
+    // 19. Display radio button value on check
+
+    // function abc(e){
+    //     document.getElementById('myh1').innerHTML = e.target.value
+    //  }
+
+    //  var jsxExp = <div>
+    //                   <input type='radio' name='cou' value='IND' id='inp1' onChange={(e)=>{abc(e)}}/>India
+    //                   <input type='radio' name='cou' id='inp2' value='UNITED STATES' onChange={(e)=>{abc(e)}} />USA
+    //                   <h1 id='myh1'></h1>
+    //               </div>
+    //  ReactDOM.render(jsxExp,document.getElementById('root'))
+
+
+
+    // 20. Display respective image on radio button value
+
+    //  function abc(e){
+    //     if(e.target.value == 'male'){
+    //        document.getElementById("myimg").src="https://i.pinimg.com/736x/2a/4e/8d/2a4e8dab6791ed643d5180bc72167f6d.jpg"
+    //     }
+
+    //     if(e.target.value == 'female'){
+    //        document.getElementById("myimg").src="https://cdn.pixabay.com/photo/2014/04/02/14/10/female-306407_640.png"
+    //     }
+    //  }
+
+    //  var jsxExp = <div>
+                      
+    //                   <input type='radio' name='gen' value='male' id='inp1' onChange={(e)=>{abc(e)}}/>Male
+    //                   <input type='radio' name='gen' id='inp2' value='female' onChange={(e)=>{abc(e)}} />Female
+    //                   <div>
+    //                   <img src="" id='myimg'></img>
+    //                   </div>
+    //               </div>
+    //  ReactDOM.render(jsxExp,document.getElementById('root'))
+
+
+
+    //21. Display select box value in h1
+
+    //  function abc(e){
+    //     document.getElementById('myh1').innerHTML = e.target.value
+    //  }
+
+    //  var jsxExp = <div>
+    //                <select onChange={abc}>
+    //                   <option>INDIA</option>
+    //                   <option>Sri Lanka</option>
+    //                   <option>Bangladesh</option>
+    //                   <option>USA</option>
+    //               </select>
+    //               <h1 id='myh1'></h1>
+    //               </div>
+    //  ReactDOM.render(jsxExp,document.getElementById('root'))
+
+
+
+    // 22. Display selected checkbox values in console
+
+    //  function abc(e){
+    //     console.log(e.target.value)
+    //  }
+
+    //  var jsxExp = <div>
+    //                   <input type='checkbox' id='inp1' value='react' onChange={(e)=>{abc(e)}}/>ReactJS
+    //                   <input type='checkbox' id='inp2' value='angular' onChange={(e)=>{abc(e)}} />Angular
+    //                   <input type='checkbox' id='inp2' value='node' onChange={(e)=>{abc(e)}} />Nodejs
+    //                   <input type='checkbox' id='inp2' value='express' onChange={(e)=>{abc(e)}} />Express
+    //                   <input type='checkbox' id='inp2' value='mongodb' onChange={(e)=>{abc(e)}} />Mongodb
+    //                   <input type='checkbox' id='inp2' value='mongoose' onChange={(e)=>{abc(e)}} />Mongoose
+    //                   <input type='checkbox' id='inp2' value='mysql' onChange={(e)=>{abc(e)}} />MySql
+    //                   <h1 id='myh1'></h1>
+    //               </div>
+    //  ReactDOM.render(jsxExp,document.getElementById('root'))
+
+
+
+    // 23. Display the selected day in h1
+
+    //  function abc(e){
+    //     document.getElementById('myh1').innerHTML = e.target.value
+    //  }
+
+    //  var jsxExp = <div>
+    //                   <input onChange={abc} type="date"/>
+    //                   <h1 id='myh1'></h1>
+    //               </div>
+    //  ReactDOM.render(jsxExp,document.getElementById('root'))
+
+
+
+
+    // 24. Bindevent handler with arguments
+
+    // function abc(num){
+    //     document.getElementById('myh1').innerHTML = num
+    //  }
+
+    //  var jsxExp = <div>
+    //                   <button onClick={()=>{abc(2)}}>Button 1</button>
+    //                   <button onClick={()=>{abc(200)}}>Button 2</button>
+    //                   <button onClick={()=>{abc(499)}}>Button 3</button>
+    //                   <button onClick={()=>{abc(900)}}>Button 4</button>
+    //                   <h1 id='myh1'></h1>
+    //               </div>
+    //  ReactDOM.render(jsxExp,document.getElementById('root'))
+
+
+
+
+
+    // 25. Bindevent handler with arguments as index for list item genereted from array
+
+    // var ar = ['sai','rishab','sharath','asif']
+
+    //  var jsxExp = <ul>
+    //                      {
+    //                         ar.map((a,i)=>{
+    //                            return <li onClick={()=>{alert(i)}}>{a}</li>
+    //                         })
+    //                      }
+    //               </ul>
+    //  ReactDOM.render(jsxExp,document.getElementById('root'))
+
+
+
+
+    // 26. Bindevent handler with arguments as values for list item genereted from array
+
+
+    // var ar = ['sai','rishab','sharath','asif']
+   
+    //  var jsxExp = <ul>
+    //                      {
+    //                         ar.map((a,i)=>{
+    //                            return <li onClick={()=>{alert(a)}}>{a}</li>
+    //                         })
+    //                      }
+    //               </ul>
+    //  ReactDOM.render(jsxExp,document.getElementById('root'))
+
+
+
+    // 27.Bindevent handler with arguments as values for list item genereted from array
+
+    // var ar = ['sai','rishab','sharath','asif']
+    // function abc(num){
+    //     document.getElementById('myh1').innerHTML = num
+    //  }
+
+    //  var jsxExp = <ul>
+    //                      {
+    //                         ar.map((e,i,ar)=>{
+    //                            return <li onClick={()=>{alert(ar)}}>{e}</li>
+    //                         })
+    //                      }
+    //               </ul>
+    //  ReactDOM.render(jsxExp,document.getElementById('root'))
+
+
+
+    // 28. Bindevent handler with arguments as values for list item genereted from array of objects
+
+    // var ar = [
+    //     {
+    //       firstname:"Praveen",
+    //       lastname:"Gubbala",
+    //       age:40,
+    //       gender:'male'
+    //     },
+    //     {
+    //       firstname:"Smrithi",
+    //       lastname:"mandana",
+    //       age:25,
+    //       gender:'female'
+    //     },
+    //     {
+    //       firstname:"mithali",
+    //       lastname:"raj",
+    //       age:39,
+    //       gender:'female'
+    //     },
+    //     {
+    //       firstname:"Rohit",
+    //       lastname:"Sharma",
+    //       age:35,
+    //       gender:'male'
+    //     },
+    //     {
+    //       firstname:"Sachin",
+    //       lastname:"Tendulkar",
+    //       age:50,
+    //       gender:'male'
+    //     },
+    //   ];
+
+
+   
+
+    //  var jsxExp = <ul>
+    //                      {
+    //                         ar.map((obj)=>{
+    //                            return <li onClick={()=>{alert(obj['firstname'])}}>{obj['firstname']}</li>
+    //                         })
+    //                      }
+    //               </ul>
+    //  ReactDOM.render(jsxExp,document.getElementById('root'))
+
+
+
+    
+
+    // 29.  Display values in h1
+
+
+    //   var ar = [
+    //     {
+    //       firstname:"Praveen",
+    //       lastname:"Gubbala",
+    //       age:40,
+    //       gender:'male'
+    //     },
+    //     {
+    //       firstname:"Smrithi",
+    //       lastname:"mandana",
+    //       age:25,
+    //       gender:'female'
+    //     },
+    //     {
+    //       firstname:"mithali",
+    //       lastname:"raj",
+    //       age:39,
+    //       gender:'female'
+    //     },
+    //     {
+    //       firstname:"Rohit",
+    //       lastname:"Sharma",
+    //       age:35,
+    //       gender:'male'
+    //     },
+    //     {
+    //       firstname:"Sachin",
+    //       lastname:"Tendulkar",
+    //       age:50,
+    //       gender:'male'
+    //     },
+    //   ];
+
+
+    // function abc(e,obj,i){
+    //     console.log(e)
+    //     console.log(obj)
+    //     console.log(i)
+    //     document.getElementById('myh1').innerHTML = `${obj['lastname']} is at index${i}`
+    //  }
+
+    //  var jsxExp = <div>
+    //                <ul>
+    //                      {
+    //                         ar.map((obj,i)=>{
+    //                            return <li>{obj['firstname']}
+    //                              <button onClick={(e)=>{abc(e,obj,i)}} >See</button>
+    //                              </li>
+    //                         })
+    //                      }
+    //               </ul>
+    //                  <h1 id='myh1'></h1>
+    //               </div>
+    //  ReactDOM.render(jsxExp,document.getElementById('root'))
+
+
+
+
+
+
+    //  30.  Display name in h1 id on h2
+    
+    // var ar = [
+    //     {
+    //       firstname:"Praveen",
+    //       lastname:"Gubbala",
+    //       age:40,
+    //       gender:'male'
+    //     },
+    //     {
+    //       firstname:"Smrithi",
+    //       lastname:"mandana",
+    //       age:25,
+    //       gender:'female'
+    //     },
+    //     {
+    //       firstname:"mithali",
+    //       lastname:"raj",
+    //       age:39,
+    //       gender:'female'
+    //     },
+    //     {
+    //       firstname:"Rohit",
+    //       lastname:"Sharma",
+    //       age:35,
+    //       gender:'male'
+    //     },
+    //     {
+    //       firstname:"Sachin",
+    //       lastname:"Tendulkar",
+    //       age:50,
+    //       gender:'male'
+    //     },
+    //   ];
+
+
+    // function abc(e,obj,i){
+    //     console.log(e)
+    //     console.log(obj)
+    //     console.log(i)
+    //     document.getElementById('myh1').innerHTML = `${obj['lastname']}`
+    //     document.getElementById('myh2').innerHTML = `${i}`
+    //  }
+
+    //  var jsxExp = <div>
+    //                <ul>
+    //                      {
+    //                         ar.map((obj,i)=>{
+    //                            return <li>{obj['firstname']}
+    //                              <button onClick={(e)=>{abc(e,obj,i)}} >See</button>
+    //                              </li>
+    //                         })
+    //                      }
+    //               </ul>
+    //                  <h1 id='myh1'></h1>
+    //                  <h2 id='myh2'></h2>
+    //               </div>
+    //  ReactDOM.render(jsxExp,document.getElementById('root'))
+
+
+
+
+
+
+
+    // 31.  Display name in h1 id in h2 on button beside student name
+
+
+
+
+    
+
+
+
+
+
+
+
+    // 32.   Display name in h1 id in h2 on button beside student name copy
+
+
+
+
+
+
+
+
+
+
+
+
+    // 33. Display variable value in h1
+
+    // var x = 23;
+    // var jsxExp = <h1>{x}</h1>
+    // ReactDOM.render(jsxExp,document.getElementById('root'))
+
+
+
+    // 34. Display incremented value variable value in h1 on a button click
+
+    // var x = 23;
+    // function incre(){
+    //     x = x+1;
+    //    document.getElementById('h1').innerHTML = x
+    // }
+    // var jsxExp = <div>
+    //                  <h1 id='h1'>{x}</h1>
+    //                  <button onClick={incre} >Increment</button>
+    //              </div>
+    
+    // ReactDOM.render(jsxExp,document.getElementById('root'))
+
+
+
+    // 35. Display decremented value variable value in h1 on a button click
+
+    // var x = 23;
+    // function decre(){
+    //     x = x-1;
+    //    document.getElementById('h1').innerHTML = x
+    // }
+    // var jsxExp = <div>
+    //                  <h1 id='h1'>{x}</h1>
+    //                  <button onClick={decre} >Decrement</button>
+    //              </div>
+    
+    // ReactDOM.render(jsxExp,document.getElementById('root'))
+
+
+
+
+
+    // 36.  Implement counter application
+
+    // var x = 123;
+
+    // function incre(){
+    //     x = x+1;
+    //    document.getElementById('h1').innerHTML = x
+    // }
+
+    // function decre(){
+    //     x = x-1;
+    //    document.getElementById('h1').innerHTML = x
+    // }
+
+    // var jsxExp = <div>
+    //                  <h1 id='h1'>{x}</h1>
+    //                  <button onClick={incre} >Increment</button>
+    //                  <button onClick={decre} >Decrement</button>
+    //              </div>
+    
+    // ReactDOM.render(jsxExp,document.getElementById('root'))
+
+
+
+
+
+    // 37. Implement counter application with reset button
+
+
+    // let x = 123;
+
+    // function incre(){
+    //     x = x+1;
+    //    document.getElementById('h1').innerHTML = x
+    // }
+
+    // function decre(){
+    //     x = x-1;
+    //    document.getElementById('h1').innerHTML = x
+    // }
+
+    // function reset(){
+    //     x = 123
+    //     document.getElementById('h1').innerHTML = x
+    // }
+
+    // var jsxExp = <div>
+    //                  <h1 id='h1'>{x}</h1>
+    //                  <button onClick={incre} >Increment</button>
+    //                  <button onClick={decre} >Decrement</button>
+    //                  <button onClick={reset} >Reset</button>
+    //              </div>
+    
+    // ReactDOM.render(jsxExp,document.getElementById('root'))
+
+
+
+
+
+    // 38. Push text box value to an array console the array
+
+    // let ar = []
+    // function pushh(){
+    //     if(document.getElementById('inp').value){
+    //         var val = document.getElementById('inp').value
+    //         ar.push(val)
+    //         console.log(ar);
+    //         document.getElementById('inp').value = ""
+    //     }
+    // }
+    
+    // var jsxExp = <div>
+    //                   <input type="text" id='inp'/>
+    //                   <button onClick={pushh}>Click here to push value</button>
+    //              </div>
+    //ReactDOM.render(jsxExp,document.getElementById('root'))
+
+
+
+
+
+    // 39. Push text box value to an array display in h1
+
+    // let ar = []
+    // function pushh(){
+    //     if(document.getElementById('inp').value){
+    //         var val = document.getElementById('inp').value
+    //         ar.push(val)
+    //         console.log(ar);
+    //         document.getElementById('inp').value = ""
+    //     }
+    // }
+    
+    // var jsxExp = <div>
+    //                   <input type="text" id='inp'/>
+    //                   <button onClick={pushh}>Click here to push value</button>
+    //              </div>
+    // ReactDOM.render(jsxExp,document.getElementById('root'))
+
+
+
+
+    //  40. Push text box value to an array display in h1
+
+
+    // let ar = []
+    // function pushh(){
+    //     if(document.getElementById('inp').value){
+    //         var val = document.getElementById('inp').value
+    //         ar.push(val)
+    //         document.getElementById('h11').innerHTML = ar
+    //         document.getElementById('inp').value = ""
+    //     }
+    // }
+    
+    // var jsxExp = <div>
+    //                   <input type="text" id='inp'/>
+    //                   <button onClick={pushh}>Click here to push value</button>
+    //                   <h1 id ='h11'></h1>
+    //              </div>
+    // ReactDOM.render(jsxExp,document.getElementById('root'))
+
+
+
+
+    // 41. Push text box value to an array display in list items
+
+    // let ar = []
+    // function pushh(){
+    //     if(document.getElementById('inp').value){
+    //         var val = document.getElementById('inp').value
+    //         ar.push(val)
+    //         document.getElementById('inp').value = ""
+    //     }
+    // }
+    
+    // var jsxExp = <div>
+    //                   <input type="text" id='inp'/>
+    //                   <button onClick={pushh}>Click here to push value</button>
+    //                   <h1 id ='h11'></h1>
+    //              </div>
+    // ReactDOM.render(jsxExp,document.getElementById('root'))
+
+
+
+
+
+    // 42. Todolist with delete button
+
+   
+
+
+
+
+
+
+
+    // 43. Implement a clock
+
+
+    // function clock(){
+    //     var date = new Date();
+    //     var time = date.getHours()+":"+date.getMinutes()+":"+date.getSeconds()
+    //     document.getElementById('root').innerHTML = time;
+    // }
+
+    // setInterval(()=>{
+    //      clock()
+    // },1000)
+
+
+    // var jsxExp = <div>
+    //                   <h1 id ='h11'></h1>
+    //              </div>
+    // ReactDOM.render(jsxExp,document.getElementById('root'))
+
+
+
+
+
+    // 44. Implement a stopwatch
+
+    var sec=0;
+    var millsec=0;
+    var intervel;
+
+    function start() {
+        intervel = setInterval(()=>{
+                      millsec++;
+                      if(millsec==100){
+                         sec++;
+                         millsec=0
+                      }
+                      document.getElementById("sec").innerHTML=sec;
+                      document.getElementById("milli").innerHTML=millsec;
+                    },10)
+    }
+
+    function pause() {
+        sec = document.getElementById("sec").innerHTML;
+        millsec = document.getElementById("milli").innerHTML;
+        clearInterval(intervel);
+        console.log(sec)
+        console.log(millsec)
+        
+    }
+
+    function reset() {
+        clearInterval(intervel)
+        console.log(sec)
+        console.log(millsec)
+        document.getElementById("sec").innerHTML=0;
+        document.getElementById("milli").innerHTML=0;
+    }
+
+
+    var jh1 = <div>
+                  <h1 id = 'dd'>
+                     <span id='sec'>0</span>:
+                    <span id='milli'>0</span>
+                  </h1>
+                  <button onClick={start}>start</button>
+                  <button onClick={pause}>pause</button>
+                  <button onClick={reset}>Reset</button>
+              </div>
+    
+    ReactDOM.render(jh1,document.getElementById('root'))
+
+     </script>
+</body>
+</html>

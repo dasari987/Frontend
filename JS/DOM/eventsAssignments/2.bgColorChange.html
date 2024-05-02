@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div" style="width:226px; height: 140px; border: 1px solid; margin-bottom: 10px;"></div>
+    <button onclick="changeColor(event)">red</button>
+    <button onclick="changeColor(event)">green</button>
+    <button onclick="changeColor(event)">blue</button>
+    <button onclick="changeColor(event)">RESET</button>
+    <script>
+        function changeColor(e){
+            var background = document.getElementById('div')
+            if(e.target.innerHTML=="RESET"){
+                background.style.backgroundColor = "white"
+            }
+            console.log(background)
+            background.style.backgroundColor = e.target.innerHTML
+        }
+    </script>
+</body>
+</html>

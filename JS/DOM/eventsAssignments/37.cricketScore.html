@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="border: 1px solid; width: 200px; height: 100px; text-align: center; margin-left: 70px; margin-bottom: 10px;">
+        <span id="score"></span>/
+        <span id="wicket"></span>
+        
+    </div>
+    <button >Zero</button>
+    <button onclick="increase(event)">One</button>
+    <button onclick="increase(event)">Two</button>
+    <button onclick="increase(event)">Three</button>
+    <button onclick="increase(event)">Four</button>
+    <button onclick="increase(event)">Five</button>
+    <button onclick="increase(event)">Six</button>
+    <button onclick="wickets()">Wicket</button>
+</body>
+
+    <script>
+        let score = 0
+        let wicket = 0
+
+        document.getElementById('wicket').innerHTML = wicket
+        document.getElementById('score').innerHTML = score
+
+        function wickets() {
+            if(wicket==9){
+                wicket = 0
+                document.getElementById('wicket').innerHTML = wicket
+                score = 0
+                document.getElementById('score').innerHTML = score
+            }
+            else{
+                wicket = +document.getElementById('wicket').innerHTML
+                wicket = wicket+1;
+                document.getElementById('wicket').innerHTML = wicket
+            }
+        }
+
+        function increase(e){
+            if(e.target.innerHTML== 'One'){
+               score = +document.getElementById('score').innerHTML
+               score = score+1;
+               document.getElementById('score').innerHTML = score
+            }
+
+            if(e.target.innerHTML== 'Two'){
+               score = +document.getElementById('score').innerHTML
+               score = score+2;
+               document.getElementById('score').innerHTML = score
+            }
+
+            if(e.target.innerHTML== 'Three'){
+               score = +document.getElementById('score').innerHTML
+               score = score+3;
+               document.getElementById('score').innerHTML = score
+            }
+
+            if(e.target.innerHTML== 'Four'){
+               score = +document.getElementById('score').innerHTML
+               score = score+4;
+               document.getElementById('score').innerHTML = score
+            }
+
+            if(e.target.innerHTML== 'Five'){
+               score = +document.getElementById('score').innerHTML
+               score = score+5;
+               document.getElementById('score').innerHTML = score
+            }
+
+            if(e.target.innerHTML== 'Six'){
+               score = +document.getElementById('score').innerHTML
+               score = score+6;
+               document.getElementById('score').innerHTML = score
+            }
+            
+        }
+
+
+    </script>
+</html>

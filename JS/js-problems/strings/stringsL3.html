@@ -1,0 +1,263 @@
+<script>
+    // 1.Find the first occurrence of a character in a given string.
+
+    // var s1 = "banana";
+    // console.log(s1.indexOf('a'))
+    
+    
+    // 2.Find the last occurrence of a character in a given string.
+    
+    // var s1 = "banana";
+    // console.log(s1.lastIndexOf("a"))
+
+
+    // 3.Search all occurrences of a character in a given string.
+
+    // var s1 = "banana";
+    // for(var i = 0; i<=s1.length-1; i++){
+    //     if(s1[i]=='a'){
+    //     console.log(i)
+    //     }
+    // }
+
+
+
+    //4.Count occurrences of a character in a given string.
+
+    // var s1 = "banana";
+    // var count = 0;
+    // for(var i = 0; i<=s1.length-1; i++){
+    //     if(s1[i]=='a'){
+    //         count++;
+    //     }
+    // }
+    // console.log(count);
+
+
+
+    // 5.Find the highest frequency character in a string.
+
+
+
+
+
+
+
+
+    // 6.Find the lowest frequency character in a string.
+
+
+
+
+
+
+
+    // 7.Count the frequency of each character in a string.
+
+
+
+
+
+
+    // 8.Remove the first occurrence of a character from a string.
+
+    // var s1 = "banana";
+    // var s2 = s1.replace('a',"")
+    // // console.log(s1.replace('a',""))
+    // console.log(s2);
+    // // console.log(s1);
+
+
+
+
+    // 9.Remove the last occurrence of a character from a string.
+       
+    // var s1 = "banazaim";
+    // var s2="";
+    // var count=0;
+    // for(var i = s1.length-1; i>=0; i--){
+    //      if(s1[i]=='a' && count==0){
+    //         count+=1;
+    //      }
+    //      else{
+    //         s2=s1[i]+s2
+    //      }
+    // }
+    // console.log(s2);
+    
+
+
+
+    // 10.Delete all occurrences of a character from a string.
+
+    // var s1 = "banana";
+    // console.log(s1.replaceAll('a',""));
+
+
+
+    // 11. Remove all repeated characters from a given string.
+
+       
+
+
+
+
+
+    // 12. Replace the first occurrence of a character with another in a string
+
+    // var s1 = "banana";
+    // console.log(s1.replace('a','#'));
+
+
+
+
+    // 13.Replace the last occurrence of a character with another in a string.
+
+    // var s1 = "bananazim";
+    // var s2 = ""
+    // var count = 0;
+    // for(var i = s1.length-1; i>=0; i--){
+    //     if(s1[i]=='a' && count==0){
+    //         count+=1;
+    //         s2 = '#'+s2;
+    //     }
+    //     else{
+    //         s2 = s1[i]+s2;
+    //     }
+    // }
+    // console.log(s2);
+
+    
+
+
+
+
+    // 14.Put all occurrences of a character with another in a string.
+
+    // var s1 = "banana";
+    // console.log(s1.replaceAll('a','#'));
+
+
+
+    // 15.Find the first occurrence of a word in a given string.
+
+    // var s = "the car is good in the racing";
+    // console.log(s.includes('the'));
+    // console.log(s.indexOf('the'));
+
+    
+
+    // 16.Find the last occurrence of a word in a given string.
+
+    // var s = "the car is good in the racing";
+    // console.log(s.includes('the'));
+    // console.log(s.lastIndexOf('the'))
+
+
+    // 17. Search all occurrences of a word in a given string.
+
+
+
+
+
+
+
+    //18. Count occurrences of a word in a given string.
+
+    // var s1 = "banana";
+    // var count = 0;
+    // for(var i in s1){
+    //    if(s1[i]=='a'){
+    //     //   console.log(s1[i])
+    //       count+=1;
+    //    }
+    // }
+    // console.log(count);
+
+
+
+
+    // 19. Remove the first occurrence of a word from the string.
+
+    // var s = "the car is good in the racing";
+    // console.log(s.replace('the',''));
+
+
+    //20.Remove the last occurrence of a word in a given string.
+
+    var s = "the the is the good the in the";
+    // var z = ["sai", "babu", "dasari"]
+    // var a = s.split('');
+    // var b = s.split(',');
+    // var c = s.split(' ');
+    // console.log(a)
+    // console.log(b)
+    // console.log(c)
+    // console.log(z)
+    var s2 = "";
+    var count = 0;
+    console.log(s.split(" "))
+    for(var i = s.length-1; i>=0; i--){
+        if(s[i]=='the' && count==0){
+           count+=1
+           
+        }
+        else{
+            s2 = s[i] + s2;
+        }
+    }
+    console.log(s2);
+
+
+
+
+
+    //21. Delete all occurrences of a word in a given string.
+
+    //  var s = "the car is good in the racitheng";
+    //  console.log(s.replaceAll('the',''))
+
+
+
+    //22. A Trim leading white space characters from a given string
+
+    // var s1 = "   Hello  ";
+    // console.log(s1);
+    // console.log(s1.trim());
+    // console.log(s1.trimStart());
+    // console.log(s1.trimEnd());
+
+
+    
+    // 23.Trim trailing white space characters from a given string.
+
+
+
+
+
+
+    // 24.Trim both leading and trailing white space characters from a given string.
+
+
+
+
+
+
+    // 25.Remove all extra blank spaces from the given string.
+
+
+
+
+
+
+
+
+    // 26. A String is Palindrome or Not
+
+
+
+   
+
+
+   
+</script>

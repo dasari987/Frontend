@@ -1,0 +1,43 @@
+#red{
+   width: 330px;
+   height: 60px;
+   background-color: red;
+}
+
+
+#green{
+    width: 330px;
+    height: 10px;
+    background-color: rgb(33, 211, 63);
+}
+
+
+#blue{
+    width: 60px;
+   height: 330px;
+   background-color: rgb(84, 91, 236);
+   display: inline-block;
+}
+
+#yellow{
+    width: 210px;
+   height: 330px;
+   background-color: yellow;
+   display: inline-block;
+   margin-left: -4px;
+}
+
+#skyblue{
+    width: 60px;
+   height: 330px;
+   background-color: skyblue;
+   display: inline-block;
+   margin-left: -4px;
+}
+
+#orange{
+   width: 330px;
+   height: 60px;
+   background-color: orange;
+   margin-top: -4px;
+}

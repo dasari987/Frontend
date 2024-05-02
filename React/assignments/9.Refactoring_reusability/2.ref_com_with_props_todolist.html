@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+     <div id="root">
+
+     </div>
+
+     <style>
+        .sty{
+          padding: 8px;
+          background-color: red;
+          margin-top: 8px;
+        }
+     </style>
+
+     <body>
+        <script type="text/babel">
+
+          function Todolist() {
+              var [todos,settodos] = React.useState([])
+
+              function pushh() {
+                if(document.getElementById('inp').value){
+                  var obj = {
+                     todo: document.getElementById('inp').value,
+                     status: false
+                  }
+                  settodos([...todos,obj])
+                }
+                document.getElementById('inp').value=""
+              }
+
+
+              function don(i) {
+                 console.log(i)
+                 todos[i].status=true;
+                 settodos([...todos])
+              }
+
+
+              function undon(i) {
+                todos[i].status=false;
+                settodos([...todos])
+              }
+              
+
+              return(
+                <div style={{border:'2px solid red', padding:'7px'}}>
+                    <div style={{border:'2px solid grey', padding:'7px'}}>
+                         <h1>Todolist</h1>
+                         <input type="text" id='inp'/>
+                         <button onClick={()=>{pushh()}}> Add Task </button>
+                        {
+                           todos?.map((obj,i)=>{
+                             return <List dta={obj} index={i} donee={()=>{don(i)}} undonee={()=>{undon(i)}}></List>
+                           })
+                        }
+                         
+                    </div>
+                </div>
+              )
+          }
+
+
+          function List(props) {
+             return(
+                <div>
+                     <li class='sty' style={(props.dta.status==true)?{backgroundColor:'green'}:{backgroundColor:'red'}}>{props.dta.todo} <button onClick={props.donee}>Done</button> <button onClick={props.undonee}>unDone</button></li>
+                </div>
+             )
+          }
+
+
+          ReactDOM.render(<Todolist></Todolist>,document.getElementById('root'))
+
+        </script>
+     </body>
+</html>

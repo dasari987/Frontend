@@ -1,0 +1,75 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.box{
+  border: 1px solid;
+  height: 90px;
+  width: 20vw;
+  padding: 4px;
+  margin: 4px;
+}
+
+.parent{
+    border: 2px solid;
+    padding: 20px;
+    margin: 20px;
+    position: relative;
+}
+
+.box1{
+  background-color: blue;
+
+}
+
+.box2{
+    background-color: rgb(24, 9, 9, 0.3);
+    position: relative;
+    /* element is not removed from normal document flow */
+    top: -30px;
+    left: 20px;
+    z-index: -1;
+  }
+
+  .box3{
+    background-color: rgb(160, 200, 79);
+  }
+
+  .box4{
+    background-color: red;
+    position: absolute; 
+    /* element is removed from normal document flow */
+    /* element will take position from its positioned ancestor */
+    /* z-index: -1; */
+    top: 0px;
+    left: 20px;
+  }
+
+  .box5{
+    background-color: rgba(6, 204, 79, 0.3);
+    position: fixed;
+    /* element is removed from normal document flow */
+     /* element will take position from body not from ancestors */
+    left: 0px;
+  }
+
+  .box6{
+    background-color: rgb(6, 9, 2);
+  }
+
+  .box7{
+    background-color: rgb(72, 15, 206);
+    position: sticky;
+    top: 0px;
+  }
+
+  .box8{
+    background-color: rgb(200, 60, 25);
+  }
+
+  .box9{
+    background-color: rgb(200, 200, 25);
+    position: sticky;
+    top: 0px;
+  }

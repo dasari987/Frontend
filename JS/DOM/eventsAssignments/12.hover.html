@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            /* background-image: url('https://img.freepik.com/free-vector/dark-black-background-design-with-stripes_1017-38064.jpg');
+            background-repeat: no-repeat;
+            width: 100vw;
+            height: 100vh; */
+            overflow-y: hidden;
+        }
+        #list{
+            text-align: center;
+        }
+        #list img{
+            width: 300px;
+            height: 300px;
+            padding: 6px;
+            border-radius: 10px;
+        }
+        img{
+            border-radius: 10px;
+        }
+        
+    </style>
+    <div id="list">
+        <img onmouseover="imgGenerator(event)" src="https://cdn.pixabay.com/photo/2020/05/03/13/09/puppy-5124947_640.jpg" alt="loading image">
+        <img onmouseover="imgGenerator(event)" src="https://cdn.pixabay.com/photo/2015/11/17/13/13/puppy-1047521_640.jpg" alt="loading image">
+        <img onmouseover="imgGenerator(event)" src="https://cdn.pixabay.com/photo/2016/02/18/18/37/puppy-1207816_640.jpg" alt="loading image">
+    </div>
+
+    <div id="hov" style="text-align: center;">
+          <img id="image" src="" alt="">
+    </div>
+
+    <script>
+         function imgGenerator(e){
+            // console.log(e)
+             document.getElementById('image').src=e.target.src
+            //  console.log(image)
+         }
+    </script>
+   
+
+</body>
+</html>

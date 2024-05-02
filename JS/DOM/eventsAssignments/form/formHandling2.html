@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" onsubmit="handleSubmit(event)">
+        <label for="">firstName: </label>
+          <input type="text" name="fname">
+          <br>
+          <label for="">lastName: </label>
+          <input type="text" name="lastname">
+          <br>
+          <button type="submit">Submit</button>
+    </form>
+    <script>
+        function handleSubmit(e) {
+            e.preventDefault()
+            // console.log(e)
+            // console.log(e.target)
+            var myform = new FormData(e.target)
+            // console.log(myform)
+            // console.log(typeof(myform))
+
+            // myform.forEach(function(data){
+            //     console.log(data)
+            // })
+
+            // for(var x of myform.values()){   // this fn gives you an iterator 
+            //     console.log(x)
+            // }
+            // console.log(myform.values())
+            // console.log(typeof(myform.values()))
+
+            // for(var x of myform.keys()){   // this fn gives you an iterator 
+            //     console.log(x)
+            // }
+
+            for(var x of myform.entries()){   // this fn gives you an iterator 
+                console.log(x)
+            }
+
+
+            // for(var x of myform.keys()){   // how to get values from keys
+            //     console.log(myform.get(x))
+            // }
+            // console.log(myform.get("fname"))
+            
+        }
+         
+    </script>
+</body>
+</html>

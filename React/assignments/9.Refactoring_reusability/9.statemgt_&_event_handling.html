@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+     <div id="root">
+
+     </div>
+
+     <script type="text/babel">
+
+             function Appcomponent(){
+                var[squad,setsquad] = React.useState([ "Rohit Sharma", "Kieron Pollard", "Suryakumar Yadav", "Jasprit Bumrah", "Ishan Kishan","Ramandeep Singh", "Rahul Buddhi", "Hrithik Shokeen", "Arjun Tendulkar", "Aryan Juyal", "Fabian Allen", "Dewald Brevis", "Basil Thampi", "M Ashwin", "Jaydev Unadkat", "Mayank Markande", "Tilak Varma", "Sanjay Yadav", "Riley Meredith", "Mohd Arshad Khan", "Anmolpreet Singh"])
+                var[team,setTeam] = React.useState([])
+                var[c,setc] = React.useState(0)
+
+
+              function move(i){
+                  team.push(squad[i])
+                  console.log(team)
+                  squad.splice(i,1)
+                  setc(c+1)
+                  setsquad([...squad])
+              }
+
+              function move2(i){
+                 squad.push(team[i])
+                 team.splice(i,1)
+                 setc(c-1)
+                 setTeam([...team])
+              }
+
+                return(
+                    <div style={{display:'flex', columnGap:'50px'}}>
+                         <div style={{border:'1px solid',width:'220px'}}>
+                            <h3>Mumbai Indian Squad</h3>
+                            <p>(click to unselect player)</p>
+                            <ul>
+                                {
+                                  squad.map((player,i)=>{
+                                      return <Mumbaisquad playerr={player} del={()=>{move(i)}}></Mumbaisquad>
+                                  })
+                                }
+                            </ul>
+                         </div>
+
+                         <div style={{border:'1px solid',width:'220px'}}>
+                             <h3>PlayingXI-selected-{c}</h3>
+                             <p>(no player selected)</p>
+                             <ul>
+                                 {
+                                    team?.map((player,i)=>{
+                                       return <Playingelev playerrs={player} del2={()=>{move2(i)}}></Playingelev>
+                                    })
+                                 }
+                             </ul>
+                         </div>
+                    </div>
+                )
+             }
+
+
+             function Mumbaisquad(props) {
+                return <li onClick={()=>{props.del()}}>{props.playerr}</li>
+             }
+
+             function Playingelev(props){
+                    return <li onClick={()=>{props.del2()}}>{props.playerrs}</li>
+             }
+
+             ReactDOM.render(<Appcomponent></Appcomponent>,document.getElementById('root'))
+
+
+     </script>
+</body>
+</html>

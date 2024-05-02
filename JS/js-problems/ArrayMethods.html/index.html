@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    // different ways to create array
+
+    // var a = [1,2,3,4,5];  // array literal // shorthand way 
+    // var b = new Array(1,2,34)  //  Array Constructor
+    // console.log(a)
+    // console.log(b)
+
+///////////////////////////////////////////
+
+    //  array methods basic
+
+    // at()
+    // concat()       // returns new array doesnot modify orginal array
+    // reverse()
+    // join()
+    // isArray()      *****
+    // push()
+    // pop()
+    // unshift()
+    // shift()
+    // slice()       // returns new array doesnot modify orginal array,,,,,,,,,,    
+                     // Slice: Extracts a section of an array and returns a new array.
+    // splice()      // Splice: Changes the content of an array by removing, replacing, or adding elements
+                     // splice: modifies orginal array
+    // includes()
+    // indexOf()
+    // lastIndexOf()
+
+
+
+    // sort()        // sort happens only on first numbers of digit. and sort works fine on strings
+
+
+
+     //////////*********** Advanced Array Methods  **********************///////////////////////////
+     //////////*********** Advanced Array Methods  **********************///////////////////////////
+     //////////*********** Advanced Array Methods  **********************///////////////////////////
+     //////////*********** Advanced Array Methods  **********************///////////////////////////
+
+     //   first order functions(functions which accept fn as argument is called as first order functions)
+
+     // forEach ia a array method it is firstclass fn, expect fn as a argument
+
+     // (value, index, array) parameters can be passed
+
+     // forEach()   // does not return array
+     // callback function is called for every element in array
+
+
+     // (value, index, array) parameters can be passed
+
+     // map()       // returns new array and do not change orginal array
+     // callback function is called for every element in array
+
+
+     // (value, index, array) parameters can be passed
+
+     // filter()    // returns new array and do not change orginal array
+     // callback function is called for every element in array
+
+
+
+     // reduce()
+
+
+
+
+     // sort()
+
+     ////////////////////////////////
+
+     // find()
+     // flat()
+     // findIndex()
+     // indexOf()
+     // lastIndexOf()
+     // concat()
+     // every()
+     // some()
+     // includes
+
+
+
+    //////////////////////////////////////////
+
+    // at
+
+    // var ar = [12,13,14,15,16,17];
+    // var x = ar.at(1)
+
+    // console.log(x);
+    // console.log(ar.at(-1));
+    // console.log(ar.at(10));
+    // console.log(ar.at(-10));
+
+
+    ///////////////////////////////////////////
+
+
+    // concat()
+
+    // var ar = [1,2,3,4,5];
+    // var br = [7,8,9,0];
+
+    // var x = ar.concat(br); // concat method returns new array by combining two arrays
+    // console.log(x)
+
+
+
+    // how do you dublicate an array
+
+    // var a = [1,2,3];
+    // var b = a;
+    // var c = a.concat([]);
+    // c.push(300);
+    // console.log(a);
+    // console.log(b);
+    // console.log(c);
+
+
+
+    //////////////////////////////////////////
+
+        // .reverse() method
+
+        // var a = [1,2,3,4,5];
+        // console.log(a)
+        // var b = a.reverse();
+        // console.log(a)
+        // console.log(b)
+
+   ///////////////////
+
+        // .join() method
+
+        // var a = [1,2,3,45];
+        // console.log(a);
+        // var b = a.join();
+        // var c = a.join("");
+        // var d = a.join(" ");
+        // var e = a.join("@")
+        // console.log(b)
+        // console.log(c);
+        // console.log(d);
+        // console.log(e)
+
+
+///////////////////////
+
+
+        // reverse a string 
+        // [using array methods + string method]
+
+        // var s1 = "dasari";
+
+
+//////////////////////
+
+         // isArray()
+
+        //  var ar = [12,13,14,17] // array literal
+        //  var br = [1,2,3,4,5]   // br is reference variable
+        //  var ob = {             // ob is also a reference variable
+        //     name: "sai",
+        //     age: 23
+        //  }
+
+        //  console.log(typeof(ar))
+        //  console.log(typeof(br))
+        //  console.log(typeof(ob))
+
+
+        // //  console.log(ar.isArray())
+        //  console.log(Array.isArray(ar));
+        //  console.log(Array.isArray(br));
+        //  console.log(Array.isArray(ob));
+
+
+
+
+///////////////////////
+           
+          // push()
+
+        //   var ar = [12,13]
+        //    ar.push(1,2,3);
+        //    console.log(ar.length)
+        //    var x = ar.push(999)          // returns length of array
+        //   console.log(x)
+        //   console.log(ar);
+
+
+/////////////////////
+
+
+        // pop()
+
+        // var ar = [1,2,3,4,5,6,7,8]
+        // var x =  ar.pop();
+        // var y = ar.pop();               //returns removed element
+        // ar.pop();
+        // console.log(x)
+        // console.log(y)
+        // console.log(ar)
+
+//////////////////////////////////////////
+
+
+        // shift()
+
+        // var ar = [1,2,3,4,5,6,7]
+        // var x = ar.shift();            // returns removed value
+        // console.log(x)
+        // console.log(ar)
+
+        
+/////////////////////////////////////////
+
+
+
+        // unShift()
+
+        // var ar = [1,2,3,4,5,6,7,8];
+        // ar.unshift(0)
+        // var x = ar.unshift(-1);         // returns length
+        // console.log(x)
+        // console.log(ar)
+
+
+
+
+
+/////////////////////////////////////
+
+
+
+         // slice() 
+         // does not modify the orginal array it returns new array
+
+        //  var ar = [1,2,3,4,5,6,7,8,9];
+        // //  var x = ar.slice(3);
+        // //  var x = ar.slice(-5);
+        // //  var x = ar.slice(3,7);
+        // //  var x = ar.slice(3,2);     // first argument should always be less than second argument
+        // //  var x = ar.slice(2,-2);
+        // //  var x = ar.slice(-6,-1);
+        // //  var x = ar.slice(-4,2);
+        // // console.log(ar.slice(ar.length-3)) // gives last 3 values
+        // console.log(x)
+        //  console.log(ar)
+
+
+//////////////////////////////////////
+
+
+        // splice()      // modifies orginal array
+
+        // Splice: Changes the content of an array by removing, replacing,
+        // or adding elements
+
+
+
+
+
+
+        // var ar = [1,2,3,4,5,6,7,8,9];
+
+        // // var x = ar.splice(2)
+        // // var x = ar.splice(2,6)  //(startIndex,no of elements) //from position 2, remove 6 elements:
+
+        // // var x = ar.splice(2,4,"sai")  // removing and adding
+
+        // // var x = ar.splice(2,0,"sai")    // adding without removing elements
+
+        // // var x = ar.splice(2,0,"sai","dasari"); // At position 2, add 2 elements:
+
+
+
+        // console.log(x);
+        // console.log(ar);
+
+
+
+
+
+
+
+
+//////////////////////////////////////
+         
+          // includes()
+
+        //   var a = [1,2,3,4,5,6]
+        //   console.log(a.includes(3))
+        //   console.log(a.includes(30))
+
+
+////////////////////
+
+
+        // indexOf();
+
+        // var a = [1,2,3,4,5,6,3];
+        // console.log(a.indexOf(3))
+
+
+////////////////////
+
+
+         // lastIndexOf();
+
+        //  var a = [1,2,3,4,5,6,3];
+        //  console.log(a.lastIndexOf(3));
+
+
+///////////////////
+
+
+        // sort()
+
+
+        //  var ar = [8,9,6,5,0,1,99,200,500];
+        //  var x = ar.sort();
+        //  console.log(x);
+        //  console.log(ar);
+
+
+/////////////////////
+
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+               
+
+
+  ////////*********  Advanced Array Methods  ****************** //////////////
+
+
+     // forEach()
+
+      // The forEach() method calls a callback function for each element in an array.
+      // The forEach() method is not executed for empty elements.
+      // callback function is called for every element in array
+
+
+//     var ar = [1,2,3,4,5,6,78];
+
+//     var br = ar.forEach(function(x,i,ar){
+//         console.log(x)
+//         // console.log(i)
+//         // console.log(ar)
+//     });
+
+//     console.log(br,"br");
+// //     console.log("sai", "br");
+
+
+
+
+
+
+
+
+        // filter()            returns new array with only orginal array values
+                  // filter returns based on truthy values
+
+        // // The filter() method calls a callback function for each element in an array.
+        // callback function is called for every element in array
+
+
+        // var ar = [1,2,3,4,5,6,78,0,undefined,""];
+        // var br = ar.filter(function (x,i,ar) {
+        //         if(x%2 == 0){
+        //                 return true;
+        //         }
+        //         else{
+        //                 return false;
+        //         }
+        // })
+        // console.log(br);
+
+
+
+
+
+        // var ar = [1,2,3,4,5,6,false,78,0,37,undefined];
+        // var br = ar.filter(function (x,i) {
+        //         if(i%2==0){
+        //            return true;
+        //         }
+        // })
+        // console.log(br);
+
+
+
+
+        // var ar = [1,2,3,4,5,6,78,false,0];
+        // var br = ar.filter(function(x,i){
+        //         return x;
+        // });
+        // console.log(br);
+
+
+
+
+        // var ar = [1,2,3,4,5,6,78,false,0];
+        // var br = ar.filter(function(x,i){
+        //           return i;
+        // })
+        // console.log(br);
+
+
+
+
+        // var ar = [1,2,3,4,5,6,78,false,0];
+        // var br = ar.filter(function(x,i,ar){
+        //           return ar;
+        // })
+        // console.log(br);
+
+
+        
+
+        // var ar = [1,2,3,4,5,6,78,false,0];
+        // var br = ar.filter(function(x,i){
+        //           return x*2;
+        // })
+        // console.log(br);
+
+
+
+        // var ar = [1,2,3,null,4,5,"",6,undefined];
+        // var br = ar.filter(function (x) {
+        //         if(x){
+        //            return true;
+        //         }
+        // })
+        // console.log(br);
+
+
+
+
+
+
+
+
+
+        // map()         returns new array
+
+         // // The map() method calls a callback function for each element in an array.
+        // callback function is called for every element in array
+        // the new array will have same length as orginal array
+
+
+
+        // var ar = [1,2,3,4,5,6,78];
+        // var br = ar.map(function (x,i,ar) {
+        //         return 2*x
+        // })
+        // console.log(br);        // the new array will have same length as orginal array
+
+
+
+        // var ar = [1,2,3,4,5,6,78];
+        // var br = ar.map(function (x) {
+        //         if(x%2===0){
+        //         return x;
+        //         }
+        // })
+        // console.log(br);        // the new array will have same length as orginal array
+
+
+
+
+        // var ar = [1,2,3,4,5,6,78];
+        // var br = ar.map(function (x) {
+        //         if(x===78){
+        //         return x;
+        //         }
+        // })
+        // console.log(br);        // the new array will have same length as orginal array
+
+
+
+
+        //  var ar = [1,2,3,4,5,6,78];
+        // var br = ar.map(function (x) {
+        //         if(x>4){
+        //         return x;
+        //         }
+        // })
+        // console.log(br);        // the new array will have same length as orginal array
+
+
+
+
+
+
+
+        /// reduce
+
+
+
+        // var ar = [1,2,3,4,5]       
+        // var ans = ar.reduce(function(a,b,c,d){   // a-accumulator  b-value c-index d-array
+        
+        //     console.log(a)
+        //     console.log(b)
+        //     console.log(c)
+        //     console.log(d)
+        // //     console.log(ans)
+        // })
+        // // console.log(ans)
+
+
+
+
+        var ar = 
+        
+
+
+
+///////////////////////////////////////////////////////////////
+    
+        
+      // find()
+     // flat()
+     // findIndex()
+     // indexOf()
+     //lastIndexOf()
+     //concat()
+     // every()
+     // some()
+     // includes
+
+
+
+     // find()
+//      var ar = [1,2,3,4,5];
+//      var ans = ar.find(function(x){
+//         return x>3
+//      })
+//      console.log(ans)
+
+
+
+
+       // findIndex()
+//        var ar = [1,2,3,4,5,6]
+//        var ans = ar.findIndex(function(x){
+//              return x>3
+//        })
+//        console.log(ans)
+
+         
+
+          // indexOf()
+
+        //   var ar = [1,2,3,4,5,6,7,6];
+        //   console.log(ar.indexOf(6))
+
+
+
+
+        // lastIndexOf()
+
+        // var ar = [1,2,3,4,3,2,1]
+        // console.log(ar.lastIndexOf(1))
+
+
+
+
+
+
+      // flat
+//       var ar = [0,1,2,3,[5,6],6,[1,[2,3],7]];
+//       console.log(ar.flat())
+//       console.log(ar.flat(2))
+
+
+        
+         // concat()
+
+        //  var ar = [1,2,3,4,5]
+        //  var br = [7,8,9]
+        //  var cr = ar.concat(br);
+        //  console.log(cr)
+
+
+
+        // includes()
+
+        // var ar = [1,2,3,4,5,6]
+        // console.log(ar.includes(4));
+
+
+        // every()
+
+        // var ar = [1,2,3,4,5,6,7];
+        // var ans = ar.every(function(x){
+        //         return x>4
+        // })
+        // console.log(ans);
+
+
+
+        // some()
+
+        // var ar = [1,2,3,4,6,9]
+        // var ans = ar.some(function(x){
+        //         return x>2
+        // })
+        // console.log(ans)
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

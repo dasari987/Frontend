@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <!-- 6. Take an array of image urls and display the images in browser. -->
+
+    <h1 class="imgs" id="ims" style="color: aquamarine;">hello</h1>
+
+    <div id="d1">
+        
+    </div>
+
+    <style>
+        .imgs{
+            border: 1px solid red;
+        }
+
+        #ims{
+            border: 2px solid green;
+        }
+    </style>
+
+    <script type="text/babel">
+        var arImages = [
+                         "https://images.unsplash.com/photo-1615751072497-5f5169febe17?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y3V0ZSUyMGRvZ3xlbnwwfHwwfHx8MA%3D%3D",
+                         "https://media.istockphoto.com/id/1425207162/photo/studio-shot-of-welsh-corgi-pembroke-catching-a-treat.jpg?s=612x612&w=0&k=20&c=f3dOX_gV5pj6YPsj2Uja-U7Xa3rue5xIyzU-u7jXIAY=",
+                          "https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTA4L2hpcHBvdW5pY29ybjc2X3Bob3RvX29mX2JhYnlfbGFicmFkb3JfeWF3bmluZ19pc29sYXRlZF9vbl93aGl0ZV82YjVmMTIwMS02ZTU1LTRiMzQtOWQ4ZC0yNTM0NWQ4MmM3MDEucG5n.png"
+                        ]
+
+        var jsximg = <span>
+                         {
+                            arImages.map((im)=>{
+                                return <img src={im}  className='imgs' id='ims'  style={{width:'250px',height:'300px',objectFit:'contain'}}></img>
+                            })
+                         }
+                     </span>
+        ReactDOM.render(jsximg,document.getElementById('d1'))
+    </script>
+
+</body>
+</html>

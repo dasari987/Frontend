@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .container {
+        text-align: center;
+        margin: 0 auto;
+        padding: 10px;
+      }
+      #previewImage {
+        display: block;
+        max-width: 300px;
+        margin: 0 auto;
+        padding-top: 10px;
+      }
+    </style>
+<!-- accept="image/*" -->
+    <div class="container">
+      <input type="file" id="inputImage"  />
+      <img id="previewImage" />
+      <p id="errorMsg"></p>
+    </div>
+
+    <button>sdfgh</button>
+
+    <script>
+      function previewImage(event) {
+        console.log("qwe")
+        const reader = new FileReader();
+        reader.onload = function () {
+          const element = document.getElementById("previewImage");
+          element.src = reader.result;
+        };
+        reader.onerror = function () {
+          const element = document.getElementById("errorMsg");
+          element.value = "Couldn't load the image.";
+        };
+        reader.readAsDataURL(event.target.files[0]);
+      }
+
+      const input = document.getElementById("inputImage");
+      input.addEventListener("change", (event) => {
+        previewImage(event);
+        console.log("huu")
+      });
+     
+    </script>
+
+  </body>
+</html>

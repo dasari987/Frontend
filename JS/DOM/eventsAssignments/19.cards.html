@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="text-align: center; background-color: antiquewhite; font-size: 20px;">
+    
+    <style>
+        img{
+            height: 300px;
+            width: 300px;
+            margin-right: 7px;
+            margin-top: 7px;
+            border-radius: 5px;
+        }
+        #maindiv{
+            border: 2px solid red;
+            width: 300px;
+            height: 250px;
+            background-color: yellow;
+            margin-bottom: 20px;
+            margin-left: 20px;
+            color: red;
+        }
+        #maindiv span{
+            text-align: start;
+        }
+        #profile{
+            border-radius: 50%;
+            height: 150px;
+            width: 150px;
+        }
+    </style>
+  <div style="text-align: center; margin-top: 100px;">
+        <h1 style="color: red;">Show images using URL</h1>
+
+    <form action="" onsubmit="addContact(event)">
+        <label for="">Name:</label>
+        <input id="input" type="text" name="name" style="margin-left: 50px;">
+       <br>
+       <label for="">Number:</label>
+        <input id="input" type="text" name="num" style="margin-left: 33px;">
+       <br>
+       <label for="">Email:</label>
+        <input id="input" type="text" name="email" style="margin-left: 50px;">
+       <br>
+       <label for="">Image URL:</label>
+        <input id="input" type="text" name="url" style="margin-left: 5px;">
+       <br>
+         
+        <button style=" background-color: orange; border: 0px; border-radius: 3px; padding: 7px 20px; margin-right: 15px; margin-top: 19px; margin-bottom: 35px;">Add Contact</button>
+    </form>
+        
+      <div id = cards >
+           
+      </div>
+        
+  </div>
+    <script>
+         var cardArr = []
+        function addContact(e) {
+            e.preventDefault();
+            var obj = {
+            }
+            var formdata = new FormData(e.target)
+            for(var x of formdata.entries()){
+                obj[x[0]] = x[1]
+            }
+            cardArr.push(obj)
+            document.getElementById("cards").innerHTML = ""
+            
+            console.log(cardArr);
+            
+            genUI()
+
+            e.target.name.value=""
+            e.target.num.value=""
+            e.target.email.value=""
+            e.target.url.value="" 
+        }
+
+
+
+        function  genUI() {
+            cardArr.forEach(function(obj){
+               var div = document.createElement('div')
+               div.id='maindiv'
+               var img = document.createElement('img')
+               img.id = "profile"
+               var namekey = document.createElement('span')
+               namekey.innerHTML = "Name :"
+               var name = document.createElement('span')
+               var numberkey = document.createElement('span')
+               var number = document.createElement('span')
+               var emailkey = document.createElement('span')
+               var email = document.createElement('span')
+               var br = document.createElement('br')
+               var br1 = document.createElement('br')
+               var br2 = document.createElement('br')
+               console.log(obj)
+                  img.src = obj["url"]
+                  namekey.innerHTML = "Name : "
+                  name.innerHTML = obj["name"]
+                  numberkey.innerHTML = "Number : "
+                  number.innerHTML = obj["num"]
+                  emailkey.innerHTML = "Email : "
+                  email.innerHTML = obj["email"]
+                  div.appendChild(img)
+                  div.appendChild(br)
+                  div.appendChild(namekey)
+                  div.appendChild(name)
+                  div.appendChild(br1)
+                  div.appendChild(numberkey)
+                  div.appendChild(number)
+                  div.appendChild(br2)
+                  div.appendChild(emailkey)
+                  div.appendChild(email)
+
+                  console.log(div);
+                  
+               document.getElementById("cards").appendChild(div)
+            })
+        }
+        
+
+
+
+
+
+
+
+
+        //   function addContact(e) {
+        //      e.preventDefault()
+        //     //  console.log(e)
+        //      var obj = {
+                
+        //      }
+        //      var formdata = new FormData(e.target)
+        //      for(var x of formdata.entries()){
+        //         //    console.log(x)
+        //         obj[x[0]] = x[1]
+        //         console.log(obj)
+        //      }
+        //   }
+   
+    </script>
+</body>
+</html>

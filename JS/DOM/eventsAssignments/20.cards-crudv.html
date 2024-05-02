@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="text-align: center; background-color: antiquewhite; font-size: 20px;">
+    
+    <style>
+        img{
+            height: 300px;
+            width: 300px;
+            margin-right: 7px;
+            margin-top: 17px;
+            border-radius: 5px;
+        }
+        #maindiv{
+            border: 2px solid red;
+            width: 300px;
+            height: 267px;
+            background-color: yellow;
+            margin-bottom: 20px;
+            margin-left: 20px;
+            color: red;
+        }
+        #maindiv span{
+            text-align: start;
+        }
+        #profile{
+            border-radius: 50%;
+            height: 150px;
+            width: 150px;
+        }
+        #del{
+            position: absolute;
+            left: 310px;
+            cursor: pointer;
+            font-weight: 800;
+        }
+    </style>
+  <div style="text-align: center; margin-top: 100px;">
+        <h1 style="color: red;">Add Contact Cards With CRUD Operations</h1>
+
+    
+        <label for="">Name:</label>
+        <input id="name" type="text" name="name" style="margin-left: 50px;">
+       <br>
+       <label for="">Number:</label>
+        <input id="number" type="text" name="num" style="margin-left: 33px;">
+       <br>
+       <label for="">Email:</label>
+        <input id="email" type="text" name="email" style="margin-left: 50px;">
+       <br>
+       <label for="">Image URL:</label>
+        <input id="url" type="text" name="url" style="margin-left: 5px;">
+       <br>
+         
+        <button id="addContact" onclick="addContact()" style=" background-color: orange; border: 0px; border-radius: 3px; padding: 7px 20px; margin-right: 15px; margin-top: 19px; margin-bottom: 35px;">Add Contact</button>
+        <button id="saveContact" onclick="saveContact()" style=" display: none; background-color: orange; border: 0px; border-radius: 3px; padding: 7px 20px; margin-right: 15px; margin-top: 19px; margin-bottom: 35px;">Save Contact</button>
+    
+        
+      <div id = cards >
+           
+      </div>  
+  </div>
+
+    <body>
+     <script>
+
+        var cardArr = []
+        var index = 0;
+
+        function addContact() {
+            var obj = {
+            }
+            obj.name = document.getElementById('name').value
+            obj.number = document.getElementById('number').value
+            obj.email = document.getElementById('email').value
+            obj.url = document.getElementById('url').value
+
+            cardArr.push(obj)
+            console.log(cardArr);
+            
+            genUI()
+
+            document.getElementById('name').value =''
+            document.getElementById('number').value = ''
+            document.getElementById('email').value = ''
+            document.getElementById('url').value =''
+        }
+
+
+        function saveContact() {
+             var obj = cardArr[index]
+
+            obj.name = document.getElementById('name').value
+            obj.number = document.getElementById('number').value
+            obj.email = document.getElementById('email').value
+            obj.url = document.getElementById('url').value
+
+            genUI()
+
+            document.getElementById("saveContact").style.display = 'none'
+            document.getElementById("addContact").style.display = 'inline-block'
+
+            document.getElementById('name').value =''
+            document.getElementById('number').value = ''
+            document.getElementById('email').value = ''
+            document.getElementById('url').value =''
+        }
+
+
+
+        function  genUI() {
+              document.getElementById("cards").innerHTML = ""
+
+            cardArr.forEach(function(obj,i){
+               var div = document.createElement('div')
+               div.id='maindiv'
+
+               var delbtn = document.createElement('span')
+               delbtn.innerHTML = 'X'
+               delbtn.id = 'del'
+               div.appendChild(delbtn)
+
+               var img = document.createElement('img')
+               img.id = "profile"
+               img.src = obj["url"]
+               var br = document.createElement('br')
+                div.appendChild(img)
+                div.appendChild(br)
+
+               var namekey = document.createElement('span')
+               namekey.innerHTML = "Name : "
+               var name = document.createElement('span')
+               name.innerHTML = obj["name"]
+               var br1 = document.createElement('br')
+                div.appendChild(namekey)
+                div.appendChild(name)
+                div.appendChild(br1)
+
+               var numberkey = document.createElement('span')
+               numberkey.innerHTML = "Number : "
+               var number = document.createElement('span')
+               number.innerHTML = obj["number"]
+               var br2 = document.createElement('br')
+                div.appendChild(numberkey)
+                div.appendChild(number)
+                div.appendChild(br2)
+
+               var emailkey = document.createElement('span')
+               emailkey.innerHTML = "Email : "
+               div.appendChild(emailkey)
+               var email = document.createElement('span')
+               email.innerHTML = obj["email"]
+               div.appendChild(email)
+               var br3 = document.createElement('br')
+               div.appendChild(br3)
+
+               var edbtn = document.createElement('button')
+               edbtn.innerHTML = 'Edit'
+               div.appendChild(edbtn)
+
+               console.log(obj)
+               console.log(div);
+                  
+               document.getElementById("cards").appendChild(div)
+
+               edbtn.onclick = function (){
+                  index = i;
+                  document.getElementById('name').value = obj['name']
+                  document.getElementById('number').value = obj['number']
+                  document.getElementById('email').value = obj['email']
+                  document.getElementById('url').value = obj['url']
+
+                  document.getElementById("saveContact").style.display = 'inline-block'
+                  document.getElementById("addContact").style.display = 'none'
+               }
+
+               delbtn.onclick = function (){
+                cardArr.splice(i,1)
+
+                genUI()
+
+                document.getElementById('name').value =''
+                document.getElementById('number').value = ''
+                document.getElementById('email').value = ''
+                document.getElementById('url').value =''
+               }
+            })
+        }
+
+    </script>
+</body>
+</html>

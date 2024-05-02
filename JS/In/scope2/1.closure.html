@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- closure -->
+    <!-- closure is a scope -->
+    <!-- the closure scope will be added to the inner function by outer function -->
+    <script>
+        // var j = 20
+        // function inc() {               
+        //     var i = 0;
+        //     function increment() {     // inner function will maintain outer function variables in the closure scope
+        //         i++;                    // outer function will bind its variables to inner functions under closure scope
+        //         console.log("i::",i)
+        //     }
+        //     increment()
+        //     increment()
+        //     // console.dir(inc)
+        //     console.dir(increment)
+        // }
+        // inc()
+        // // inc()
+        // console.dir(inc)
+
+
+        ///////////////////////////////////////////////////////////////
+
+
+
+        // var j = 20
+        // function inc() {               
+        //     var i = 0;
+        //     {
+        //         let b = 999;
+        //         function increment() {    
+        //         i++; 
+        //         b=b+1;                   
+        //         console.log("i::",i)
+        //         }
+        //     }
+        //     increment()
+        //     increment()
+        //     console.dir(increment)
+            
+        // }
+        // inc()
+        // // inc()
+
+
+        ///////////////////////////////////////////////////////////////////
+
+
+        // var j = 20
+        // function inc() {               
+        //     var i = 0;
+        //     i++;
+        //     i=i*3;
+        //     i=i-45;
+        //         function increment() {                      
+        //          console.log("i::",i)
+        //         }
+        //         return increment
+        // }
+        // var x = inc()
+        // console.log(x)
+        // console.dir(x)
+
+
+        //////////////////////////////////////////////////////////////////////////////
+
+
+        // var j = 20
+        // function inc() {               
+        //     var i = 1;
+        //         function increment() { 
+        //             i++                     
+        //          console.log("i::",i)
+        //         }
+        //         return increment
+        // }
+        // var x = inc()
+        // console.log(x)
+        // console.dir(x)
+
+
+        //////////////////////////////////////////////////////////////
+
+        // var j = 20
+        // function inc() {               
+        //     var i = 1;
+        //         function increment() { 
+        //             i++                     
+        //          console.log("i::",i)
+        //          console.log(j)
+        //         }
+        //         return increment
+        // }
+        // var x = inc()
+        // console.dir(x)
+        // x();
+        // x();
+        // x();
+
+        ///////////////////////////////////////////////////////////////////////
+    </script>
+</body>
+</html>

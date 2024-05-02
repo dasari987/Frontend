@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+     <div id="root">
+
+     </div>
+
+     <script type="text/babel">
+
+             
+            function Gamecomponent(){
+
+                let [alpha, setalpha] = React.useState(['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'])
+                let [leter, setleter] = React.useState()
+                let [score, setscore] = React.useState(0)
+                let [incorrect, setincorrect] = React.useState(0)
+                let x = React.useRef()
+                    
+
+                React.useEffect(()=>{
+                    if(incorrect>=5){
+                        console.log(incorrect);
+                        clearInterval(x.current)
+                     }
+                },[incorrect])
+
+                
+
+                React.useEffect(() => {    
+                    x.current = setInterval(()=>{
+                        var num = Math.floor(Math.random()*27)
+                        setleter(num)
+                    },2000)
+                },[]);
+
+                
+
+
+                function check(){
+                   var value = document.getElementById('inp').value.toUpperCase();
+                   if(value==alpha[leter]){
+                     setscore(score+1)
+                   }
+                   else{
+                    if(document.getElementById('inp').value){
+                        setincorrect(incorrect+1)
+                    }
+                   }
+                   document.getElementById('inp').value=""
+                }
+                
+
+                return <div style={{border:'1px solid',height:'200px', width:'400px'}}>
+                             <div style={{display:'flex',justifyContent:'space-around', marginBottom:'20px'}}>
+                             <div>incorrect:{incorrect}</div>
+                             <div style={{border:'1px solid',borderRadius:'50%', width:'40px',height:'30px',paddingTop:'10px',paddingLeft:'26px'}}>{alpha[leter]}</div>
+                             <div>score:{score}</div>
+                            </div>
+                             <input type="text" onKeyUp={check} id='inp' style={{marginLeft:'125px'}}/>
+                       </div>
+            }
+        
+
+            ReactDOM.render(<Gamecomponent></Gamecomponent>,document.getElementById('root'))
+            
+     </script>
+</body>
+</html>

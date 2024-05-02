@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  #upd{
+    display: none;
+  }
+</style>
+<body>
+    <input type="text" id="inp">
+    <button id="save" onclick="save()">Save</button>
+    <button id="upd" onclick="update()">UPDATE</button>
+    <ul id="d1">
+
+    </ul>
+    <script>
+        var ar = []
+        var index = 0
+          function save() {
+            var name = document.getElementById("inp")
+             ar.push(name.value)
+             console.log(ar)
+            genUI()
+            name.value = ""; 
+          }
+
+          function update() {
+            // console.log(index)
+                var updValue = document.getElementById("inp").value
+                ar[index] = updValue
+                document.getElementById("inp").value = "";
+                genUI();
+              console.log(ar)
+              document.getElementById('upd').style.display = "none"
+              document.getElementById('save').style.display = "inline-block"
+          }
+
+          
+
+          function genUI(){
+            document.getElementById("d1").innerHTML="";
+            ar.forEach(function(a,i){
+              var li = document.createElement('li')
+              li.innerHTML = a;
+              document.getElementById('d1').appendChild(li)
+      
+              var del = document.createElement("button")
+              del.innerHTML = "DELETE"; 
+              li.appendChild(del)    
+              
+              var edit = document.createElement("button")
+              edit.innerHTML = "EDIT"
+              li.appendChild(edit)
+
+              del.onclick = function(){
+                  ar.splice(i,1);
+                  console.log(i);
+                  console.log(a);
+                  console.log(ar);
+                  genUI();
+                  document.getElementById("inp").value = "";
+                }
+              
+              edit.onclick = function(){
+                var val = document.getElementById("inp").value
+                document.getElementById("inp").value = a;
+                index = i;
+                document.getElementById('upd').style.display = "inline-block"
+                document.getElementById('save').style.display = "none"
+              }
+           })
+          }
+    </script>
+
+
+
+  <!-- <button onclick="abc()">increase</button>
+  <script>
+      var x = 10;
+      function abc() {
+         x = "hii"
+         console.log(x)
+      }
+      console.log(x)
+  </script> -->
+
+
+    <!-- <script>
+        var ar = [1,2,3,4,5]
+        n = 2
+       var ans = ar.splice(n,1)
+      console.log(ar)
+    </script> -->
+
+</body>
+</html>

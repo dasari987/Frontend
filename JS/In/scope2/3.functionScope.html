@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // outer function variables values are binded to inner function under closure scope
+
+
+        ///////////////////////////////
+
+        // function abc() {
+        //     var d = 4;    // not a global variable
+        // }
+        // abc();
+        // // console.dir(abc)
+        // console.log(d)
+
+        /////////////////////////////////
+
+        // var p = 300;
+        // function abc() {
+        //     console.log(p)     // global variable can be accessed inside function
+        // }
+        // abc();
+
+        //////////////////////////////////
+
+        // var p = 300;
+        // function abc() {
+        //     var p = 5000;
+        //     console.log(p)     
+        // }
+        // abc();
+        // console.log(p)
+
+        ///////////////////////////////////
+
+        // var p = 300;
+        // function abc() {
+        //     console.log(p)
+        //     var p = 5000;     
+        // }
+        // abc();
+        // console.log(p)
+
+        ///////////////////////////////////
+
+        //  var p = 300;
+        // function abc() {
+        //     console.log(p)
+        //     var p = 5000;  
+        //     console.log(p)   
+        // }
+        // abc();
+        // console.log(p)
+
+        ///////////////////////////////////
+
+        // var p = 300;
+        // function abc() {         
+        //     var p = 6000
+        //     console.log(p)      // first it checks variable in function block if it is present it prints. if not present then it checks in global scope if it is present in global scope it prints
+        // }
+        // abc();
+
+
+        //////////////////////////////////
+
+         
+        // function abc() {
+        //     console.log(p)     
+        // }
+        // abc();
+
+        ////////////////////////////////////
+
+        // var x = 100
+        //  function pqr() {
+        //     console.log(x)
+        //     console.log(pqr)
+        //     console.dir(pqr)
+        //  }
+        //  pqr()
+
+        //////////////////////////////////////
+
+        // var x = 100
+        //  function pqr() {
+        //     console.log(x)
+        //     console.dir(pqr)
+        //  }
+        //  pqr();
+        //  x=x+100;
+        //  pqr();
+
+        /////////////////////////////////////////
+
+
+        // var x = 100
+        //  function pqr() {
+        //     var q = 123
+        //     console.log(x)
+        //     function xyz() {
+        //         console.log(q)
+        //         console.log(x)
+        //     }
+        //     console.dir(xyz)
+        //  }
+        //  pqr()
+
+
+         //////////////////////////////////////////////
+
+
+        //  var x = 100
+        //  function pqr() {
+        //     var q = 123
+        //     console.log(x)
+        //         {
+        //         let f = 334;
+        //         function xyz() {
+        //         console.log(q)
+        //         console.log(x)
+        //         console.log(f)
+        //         }
+        //         xyz()
+        //         console.dir(xyz)
+        //        }
+        //  }
+        //  pqr()
+
+
+
+         var x = 100
+         function pqr() {
+            var q = 123
+            console.log(x)
+                function a(){
+                var f = 334;
+                }
+                function xyz() {
+                console.log(q)
+                console.log(x)
+                console.log(f)
+                
+                
+                console.dir(xyz)
+               }
+               xyz()
+         }
+         pqr()
+         console.dir(pqr)
+         
+         
+
+    </script>
+</body>
+</html>

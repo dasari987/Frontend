@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+     <div id="root">
+
+     </div>
+
+     <script type="text/babel">
+
+        function Appcomponent() {
+
+            let [val,setVal] = React.useState()
+
+            function inp(e) {
+                document.getElementById('inpdta').innerHTML = e.target.value
+                setVal(e.target.value)
+            }
+
+
+            function showdta() {
+                document.getElementById('num').innerHTML = 100
+            }
+
+
+
+            return(
+                <div style={{border:'1px solid'}}>
+                     <div style={{backgroundColor:'skyblue',display:'flex', columnGap:'20px', padding:'20px', margin:'10px'}}>
+                        <div>home</div>
+                        <div>aboutus</div>
+                        <div>contactus</div>
+                        <div>dashboard</div>
+                        <div>addservice</div>
+                     </div>
+                     <h1 style={{margin:'10px'}}>App Component</h1>
+                     <input type="text" style={{margin:'10px'}} onKeyUp={(e)=>{inp(e)}} />
+                     <h2 id='inpdta' style={{margin:'12px'}}></h2>
+                     <h1 id='num'></h1>
+                     <Childcomp1 dta1 = {val}></Childcomp1>
+                     <Childcomp2 fnc={showdta}></Childcomp2>
+                </div>
+            )
+        }
+
+
+        function Childcomp1(props) {
+            return(
+                <div style={{border:'1px solid',margin:'10px',padding:'20px'}}>
+                    <h1>First Component</h1>
+                    <h2>{props.dta1}</h2>
+                </div>
+            )
+        }
+
+        function Childcomp2(props) {
+            console.log(props)
+            return(
+                <div style={{border:'1px solid',margin:'10px',padding:'20px'}}>
+                    <h1>Second Component</h1>
+                    <button onClick={()=>{props.fnc()}}>Send Data</button>
+                </div>
+            )
+        }
+
+        ReactDOM.render(<Appcomponent></Appcomponent>,document.getElementById('root'))
+
+    </script>
+</body>
+</html>

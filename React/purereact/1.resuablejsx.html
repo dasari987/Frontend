@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root">
+
+    </div>
+
+    <script type="text/babel">
+        //   var Jh1 = function(){            // Jh1 is custom element
+        //     return <h1>HELLO</h1>
+        //   }
+
+        //   var pj2 = <div> 
+        //                  welcome to reusability
+        //                  <Jh1/>     
+        //             </div>
+        //  ReactDOM.render(pj2,document.getElementById('root'))
+
+
+        //////////////////////////////////////////////////////////////////
+
+
+        // var Card = function(){   // component
+        //          return <div style={{border:'1px solid',backgroundColor:'skyblue',width:'200px', textAlign:'center', borderRadius:'6px'}}>
+        //                      <h1>Iphone</h1>
+        //                      <img src="https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1708678682/Croma%20Assets/Communication/Mobiles/Images/300823_0_qhq6qz.png?tr=w-600" alt="" style={{width:'200px'}}/>
+        //                      <h2>Price:75000</h2>
+        //                 </div>
+        // }
+
+        // var pj2 = <div>
+        //               welcome to reusability
+        //               <Card/>
+        //               <Card/>
+        //               <Card/>
+        //           </div>
+        //           ReactDOM.render(pj2,document.getElementById('root'))
+
+
+        /////////////////////////////////////////////////////////////////////////////////
+
+
+        var ip = {
+            title: 'Iphone15ProMax',
+            price: 78000,
+            img: "https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1708678682/Croma%20Assets/Communication/Mobiles/Images/300823_0_qhq6qz.png?tr=w-600"
+        }
+
+        var sp = {
+            title: 'SamsungS23Pro',
+            price: 48000,
+            img: "https://5.imimg.com/data5/CB/DT/BE/SELLER-100534408/samsung-mobile-phones-a50s-4-128-.jpg"
+        }
+
+        var vp = {
+            title: 'VivoX',
+            price: 98000,
+            img: "https://images.hindustantimes.com/tech/htmobile4/P37428/images/Design/150268-v4-vivo-t3-mobile-phone-large-8.jpg"
+        }
+                                      //details is an attribute
+        var Card = function(props){   // component
+            console.log(props)
+                 return <div style={{border:'1px solid',backgroundColor:'skyblue',width:'200px', textAlign:'center', borderRadius:'6px'}}>
+                             <h2>{props.details?.title}</h2>
+                             <img src={props.details?.img} alt="" style={{width:'200px'}}/>
+                             <h2>{props.details?.price}</h2>
+                        </div>
+        }
+
+        var pj2 = <div>
+                      welcome to reusability
+                      <Card details={ip}/>   
+                      <Card details={sp}></Card>
+                      <Card details = {vp}/>
+                   </div>
+                  ReactDOM.render(pj2,document.getElementById('root'))
+    </script>
+</body>
+</html>

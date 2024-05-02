@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div" onclick="changeColor(event,colours)" style="width:226px; height: 140px; border: 1px solid; margin-bottom: 10px;"></div>
+<script>
+    var colours = ["red","blue","green","pink","purple","skyblue","black"]
+    var i = 0;
+    document.getElementById('div').style.backgroundColor = colours[i]
+
+    function changeColor(e,ar) {
+        if(i==colours.length-1){
+            i=0;  
+            e.target.style.backgroundColor = colours[i]        
+        }
+        else{
+            i = i+1;
+            e.target.style.backgroundColor = colours[i]
+        }
+    }
+
+   
+
+
+
+
+
+
+
+
+
+    
+
+    // var a = 12;
+    // b = a++;
+    // console.log(a)
+    // console.log(b)
+
+    // var c = 13;
+    // d = ++c;
+    // console.log(c)
+    // console.log(d)
+
+
+</script>
+</body>
+</html>

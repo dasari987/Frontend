@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+     <div id="root">
+
+     </div>
+
+     <body>
+        <script type="text/babel">
+
+               function Counter(prop) {
+                
+                let [c,setc] = React.useState(prop.intval);
+                    return(
+                        <div>
+                            <h1>Count:{c}</h1>
+                            <button onClick={()=>{inc(prop.incream)}}>Increment</button>
+                            <button onClick={()=>{dec(prop.decream)}}>Decrement</button>
+                        </div>
+                    )
+
+                  function inc(incval) {
+                       setc(c+incval)
+                  }
+
+                  function dec(decval) {
+                       setc(c-decval)
+                  }
+               }
+
+
+               function Call(){
+                   return (
+                     <div>
+                          <Counter intval = {0} incream = {1} decream = {2}></Counter>
+                          <Counter intval = {100} incream = {10} decream = {20}></Counter>
+                     </div>
+                   )
+                 } 
+
+              
+
+               ReactDOM.render(<Call/>,document.getElementById('root'))
+        </script>
+     </body>
+</html>

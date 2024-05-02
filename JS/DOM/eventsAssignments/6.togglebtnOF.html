@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- <button id="btn" style="padding: 19px;">ON</button>
+
+    <script>
+        var x = document.getElementById('btn')
+
+         x.onclick =  function changebtn(e) {
+             console.log(e) // pointerevent object
+             
+             if(e.target.innerHTML == "ON"){
+                 e.target.innerHTML = "OFF"
+             }
+             else{
+                e.target.innerHTML = "ON"
+             }
+           }
+    </script> -->
+    <!-- /////////////////////////////////////////////////////////////////////////////////// -->
+
+    <button id="btn" style="padding: 19px;">ON</button>
+
+    <script>
+        var x = document.getElementById('btn')
+
+         x.onclick =  changebtn;
+         
+         
+         function changebtn(e) {
+             console.log(e) // pointerevent object
+             
+             if(e.target.innerHTML == "ON"){
+                 e.target.innerHTML = "OFF"
+             }
+             else{
+                e.target.innerHTML = "ON"
+             }
+           }
+    </script>
+
+     <!-- /////////////////////////////////////////////////////////////////////////// -->
+
+<!-- 
+    <button id="btn" style="padding: 19px;">ON</button>
+
+    <script>
+        var x = document.getElementById('btn')
+        
+         x.addEventListener('click', function changebtn(e) {
+             console.log(e) // pointerevent object
+             
+             if(e.target.innerHTML == "ON"){
+                 e.target.innerHTML = "OFF"
+             }
+             else{
+                e.target.innerHTML = "ON"
+             }
+           })
+    </script> -->
+
+
+    <!-- ////////////////////////////////////////////////////////////////////////////// -->
+
+
+    
+    <!-- <button id="btn" style="padding: 19px;">ON</button>
+
+    <script>
+        var x = document.getElementById('btn')
+        
+         x.addEventListener('click', changebtn)
+
+         function changebtn(e) {
+             console.log(e) // pointerevent object
+             
+             if(e.target.innerHTML == "ON"){
+                 e.target.innerHTML = "OFF"
+             }
+             else{
+                e.target.innerHTML = "ON"
+             }
+           }
+    </script> -->
+
+      <!-- ///////////////////////////////////////////////////////////////////////// -->
+
+    <!-- <button onclick="changebtn(event)" style="padding: 19px;">ON</button>
+
+    <script>
+           function changebtn(e) {
+             console.log(e) // pointerevent object
+             
+             if(e.target.innerHTML == "ON"){
+                 e.target.innerHTML = "OFF"
+             }
+             else{
+                e.target.innerHTML = "ON"
+             }
+           }
+    </script> -->
+</body>
+</html>

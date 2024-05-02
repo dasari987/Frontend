@@ -1,0 +1,549 @@
+<script>
+    //  1.Write a function which can return the sum of two numbers.
+    //                         function add(a,b){
+    //                             …………………
+    //                         }
+    //                         var sum = add(45,67);
+    //                         console.log(sum);
+    //                         //Expected output: 112
+
+
+
+    //  function add(i,j){
+    //     return i+j;
+    //  }
+
+    //  var sum = add(5,5);
+    //  console.log(sum);
+
+    ////////////////////////////
+
+
+    // 2. Write a function which can return the greatest of the three numbers passed in arguments.
+    //                         function compare(a,b,c){
+    //                             …………………
+    //                         }
+    //                         var greatest = compare(45,67,23);
+    //                         console.log(greatest);//67
+
+     
+    //  function compare(a,b,c){
+    //     if(a>b && a>c){
+    //         return a;
+    //     }
+    //     if(b>a && b>c){
+    //         return b;
+    //     }
+    //     else{
+    //         return c;
+    //     }
+    // }
+    // var greatest = compare(5,33,7)
+    // console.log(greatest);
+
+    ////////////////////////////////
+
+
+
+
+    ////////////////////////////
+
+    // 3.Write a function which can print the given arguments in ascending order.
+                            
+    //                         function sortNums(a,b,c){
+    //                         …………………
+    //                         }
+    //                         var ascending = sortNums(45,7,68);
+    //                         console.log(ascending);
+
+
+   //  function sortNums(num1,num2,num3) {
+   //      if(num1<num2 && num1<num3 && num2>num1 && num2<num3 && num3>num1 && num3>num2){
+   //      console.log(num1,num2,num3)
+   //   }
+
+   //   else if(num1<num2 && num1<num3 && num3>num1 && num3<num2 && num2>num1 && num2>num3){
+   //      console.log(num1,num3,num2)
+   //   }
+
+   //   else if(num2<num1 && num2<num3 && num1>num2 && num1<num3 && num3>num1 && num3>num2){
+   //      console.log(num2,num1,num3);
+   //   }
+
+   //   else if(num2<num1 && num2<num3 && num3>num2 && num3<num1 && num1>num2 && num1>num2){
+   //      console.log(num2,num3,num1)
+   //   }
+
+   //   else if(num3<num1 && num3<num2 && num1>num3 && num1<num3 && num2>num1 && num2>num3){
+   //      console.log(num3,num1,num2)
+   //   }
+
+   //   else{
+   //      console.log(num3,num2,num1);
+   //   }
+   //  }
+
+   //  var ascendingOrder = sortNums(444,999,99)
+    
+
+
+
+
+    ////////////////////////////
+
+    // 4.Write a function which can return the factorial of a number.
+                            
+    // function fact(a){
+    //                         …………………
+    //                         }
+    //                         var factorial = fact(4);
+    //                         console.log(factorial);
+
+
+
+    // function fact(a){
+    //     var f = 1;
+    //     for(var i =1; i<=a; i++){
+    //          f = f*i;
+    //     }
+    //     return f;
+    // }
+
+    // var factorial = fact(5);
+    // console.log(factorial);
+
+
+
+    /////////////////////////////
+
+
+
+    // 5.Write a function which can to return the reverse of a given number.
+    //                         function rev(a){
+    //                         …………………
+    //                         }
+    //                         var reverse = rev(4);
+    //                         console.log(reverse);
+
+
+    // function rev(num) {
+    //     var reversed = 0;
+    //     while(num>0){
+    //        var digit = num%10;
+    //        reversed = reversed*10 + digit;
+    //        num = parseInt(num/10);
+    //     }
+    //     return reversed;
+    // }
+
+    // var reverse = rev(123456);
+    // console.log(reverse);
+
+
+
+    ////////////////////////////////
+
+
+    // 6.Write a function which can check a given number is prime number or not
+
+
+    // function isPrime(n) {
+    //     var count = 0;
+    //     for(var i = 1; i<=n; i++){
+    //         if(n%i===0){
+    //             count++;
+    //         }
+    //     }
+    //     if(count<=2){
+    //         return "prime";
+    //     }
+    //     else{
+    //        return "not prime";
+    //     }
+    // }
+
+    // var prime = isPrime(13)
+    // console.log(prime)
+
+
+    ////////////////////////////////
+
+
+    // 7.Write a function which can check a given number is palindrome or not
+
+    // function isPalindrome(num) {
+    //     var temp = num;
+    //     var reversed = 0;
+    //     while(num){
+    //         var digit = num%10;
+    //         reversed = reversed*10 + digit;
+    //         num = parseInt(num/10);
+    //     }
+    //     if(temp == reversed){
+    //         return "palindrome";
+    //     }
+    //     else{
+    //         return "not palindrome"
+    //     }
+    // }
+
+    // var palindrome = isPalindrome(123321)
+    // console.log(palindrome)
+
+
+    /////////////////////////////////
+
+
+    // 8.Write a function to return the number of digits in the given number.
+
+    // function numOfDigits(num) {
+    //     var count = 0;
+    //     while(num>0){
+    //         var digit = num%10;
+    //         count++;
+    //         num = parseInt(num/10);
+    //     }
+    //     return count;
+    // }
+
+    // var digits = numOfDigits(123);
+    // console.log(digits);
+
+    //////////////////////////////////
+
+
+    //9. Write a function that prints all even numbers between 1 and 20.
+
+    // function evenNumbers(a,b) {
+    //     var ar = []
+    //     for(var i = a; i<=b; i++){
+    //         if(i%2==0){
+    //             ar.push(i)
+    //         }
+    //     }
+    //     return ar;
+    // }
+
+    // var even = evenNumbers(1,20);
+    // console.log(even);
+
+    // for(var i = 0; i<=even.length-1; i++){
+    //     console.log(even[i]);
+    // }
+    
+
+    /////////////////////////////////
+
+
+    // 17.Write a function which can check a given number is armstrong number or not
+
+    // function isAmstrong(num) {
+    //     var temp = num;
+    //     var noOfDigits = num.toString().length;
+
+    //     var sum = 0;
+    //     while(num>0){
+    //         var digit = num%10;
+    //         sum = sum + digit**noOfDigits;
+    //         num = parseInt(num/10);
+    //     }
+    //     console.log(sum)
+    //     if(temp == sum){
+    //         return "Amstrong"
+    //     }
+    //     else{
+    //         return " Not a Amstrong"
+    //     } 
+    // }
+
+    // var Amstrong = isAmstrong(153);
+    // console.log(Amstrong)
+
+   
+
+
+    ///////////////////////////////////////
+
+
+    // 21. Cube of any number using the function.
+
+    // function cube(num) {
+    //     return num**3;
+    // }
+
+    // var ans = cube(10);
+    // console.log(ans)
+
+
+    ////////////////////////////////////////////////////////////////
+
+
+    // 22. Find diameter, circumference and area of a circle using functions
+
+    // area = pi*r**2;
+    // circumference = 2*pi*r
+    // diameter = 2*r
+
+
+    // function area(pi,r) {
+    //     return pi*r**2
+    // }
+
+    // var circleArea = area(3.14,5)
+    // console.log(circleArea)
+
+
+    ////////////
+
+
+    // function circumference(pi,r) {
+    //     return 2*pi*r
+    // }
+
+    // var circleCicumference = circumference(3.14,5)
+    // console.log(circleCicumference);
+
+    ////////////
+
+    //   function diameter(r) {
+    //     return 2*r
+    // }
+
+    // var circleDiameter = diameter(2)
+    // console.log(circleDiameter)
+
+
+
+
+    //////////////////////////////////////////////////////////////
+
+
+    // 23.Maximum and minimum between two numbers using functions.
+
+
+    // function maximum(a,b) {
+    //     if(a>b){
+    //         return a;
+    //     }
+    //     else{
+    //         return b;
+    //     }
+    // }
+
+    // var max = maximum(33,6)
+    // console.log(max);
+
+
+    //////////////////////////////////////////////////////////////
+
+
+    // 24.Check whether a number is even or odd using functions.
+
+    // function isEven(num) {
+    //     if(num%2===0){
+    //         return "even";
+    //     }
+    //     else{
+    //         return "odd"
+    //     }
+    // }
+
+    // var even = isEven(21);
+    // console.log(even);
+
+
+    ///////////////////////////////////////////////////////////////
+
+    //25. Check whether a number is prime, Armstrong or perfect number using functions.
+
+    // perfectNumber
+
+    // function isPerfectNumber(num) {
+    //     var sum = 0;
+    //     for(var i = 1; i<num; i++){
+    //         if(num%i==0){
+    //             sum = sum+i;
+    //         }
+    //     }
+    //     if(sum==num){
+    //         console.log(sum);
+    //         return "perfect Number"
+    //     }
+    //     else{
+    //         console.log(sum);
+    //         return "not a perfect number"
+    //     }
+    // }
+
+
+    // var perfect = isPerfectNumber(29);
+    // console.log(perfect)
+
+
+
+    ////////////////////////////////////////////////////////////////
+
+
+
+    // 26.Find all prime numbers between the given interval using functions.
+
+
+    // function primeNumbers(a,b) {
+    //     var ar = [];
+    //     for(var i = a; i<=b; i++){
+    //         var count = 0;
+    //         for(var j = 1; j<=b; j++){
+    //           if(i%j===0){
+    //             count++
+    //           }
+    //         }
+    //         if(count<=2){
+    //             ar.push(i);
+    //         }
+    //     }
+    //     return ar;
+    // }
+
+
+    // var prime = primeNumbers(1,100)
+    // console.log(prime)
+
+
+
+    ////////////////////////////////////////////////////////////////
+
+
+   // check weather given number is strong or not
+
+
+    // function factorial(n) {
+    //     var f = 1;
+    //     for(var i = 1; i<=n; i++){
+    //         f = f*i;
+    //     }
+    //     return f;
+    // }
+
+    //  function strong(num) {
+    //     var temp = num;
+    //     var sum = 0;
+    //     while (num>0) {
+    //         var digit = num%10;
+    //         sum = sum + factorial(digit);
+    //         num = parseInt(num/10);
+    //     }
+    //     if(sum==temp){
+    //         return "strong"
+    //     }
+    //     else{
+    //         return "not strong"
+    //     }
+    //  }
+
+
+
+    //  var strongNumber = strong(40585);
+    //  console.log(strongNumber)
+
+////////////////////////////////////////////////////////////////
+
+
+
+    // 27.Print all strong numbers between the given interval using functions.
+
+
+    // function factorial(n) {
+    //     var f = 1;
+    //     for(var i = 1; i<=n; i++){
+    //         f = f*i;
+    //     }
+    //     return f;
+    // }
+
+    //   function strong(a,b) {
+    //     var ar = [];
+    //     for(var i = a; i<=b; i++){
+    //         var num = i;
+    //         var temp = i;
+    //         var sum = 0;
+    //         while(num>0){
+    //         var digit = num%10;
+    //         sum = sum+factorial(digit);
+    //         num = parseInt(num/10);
+    //         }
+    //         if(sum==temp){
+    //            ar.push(temp);
+    //         }
+    //     }
+    //     return ar;
+    //  }
+
+
+    //  var strongNumbers = strong(1,100000)
+    //  console.log(strongNumbers);
+
+
+
+    /////////////////////////////////////////////////////////////////
+
+
+    // 28.Armstrong numbers between the given interval using functions.
+
+
+    // function Amstrong(a,b) {
+    //     var arr = [];
+    //     for(var i =a; i<=b; i++){
+    //         var num = i;
+    //         var noOfDigits = num.toString().length;
+    //         var temp = num;
+    //         var sum = 0;
+    //         while(num>0){
+    //          var digit = num%10;
+    //          sum = sum+digit**noOfDigits;
+    //          num = parseInt(num/10)        
+    //         }
+    //         if(temp===sum){
+    //           arr.push(temp)
+    //         }
+    //     }
+    //     return arr;
+    // }
+
+    // var AmsNumbers = Amstrong(1,500);
+    // console.log(AmsNumbers)
+
+    // for(var i = 0; i<=AmsNumbers.length-1;i++){
+    //     console.log(AmsNumbers[i])
+    // }
+
+
+/////////////////////////////////////////////////
+
+
+    // 29.Print all perfect numbers between the given interval using functions.
+
+
+    //   function perfectNumbers(a,b) {
+    //     var ar = [];
+    //     for(var i = a; i<=b; i++){
+    //        var num = i;
+    //        var sum = 0;
+    //        for(var j =1; j<num; j++){
+    //          if(i%j == 0){
+    //             sum = sum+j;
+    //          }
+    //        }
+    //        if(sum == num){
+    //           ar.push(num)
+    //        }
+    //     }
+    //     return ar;
+    //   }
+
+    //   var perNumbers = perfectNumbers(1,10000);
+    //   console.log(perNumbers)
+
+    //////////////////////////////////
+
+
+</script>

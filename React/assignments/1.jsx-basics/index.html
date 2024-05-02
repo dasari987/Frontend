@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root">
+
+    </div>
+
+    <div id="root1">
+
+    </div>
+
+    <script type="text/babel">
+
+
+      // 10.Print reverse of string praveen in JSX
+
+        // var x = "sai";
+        // var jsxexp = <h1>{x.split('').reverse().join("")}</h1>
+        // ReactDOM.render(jsxexp,document.getElementById('root'))
+
+
+        // 11. Evaluate addition of two variable values in JSX
+
+        // var x = 30;
+        // var y = 60;
+        // var jsxexp = <h1>{x+y}</h1>
+        // ReactDOM.render(jsxexp,document.getElementById('root'))
+
+
+        // 12. Display greatest of two variable values in JSX
+
+        // var x = 30;
+        // var y = 60;
+        // var jsxexp = <h1>{(x>y)?x:y}</h1>
+        // ReactDOM.render(jsxexp,document.getElementById('root'))
+
+
+        // 13. Display variable value is even or odd in JSX
+
+        // var x = +prompt();
+        // var jsxexp = <h1>{(x%2==0)?"Even":"Odd"}</h1>
+        // ReactDOM.render(jsxexp,document.getElementById('root'))
+
+
+        // 14. Display variable value is positive or negative in JSX
+
+        // var x = +prompt();
+        // var jsxexp = <h1>{(x>=0)?"Positive":"Negative"}</h1>
+        // ReactDOM.render(jsxexp,document.getElementById('root'))
+
+
+        // 15. Display greatest variable value of three in JSX
+
+        // var x = +prompt();
+        // var y = +prompt();
+        // var z = +prompt();
+        // var jsxexp = <h1>{(x>=0)?"Positive":"Negative"}</h1>
+        // ReactDOM.render(jsxexp,document.getElementById('root'))
+
+
+
+        // 16. Display different elements conditionally JSX
+
+        // var x = +prompt();
+        // var jsxexp = <h1>{(x%2==0)?"Even":"Odd"}</h1>
+        // ReactDOM.render(jsxexp,document.getElementById('root'))
+
+
+        // 17.  Display different images conditionally JSX
+
+        // var x = +prompt();
+        // var jsxexp = <div>{(x%2==0)?<img src="https://cdn.pixabay.com/photo/2017/09/25/13/12/puppy-2785074__340.jpg"/> : <img src = "https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492__340.jpg"/>}</div>
+        // ReactDOM.render(jsxexp,document.getElementById('root'))
+
+
+        // 18. Conditionally apply url to image in JSX
+
+        // var x = +prompt();
+        // var jsxexp = <img src={(x%2==0)?"https://cdn.pixabay.com/photo/2017/09/25/13/12/puppy-2785074__340.jpg":"https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492__340.jpg"}/>
+        // ReactDOM.render(jsxexp,document.getElementById('root'))
+
+
+        // 19. Print array values in list items in JSX
+
+        // var ar = [20,400,5432,5,6781]
+        // var jsxexp = <ul>
+        //                   {
+        //                     ar.map((e)=>{
+        //                        return <li>{e}</li>
+        //                     })
+        //                   }
+        //              </ul>
+        // ReactDOM.render(jsxexp,document.getElementById('root'))
+
+
+        // 20. Print squared array values in list items in JSX
+
+        // var ar = [20,400,5432,5,6781]
+        // var jsxexp = <ul>
+        //                   {
+        //                     ar.map((e)=>{
+        //                        return <li>{e*e}</li>
+        //                     })
+        //                   }
+        //              </ul>
+        // ReactDOM.render(jsxexp,document.getElementById('root'))
+
+
+        // 21. Print array values in h1 elements
+
+        // var ar = [20,400,5432,5,6781]
+        // var jsxexp = <div>
+        //                   {
+        //                     ar.map((e)=>{
+        //                        return <h1>{e}</h1>
+        //                     })
+        //                   }
+        //              </div>
+        // ReactDOM.render(jsxexp,document.getElementById('root'))
+
+
+        // 22.Print array values in sorted order in list items in JSX
+
+        // var ar = [20,456,2,90,63]
+        // ar.sort((a,b)=>{
+        //     if(a<b){
+        //         return -1;
+        //     }
+        //     if(a>b){
+        //         return 1
+        //     }
+        //     return 0
+        // })
+        
+        // var jsxexp = <ul>
+        //                   {
+        //                     ar.map(e=>{
+        //                         return <li>{e}</li>
+        //                     })
+        //                   }
+        //              </ul>
+        // ReactDOM.render(jsxexp,document.getElementById('root'))
+
+
+
+        // 23. Print merged array values of given two arrays
+
+        // var ar = [1,2,3,4,5]
+        // var br = [6,7,8,9,10]
+
+        // var jsxexp = <div>
+        //                    {
+        //                      ar.concat(br).map(e=>{
+        //                         return <li>{e}</li>
+        //                      })
+        //                    }
+        //              </div>
+        // ReactDOM.render(jsxexp,document.getElementById('root'))
+
+
+        // 24. Print merged array values in sorted order of given two arrays
+
+        //  var ar = [12,3,89,4,50]
+        //  var br = [120,110,175,150]
+
+        //  var jsxexp = <div>
+        //                    {
+        //                     ar.concat(br).sort((a,b)=>{
+        //                         (a<b)? -1: 1;
+        //                     }).map(e=>{
+        //                         return <li>{e}</li>
+        //                     })
+        //                    }
+        //               </div>
+        //               ReactDOM.render(jsxexp,document.getElementById('root'))
+
+
+        // 25. Print array strings in list items in JSX
+
+        // var ar = ['cat','dog','elephant','tiger','monkey']
+        // var jsxexp = <div>
+        //                    {
+        //                     ar.map(e=>{
+        //                          return <li>{e}</li>
+        //                     })
+        //                    }
+        //              </div>
+        // ReactDOM.render(jsxexp,document.getElementById('root'))
+
+
+
+        // 26. Print array strings ol and ul
+
+        // var ar = ['cat','dog','elephant','tiger','monkey']
+        // var jsxexp = <ul>
+        //                    {
+        //                     ar.map(e=>{
+        //                          return <li>{e}</li>
+        //                     })
+        //                    }
+        //              </ul>
+        // ReactDOM.render(jsxexp,document.getElementById('root'))
+
+        // var jsxexp1 = <ol>
+        //                    {
+        //                     ar.map(e=>{
+        //                          return <li>{e}</li>
+        //                     })
+        //                    }
+        //              </ol>
+        // ReactDOM.render(jsxexp1,document.getElementById('root1'))
+
+
+
+        // 27. Print array strings ol of uppercase strings and ul of lowercase
+
+
+        // var ar = ['Cat','Dog','Elephant','Tiger','Monkey']
+        // var jsxexp = <ol>
+        //                    {
+        //                     ar.map(e=>{
+        //                          return <li>{e.toUpperCase()}</li>
+        //                     })
+        //                    }
+        //              </ol>
+        // ReactDOM.render(jsxexp,document.getElementById('root'))
+
+        // var jsxexp1 = <ul>
+        //                    {
+        //                     ar.map(e=>{
+        //                          return <li>{e.toLowerCase()}</li>
+        //                     })
+        //                    }
+        //              </ul>
+        // ReactDOM.render(jsxexp1,document.getElementById('root1'))
+
+
+
+
+        // 28. Print array strings in lowercase in list items
+
+        // var ar = ['Cat','Dog','Elephant','Tiger','Monkey']
+
+        //    var jsxexp1 = <ul>
+        //                    {
+        //                     ar.map(e=>{
+        //                          return <li>{e.toLowerCase()}</li>
+        //                     })
+        //                    }
+        //              </ul>
+        // ReactDOM.render(jsxexp1,document.getElementById('root1'))
+
+
+
+        // 29. Print array strings length in list items
+
+        // var ar = ['Cat','Dog','Elephant','Tiger','Monkey']
+
+        //        var jsxexp1 = <ul>
+        //                    {
+        //                     ar.map(e=>{
+        //                          return <li>{e.length}</li>
+        //                     })
+        //                    }
+        //              </ul>
+        // ReactDOM.render(jsxexp1,document.getElementById('root1'))
+
+
+
+        // 30. Print array strings in list items in JSX copy
+
+        // var ar = ['Cat','Dog','Elephant','Tiger','Monkey']
+        //  var jsxexp1 = <ul>
+        //                    {
+        //                     ar.map(e=>{
+        //                          return (e.length%2==0)? <li><b>{e}</b></li> : <li><i>{e}</i></li>
+        //                     })
+        //                    }
+        //              </ul>
+        // ReactDOM.render(jsxexp1,document.getElementById('root1'))
+
+
+
+        // 31. Print first two characters of array values in h1 elements copy
+
+
+        // var ar = ['Cat','Dog','Elephant','Tiger','Monkey']
+
+        //        var jsxexp1 = <ul>
+        //                    {
+        //                     ar.map(e=>{
+        //                          return <li>{e.slice(0,1)}</li>
+        //                     })
+        //                    }
+        //              </ul>
+        // ReactDOM.render(jsxexp1,document.getElementById('root1'))
+
+
+
+
+        // 32.Print array strings reverse in list items
+
+        //  var ar = ['Cat','Dog','Elephant','Tiger','Monkey']
+
+        //        var jsxexp1 = <ul>
+        //                    {
+        //                     ar.map(e=>{
+        //                          return <li>{e.split("").reverse().join("")}</li>
+        //                     })
+        //                    }
+        //              </ul>
+        // ReactDOM.render(jsxexp1,document.getElementById('root1'))
+
+
+
+        // 33.Print array strings sorted order in list items
+
+        // var ar = ['Dog','Tiger','Cat','Monkey','Elephant']
+
+        //        var jsxexp1 = <ul>
+        //                    {
+        //                     ar.sort((a,b)=>{
+        //                         return (a<b)?-1 : 1;
+        //                     })
+        //                     .map(e=>{
+        //                          return <li>{e}</li>
+        //                     })
+        //                    }
+        //              </ul>
+        // ReactDOM.render(jsxexp1,document.getElementById('root1'))
+
+
+        // 34.Print only the even numbers of array of numbers in list items
+
+        // var ar = [1,2,3,4,5,6,7,8,9]
+
+        //   var jsxexp1 = <ul>
+        //                    {
+        //                     ar.map(e=>{
+        //                          return (e%2==0)?<li>{e}</li>:null;
+        //                     })
+        //                    }
+        //              </ul>
+        // ReactDOM.render(jsxexp1,document.getElementById('root1'))
+
+
+
+        // 35.Print only the odd numbers of array of numbers in list items
+
+        // var ar = [1,2,3,4,5,6,7,8,9]
+        //   var jsxexp1 = <ul>
+        //                    {
+        //                     ar.map(e=>{
+        //                          return (e%2==0)?null:<li>{e}</li>;
+        //                     })
+        //                    }
+        //              </ul>
+        // ReactDOM.render(jsxexp1,document.getElementById('root1'))
+
+
+
+        // 36. Print only the numbers of array greater than 25 of numbers in list items copy
+
+        // var ar = [10,50,4,26,90]
+        //   var jsxexp1 = <ul>
+        //                    {
+        //                     ar.map(e=>{
+        //                          return (e>25)?<li>{e}</li>:null;
+        //                     })
+        //                    }
+        //              </ul>
+        // ReactDOM.render(jsxexp1,document.getElementById('root1'))
+
+
+
+        // 37.Print flatten array of multiDimentionalArray
+
+
+
+
+
+
+
+        // 38. Print even numbers in italics and odd numbers in bold in list
+
+        // var ar = [1,2,3,4,5,6,7,8,9]
+        //    var jsxexp1 = <ul>
+        //                    {
+        //                     ar.map(e=>{
+        //                          return (e%2==0)?<li><i>{e}</i></li>:<li><b>{e}</b></li>;
+        //                     })
+        //                    }
+        //              </ul>
+        // ReactDOM.render(jsxexp1,document.getElementById('root1'))
+
+
+
+
+        // 39. Print only the numbers of array less than 25 of numbers in list items copy
+
+        // var ar = [10,50,4,26,90]
+        //   var jsxexp1 = <ul>
+        //                    {
+        //                     ar.map(e=>{
+        //                          return (e<25)?<li>{e}</li>:null;
+        //                     })
+        //                    }
+        //              </ul>
+        // ReactDOM.render(jsxexp1,document.getElementById('root1'))
+
+
+        // 40. Print the sum of all numbers of array in JSX using reduce method
+
+        // var ar = [10,50,4,26,90]
+        //   var jsxexp1 = <ul>
+        //                    {
+        //                     ar.reduce((a,b)=>{
+        //                          return a+b
+        //                     })
+        //                    }
+        //              </ul>
+        // ReactDOM.render(jsxexp1,document.getElementById('root1'))
+
+
+
+        // 41. Print the sum of all numbers of array in JSX using reduce method
+
+        
+
+    </script>
+    
+</body>
+</html>

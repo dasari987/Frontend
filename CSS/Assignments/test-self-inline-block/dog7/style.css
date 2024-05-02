@@ -1,0 +1,33 @@
+*{
+    margin: 0px;
+}
+
+#container{
+    border: 1px solid black;
+    padding: 15px;
+    width: fit-content;
+    
+}
+
+img{
+    width: 400px;
+}
+
+#left{
+    background-color: orange;
+    width: 50px;
+}
+
+#right{
+    background-color: red;
+    margin-left: 303px;
+}
+
+#left,#right{
+    height: 30px;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+
+

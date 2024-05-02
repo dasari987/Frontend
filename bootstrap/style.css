@@ -1,0 +1,16 @@
+
+body{
+    margin: 10px;
+    overflow-x: hidden;
+}
+
+.box{
+    height: 70px;
+    width: 70px;
+    margin: 7px;
+}
+
+.rbox{
+    width: 200px;
+    height: 100px;
+}

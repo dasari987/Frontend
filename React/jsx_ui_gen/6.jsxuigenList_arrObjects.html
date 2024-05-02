@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <!-- 6.Generate List Elements using document object for the given Array of Objects -->
+
+    <div id="d1">
+        
+    </div>
+
+    <style>
+       
+    </style>
+
+    <script type="text/babel">
+             var students = [
+                                {
+                                name:'jaya',
+                                gender:'female',
+                                place:'gachibowli',
+                                },
+                                {
+                                name:'dasu',
+                                gender:'male',
+                                place:'kphb'
+                                },
+                                {
+                                name:'swati',
+                                gender:'female',
+                                place:'pune'
+                                },
+                                {
+                                name:'pallavi',
+                                gender:'female',
+                                place:'assam'
+                                },
+                                {
+                                name:'kiran',
+                                gender:'male',
+                                place:'kondapur'
+                                },
+                                {
+                                name:'thirumala',
+                                gender:'male',
+                                place:'madhapur'
+                                },
+                                {
+                                name:'priya',
+                                gender:'female',
+                                place:'hitech'
+                                },
+                            ]
+
+          var jsxlist = <ul>
+                            {
+                                students.map((obj)=>{
+                                    return <li  style={(obj['gender']=='female')?{backgroundColor:'pink'}:{backgroundColor:'skyblue'}}>
+                                        {
+                                            obj['name']
+                                        }
+                                        <ul>
+                                            <li>{obj['gender']}</li>
+                                            <li>{obj['place']}</li>
+                                        </ul>
+                                     </li>
+                                })
+                            }
+                       </ul>
+           ReactDOM.render(jsxlist,document.getElementById('d1'))
+                
+    </script>
+
+</body>
+</html>

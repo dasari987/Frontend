@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="text-align: center; background-color: antiquewhite; font-size: 20px;">
+    
+    <style>
+        img{
+            height: 300px;
+            width: 300px;
+            margin-right: 7px;
+            margin-top: 7px;
+            border-radius: 5px;
+        }
+    </style>
+  <div style="text-align: center; margin-top: 100px;">
+        <h1 style="color: red;">Add Students</h1>
+
+        
+        <input id="input" type="text" style="height: 20px; width: 190px; outline: none;">
+
+        <button id="btn1" onclick="addStudents()" style="margin-left: 15px; background-color: orange; border: 0px; border-radius: 3px; padding: 7px 20px; margin-right: 15px; margin-top: 19px;">Add Students</button>
+
+        <div>
+            <ul id="unorderedList">
+
+            </ul>
+        </div>
+  </div>
+    <script>
+
+    //////////////////  better method
+        
+          var ul = document.getElementById('unorderedList')
+           var studentsArr = []
+           function addStudents() {
+            var input = document.getElementById("input")
+               var inputValue = input.value
+               studentsArr.push(inputValue);
+               console.log(studentsArr)
+               ul.innerHTML = "" 
+               
+               genUI()
+               
+           }
+
+           function genUI() {
+            studentsArr.forEach(function(student){
+                var li = document.createElement('li');
+                     li.innerHTML = student
+                     ul.appendChild(li)
+               })
+           }
+           
+    
+
+    // my method
+        // var ul = document.getElementById('unorderedList')
+        // // console.log(ul)
+        // function addStudents(){
+        //     var inputValue = document.getElementById("input").value
+        //     // console.log(input)
+        //     var li = document.createElement('li');
+        //     li.innerHTML = inputValue;
+        //     ul.appendChild(li)
+            
+        // }
+
+
+    </script>
+</body>
+</html>

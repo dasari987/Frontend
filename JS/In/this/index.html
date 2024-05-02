@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- this refers to => window object
+    this refers to => current element
+    this refers to => empty object -->
+
+    <h1 onclick="abc(event,this)">welcome to this</h1>
+    <h1 id="d2">this is another element</h1>
+
+    <script>
+        var ar = [1,2,3];  // ar is reference to array
+        let am = [4,5,6]
+        var obj = {        // obj is reference to object
+            fname: "sai",
+            lname: "babu"
+        }
+        console.log(this)  // this is a reference to a window object
+        
+        console.log(this)  // window (BOM)
+        console.log(document) // document (DOM)
+        
+        function abc(e,t) {
+            console.log(e)
+            console.log(t) //current elememt
+        }
+
+        document.getElementById('d2').addEventListener("click", function(e){
+            console.log(e)
+            console.log(this)
+            this.style.color = 'red'
+        })
+
+
+        function x() {
+            console.log(this)
+        }
+        x()
+        new x()
+
+
+        
+
+        function mobile() {
+            // this={}
+            this.color = '';
+            this.name='';
+            this.price = '';
+            this.model = '';
+            //retturn this
+        }
+
+        var nb2 = new mobile();
+        console.log(nb2);
+
+
+        // function mobile(c,n,p,m,co) {
+        //     // this={}
+        //     this.color = c;
+        //     this.name=n;
+        //     this.price = p;
+        //     this.model = m;
+        //     //retturn this
+        // }
+
+        // var nb1 = new mobile('blue','prime',13000,'note6pro','mi');
+        // console.log(nb1);
+
+
+
+        // new String()    // A new String object
+        // new Number()    // A new Number object
+        // new Boolean()   // A new Boolean object
+        // new Object()    // A new Object object
+        // new Array()     // A new Array object
+        // new RegExp()    // A new RegExp object
+        // new Function()  // A new Function object
+        // new Date()      // A new Date object
+
+
+        var str = new String("sai")
+        console.log(str)
+
+        var str1 = "dasari"
+        console.log(str1)
+
+
+        var num = new Number(5)
+        console.log(num)
+
+        var bol = new Boolean(true)
+        console.log(bol)
+
+        var ob1 = new Object('sai','male',33,'male','mncl')
+        console.log(ob1)
+
+        var ar = new Array(1,2,3,4,5)
+        console.log(ar)
+        
+        var fn = new Function()
+        console.log(fn)
+
+        var dt = new Date()
+        console.log(dt)
+
+        var dt1 = new Date(86400000)
+        console.log(dt1)
+
+
+        var dt2 = new Date()
+        console.log(dt2)
+        console.log(dt2.getDate())
+        console.log(dt2.getTime())
+        console.log(dt2.getFullYear())
+        console.log(dt2.getDay())
+        console.log(dt2.getMinutes())
+        console.log(dt2.getHours())
+        console.log(dt2.getUTCDate())
+       
+        
+
+
+
+    </script>
+</body>
+</html>

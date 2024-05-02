@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // class is collection of properties and methods
+        // application is collection of objects
+
+        // if we call a class with new key word it will give us new object
+
+        // class FoodItem{
+        //     title;
+        //     price;
+        //     foodType;
+        //     quantity;
+        //     prepTime;
+        // }
+
+        // var item1 = new FoodItem();
+        // console.log(item1)
+        // var item2 = new FoodItem();
+        // console.log(item2)
+
+
+        ///////////////////////////////
+
+    //     class FoodItem{
+    //         title;
+    //         price;
+    //         foodType;
+    //         quantity;
+    //         prepTime;
+    //     }
+
+    //     var item1 = new FoodItem();
+    //     item1.title = "biryani"
+    //     item1.price = '250'
+    //     item1.foodType = 'biryani'
+    //     item1.quantity = 1
+    //     item1.prepTime = "10 mins"
+    //     console.log(item1)
+    //     var item2 = new FoodItem();
+    //     console.log(item2)
+
+    /////////////////////////////////////////
+
+    // class FoodItem{
+    //         title;
+    //         price;
+    //         foodType;
+    //         quantity;
+    //         prepTime;
+    //         constructor(){  // constructor is a default method in class
+    //           alert('hii')
+
+    //         }
+    //     }
+
+    //     // whenever FoodItem() is called constructor function get called first or constructor function is called
+    //     var item1 = new FoodItem()
+    //     console.log(item1)
+    //     var item2 = new FoodItem('paneer',223,'veg',1,'15min');
+    //     console.log(item2)
+
+    //////////////////////////////////////////
+
+
+        class FoodItem{
+            title;
+            price;
+            foodType;
+            quantity;
+            prepTime;
+            discount;
+            constructor(t,p,ft,q,pt,d){  // constructor is a default method in class
+              this.title = t
+              this.price = p
+              this.foodType = ft
+              this.quantity = q
+              this.prepTime = pt
+              this.discount = d
+            }
+            getFinalPrice(){
+                var finalPrice = this.price-(this.price*0.01*this.discount)
+                return finalPrice
+            }
+        }
+
+        // whenever FoodItem() is called constructor function get called first or constructor function is called
+        // whenever FoodItem() is called with new keyword this creates an empty object and is available for constructor function [[  this = {}  ]] and return this object
+        // this will point to newly created object
+
+        // this refers to current object(newly created object)
+
+        var item1 = new FoodItem()
+        console.log(item1)
+        var item2 = new FoodItem('paneer',220,'veg',1,'15min',10);
+        console.log(item2)
+        console.log("discount-price",item2.getFinalPrice())
+        var item3 = new FoodItem('biryani',300,'non-veg',1,'5min',20);
+        console.log(item3)
+        console.log("discount-price",item3.getFinalPrice())
+
+
+    </script>
+     </script>
+</body>
+</html>

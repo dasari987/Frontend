@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1.Write a program to print even numbers between 1 and 10 
+
+        // var i = 1;
+        // while (i<=10) {
+        //     if(i%2===0){
+        //         console.log(i);
+        //     }
+        //     i++;
+        // }
+
+
+        // 2.Write a program to print odd numbers between 1 and 25 
+
+
+        // var i = 1;
+        // while (i<=25) {
+        //     if(i%2!=0){
+        //         console.log(i);
+        //     }
+        //     i++;
+        // }
+
+
+        // 3.Write a program to print even numbers between 23 and 56  
+
+        // var i = 23;
+        // while (i<=56) {
+        //     if(i%2===0){
+        //         console.log(i);
+        //     }
+        //     i++;
+        // }
+
+
+
+        // 4.Write a program to print odd numbers between -48 and -12 
+
+        // var i = -48;
+        // while (i<=-12) {
+        //     if(i%2!=0){
+        //         console.log(i);
+        //     }
+        //     i++;
+        // }
+
+
+        // 5.Write a program to print even numbers between -50 and 8  
+
+        // var i = -50;
+        // while (i<=8) {
+        //     if(i%2 === 0){
+        //         console.log(i)
+        //     }
+        //     i++;
+        // }
+
+
+
+        //6.Write a program to print odd numbers between 10 and 1 
+
+        // var i = 10;
+        // while(i>=1){
+        //     console.log(i);
+        //     i--;
+        // }
+
+
+
+        //7. Write a program to print even numbers between 20 and 1
+
+        // var i = 20;
+        // while(i>=1){
+        //     if(i%2===0){
+        //     console.log(i);
+        //     }
+        //     i--;
+        // }
+
+
+        // 8. Write a program to print odd numbers between 46 and 23
+
+        // var i = 46;
+        // while(i>=23){
+        //     if(i%2!=0){
+        //         console.log(i);
+        //     }
+        //     i--;
+        // }
+
+
+        // 9. Write a program to print even numbers between 24 and -4 
+
+        // var i = 24;
+        // while(i>=-4){
+        //     if(i%2===0){
+        //         console.log(i);
+        //     }
+        //     i--;
+        // }
+
+
+        // 10.Write a program to print odd numbers between -3 and -36 
+
+        // var i = -3;
+        // while(i>=-36){
+        //     if(i%2!=0){
+        //         console.log(i);
+        //     }
+        //     i--;
+        // }
+
+
+        // 11.Write a program to print factors of 24(factors of 24 are 1,2,3,4,6,8,12,24)
+
+        // var i = 1;
+        // while(i<=24){
+        //     if(24%i ===0 ){
+        //         console.log(i)
+        //     }
+        //     i++;
+        // }
+
+
+
+        // 12.Write a program to print all the factors of a given number
+
+        // var num = +prompt();
+        // var i = 1;
+        // while(i<=num){
+        //     if(num%i===0){
+        //         console.log(i)
+        //     }
+        //     i++;
+        // }
+
+
+        // 13. a program to read 5 numbers and print the maximum and minimum number
+
+        // var i = 1;
+        // var max = -Infinity
+        // var min = Infinity
+        // while(i<=5){
+        //     var num = +prompt();
+        //     if(num>max){
+        //         max = num;
+        //     }
+        //     if(num<min){
+        //         min = num;
+        //     }
+        //     i++;
+        // }
+
+        // console.log(max,min);
+
+
+
+
+
+        // 14. a program to read 5 numbers and print only the even numbers
+
+
+        // var i = 1;
+        // while(i<=5){
+        //     var num = +prompt();
+        //     if(num%2===0){
+        //        console.log(num)
+        //     }
+        //     i++;
+        // }
+
+
+
+
+
+
+
+        // 15. Print all the digits of a given number
+
+
+        // var a = 890765;
+        // while(a>0){
+        //     var digit = a%10;
+        //     console.log(digit);
+        //     a=parseInt(a/10);
+        // }
+
+
+
+
+
+        // 16.Write a program to print only even digits of a given number The output should be 4,2,6 Ex. Let us take 154256
+
+        // var a = 78960;
+        // while (a>0) {
+        //     var digit = a%10;
+        //     if (digit%2===0) {
+        //         console.log(digit);
+        //     }
+        //     a = parseInt(a/10);
+        // }
+
+
+
+
+        // 17.Write a program to print only odd digits of a given number Ex. Let us take 1542763 The output should be 1,5,7,3
+
+        // var a = 1234590;
+        // while (a>0) {
+        //     var digit = a%10;
+        //     if (digit%2!=0) {
+        //         console.log(digit);
+        //     }
+        //     a = parseInt(a/10);
+        // }
+
+
+
+
+
+        // 18.Write a program to print the number at 10’s place
+
+
+        // 1234 = 1*1000  + 2*100   + 3*10    + 4*1
+             //   1*10**3 + 2*10**2 + 3*10**1 + 4*10**0;
+
+
+        // var num = 45378
+        // var x = parseInt(num/10); //4537
+        // var x = parseInt(num/10); //453
+        // var y = x%10; //3
+
+
+
+
+
+        //////////////
+
+        // var a = +prompt();
+        // var b = parseInt(a/10);
+        // // console.log(b)
+        // var c = (b%10);
+        // // console.log(c)
+        // if(c>0){
+        //     console.log(c)
+        // }
+        // else{
+        //     console.log("number dosent have tens place value")
+        // }
+
+        /////////////////////////////
+
+
+
+
+
+
+        //19. Write a program to print the number at 100’s place
+
+
+
+        // var a = +prompt();
+        // var i = 1;
+        // while(i<=3){
+        //     var a = parseInt(a/10);
+        //     var dig = a%10;
+        //     if(dig>=0){
+        //         console.log(dig);
+        //         break;
+        //     }
+        //     else{
+        //         console.log("number does not have hundreds place")
+        //         break;
+        //     }
+        //     i++;
+
+        // }
+
+
+
+
+
+
+        //20. Write a program to print the number at 1000’s place
+
+
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // 22.Write a program to find the LCM of given two numbers
+
+
+
+
+
+
+
+
+
+
+
+        //23.Write a program to convert an octal number to a decimal
+
+
+
+
+
+
+
+        // 24.Write a program to print the sum of 1 to 10 ( initialisation of sum variable with 0 )
+
+        // var sum = 0;
+        // var i = 1;
+        // while(i<=10){
+        //     sum=sum+i;
+        //     i++;
+        // }
+        // console.log(sum);
+
+
+
+        // 25.Write a program to print the average of 1 to 10
+
+        // var i = 1;
+        // var sum = 0;
+        // while(i<=10){
+        //    sum = sum+i;
+        //    i++;
+        // }
+        // sum=sum/10;
+        // console.log(sum);
+
+
+        //26. Write a program to print the sum of the numbers between the given two numbers
+
+        // var i = 1;
+        // i=i+1;
+        // var sum = 0;
+        // while(i<11){
+        //     sum = sum+i;
+        //     i++;
+        // }
+        // console.log(sum);
+
+
+        //27. Write a program to print the sum of even numbers between the given two numbers
+
+
+        // var i = 1;
+        // var sum = 0;
+        // while(i<=10){
+        //     if(i%2===0){
+        //         sum=sum+i;
+        //     }
+        //     i++;
+        // }
+        // console.log(sum);
+
+
+
+
+        //28.Write a program to print the sum of odd numbers between the given two numbers
+
+
+        //  var i = 1;
+        // var sum = 0;
+        // while(i<=5){
+        //     if(i%2!=0){
+        //         sum=sum+i;
+        //     }
+        //     i++;
+        // }
+        // console.log(sum);
+
+
+
+        //29.Write a program to print the product of the numbers between 1 to 10 ( initialisation of product variable with 1 )
+
+
+        // var i = 1;
+        // var product = 1;
+        // while(i<=5){
+        // product=product*i;
+        //     i++;
+        // }
+        // console.log(product);
+
+
+
+        //30.Write a program to find the product of all odd numbers between 1 and 10.
+
+        // var i = 1;
+        // var product = 1;
+        // while(i<=7){
+        //     if(i%2!=0){
+        //         product=product*i;
+        //     }
+        //     i++;
+        // }
+        // console.log(product);
+
+
+
+        //31.Write a program to print the nth power of a given number. n can be any positive number. (n=3 r =4 then answer must be 3*3*3*3 )
+
+        // var n = 3;
+        // var r = 3;
+        // console.log(n**r);
+
+
+
+        //32.Write a program to print factorial of a given number
+
+        // var num = 5;
+        // var fac = 1;
+        // while(num>0){
+        //     fac = fac*num;
+        //     num--;
+        // }
+        // console.log(fac);
+
+
+
+        //33.Write a program to print the number of factors of 24(number of factors for 24 is 8)
+
+
+        // var num = 24;
+        // var i = 1;
+        // var count = 0;
+        // while(i<=24){
+        //     if(num%i===0){
+        //        count++;
+        //     }
+        //     i++;
+        // }
+        // console.log(count);
+
+
+
+
+        // 34.Write a program to print the count of factors of a given number 
+
+
+        //   var num = +prompt();
+        // var i = 1;
+        // var count = 0;
+        // while(i<=24){
+        //     if(num%i===0){
+        //        count++;
+        //     }
+        //     i++;
+        // }
+        // console.log(count);
+
+
+
+
+
+        //35.Write a program to check a given number is a prime number or not
+
+        // var num = +prompt();
+        // var i = 1;
+        // var count = 0;
+        // while(i<=num){
+        //    if(num%i===0){
+        //       count++;
+        //    }
+        //    i++; 
+        // }
+        // console.log(count)
+        // if(count<=2){
+        //     console.log("prime number")
+        // }
+        // else{
+        //     console.log("composite number")
+        // }
+
+
+
+
+
+        //35.a program to read 5 numbers and print the sum of all entered numbers
+
+        // var i = 1;
+        // var sum = 0;
+        // while(i<=5){
+        //     var num = +prompt();
+        //     sum = sum+num;
+        //     i++;
+        // }
+
+        // console.log(sum);
+
+
+
+
+        //37.print Number of Digits in given number.
+
+        // var num = +prompt();
+        // var count = 0;
+        // while(num>0){
+        //     var digit = num%10;
+        //     if(digit>=0){
+        //         count++;
+        //     }
+        //     num = parseInt(num/10);
+        // }
+
+        // console.log(count)
+
+
+
+
+
+        //38. Write a program to count the number of ‘1’s in a given number
+
+        // var num = +prompt();
+        // var count = 0;
+        // var i = 1;
+        // while(num>0){
+        //     var digit = num%10;
+        //     if(digit === 1){
+        //         count++;
+        //     }
+        //     num = parseInt(num/10);
+        // }
+
+        // console.log("number of ones is "+count);
+
+
+
+
+
+        //39. Write a program to eliminate all 0’s from a given number.
+
+        // var num = 980706;
+        // var reverse = 0
+        // while(num>0){
+        //     var digit = num%10;
+        //     if(digit>0){
+        //           reverse = reverse*10 + digit;
+        //     }
+        //     num = parseInt(num/10);
+        // }
+
+        // console.log(reverse)
+
+
+
+
+
+        // 40.Write a program to print all the digits that are less than 5 in a given number.
+
+        // var num = +prompt();
+        // while(num>0){
+        //     var digit = num%10;
+        //     if(digit<5){
+        //         console.log(digit);
+        //     }
+        //     num=parseInt(num/10);
+        // }
+
+
+
+
+        //41.Print the greatest digit of a given number(n=1237456 then greatest digit is 7)
+
+        // var num = +prompt();
+        // var greatest = -Infinity;
+        // while(num>0){
+        //     var digit = num%10;
+        //     if(digit>greatest){
+        //         greatest = digit;
+        //     }
+        //     num = parseInt(num/10);
+        // }
+
+        // console.log(greatest);
+
+
+
+
+        //42.sum of all digits of a given number Ex: let us take 19345 is the given number The output should be 22 (1+9+3+4+5)=22
+
+        // var num = +prompt();
+        // var sum = 0;
+        // while(num>0){
+        //     var digit = num%10;
+        //     sum = sum+digit;
+        //     num = parseInt(num/10)
+        // }
+        // console.log(sum);
+
+
+
+
+
+        //43.a program to print reverse of digits of a number
+
+        // var num = 67849;
+        // var reverse = 0;
+        // while(num>0){
+        //     var digit = num%10;
+        //     reverse = reverse*10+digit;
+        //     num=parseInt(num/10);
+        //     // num=(num/10);
+        //     // console.log(num)
+        // }
+        // console.log(reverse)
+
+
+
+
+        
+
+
+
+
+
+        // extra questions
+
+
+        // 1.print maximum digit in given number
+
+        //  var num = +prompt();
+        //   var max = -Infinity;
+        // while(num>0){
+        //     var digit = num%10;
+        //     if(digit>max){
+        //         max = digit;
+        //     }
+        //     num = parseInt(num/10);
+        // }
+        // console.log(max)
+
+        
+
+
+
+    </script>
+</body>
+</html>

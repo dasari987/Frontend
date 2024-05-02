@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var num = +prompt();
+        console.log(num)
+        var dig = num%10;
+        var sum = dig;
+        while(num>0){
+            num = parseInt(num/10);
+            if(num<10){
+                sum = sum+num;
+            }
+        }
+
+        console.log(sum)
+
+    </script>
+</body>
+</html>

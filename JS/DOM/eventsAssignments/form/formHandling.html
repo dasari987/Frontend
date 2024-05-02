@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- /////////////////////////////////////////////////////// -->
+
+    <!-- <input id="d1" type="text" onkeyup="print()">
+    <h1 id="d2"></h1>
+    <script>
+        function print() {
+            document.getElementById('d2').innerHTML = document.getElementById('d1').value
+        }
+    </script> -->
+
+<!-- ////////////////////////////////////////////////////////////// -->
+
+    <form action="" onsubmit="event.preventDefault();console.log(event)" name = "userForm">
+      <label for="">Firstname</label>
+      <input type="text"  name="fn">
+      <br>
+      <br>
+      <label for="">LastName</label>
+      <input type="text" name="ln">
+      <br>
+      <br>
+      <label for="">DOB</label>
+      <input type="date"  name="dob">
+      <br>
+      <br>
+      <label for="">Gender</label>
+      <input type="radio" name="gender" value="male">Male
+      <input type="radio" name="gender" value="female">Female
+      <input type="radio" name="gender" value="others">Others
+      <br>
+      <br>
+      <label for="">languages</label>
+      <input type="checkbox" name="languages" value="Telugu">Telugu
+      <input type="checkbox" name="languages" value="Hindi">Hindi
+      <input type="checkbox" name="languages" value="English">English
+      <br>
+      <br>
+      <label for="">Select course</label>
+      <select name="course">
+        <option value="MERN">MERN</option>
+        <option value="REactJs">ReactJs</option>
+        <option value="ANgular">Angular</option>
+      </select>
+      <br>
+      <br>
+      <label for="">Address</label>
+      <textarea name="address" id="" cols="30" rows="10"></textarea>
+      <br>
+      <br>
+      <button onclick="print()">print</button>
+      <!-- <button type="button" onclick="print()">print</button> -->
+      <!-- <button type="submit" onclick="print()">print</button> -->
+    </form>
+      <script>
+         var userForm = document.userForm;
+         var people = [];
+          function print() {
+            //   console.log(document.userForm.fn.value)
+            //   console.log(document.userForm.ln.value)
+            //   console.log(document.userForm.dob.value)
+            //   console.log(document.userForm.gender.value)
+            //   console.log(document.userForm.languages)
+            //   console.dir(document.userForm.languages)
+            //   console.log(document.userForm.languages[0].checked)
+            //   console.log(document.userForm.languages[1].checked)
+            //   console.log(document.userForm.languages[2].checked)
+            //   userForm.languages.forEach(function(language){
+            //     console.log(language.value,language.checked)
+            //   })
+            // console.log(userForm.course.value)
+            // console.log(userForm.address.value)
+            
+
+
+              var person = {
+                  "firstname": "",
+                  "lname": "",
+                  "dob": "",
+                  "gender": "",
+                  "languages":[],
+                  "course": "",
+                  "address": ""
+              }
+
+              person.firstname = userForm.fn.value
+              person.lname = userForm.ln.value
+              person['dob'] = userForm.dob.value;
+              person['gender'] = userForm.gender.value;
+              userForm.languages.forEach(function(language){
+                 if(language.checked===true){
+                    person.languages.push(language.value)
+                 }
+              })
+              person.course = userForm.course.value;
+              person.address = userForm.address.value;
+
+              
+              people.push(person);
+              console.log(people);
+
+             userForm.reset();
+              
+
+            //   console.log(document.userForm)
+            //   console.dir(document.userForm)
+            //   console.dir(document.userForm.fn)
+            //   console.dir(document.userForm.fn.value)
+
+
+            // var fn = document.getElementById('fn').value;
+            // var ln = document.getElementById('ln').value;
+            // var dob = document.getElementById('dob').value;
+            // var gen = document.getElementById('gen').value;
+            // var obj = {
+            // }
+            // obj.fName = fn;
+            // obj.lName = ln;
+            // obj["dob"] = dob;
+            // obj["gender"] = gen;
+            // console.log(obj);
+          }
+      </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <!-- 7.Display the above data like the following image using Javascript DOM Element creation and append -->
+
+    <div id="d1">
+        
+    </div>
+
+    <style>
+       .sty{
+        border: 1px solid;
+       }
+    </style>
+
+    <script type="text/babel">
+             var students = [		
+                                    {
+                                        "firstname": "praveen",
+                                        "age": 36,
+                                        "subjects":['angular','nodejs','reactjs','java']
+                                    }, 
+                                    {
+                                        "firstname": "srikanth",
+                                        "age": 32,
+                                        "subjects":['react','mongodb']
+                                    }, 
+                                    {
+                                        "firstname": "pradeep",
+                                        "age": 21,
+                                        "subjects":['express','mongoose','python']
+                                    }
+                            ]
+
+          var jsxlist = <ol>
+                            {
+                                students.map((obj)=>{
+                                    return <li>
+                                        {
+                                            obj['firstname']
+                                        }
+                                        <ol>
+                                           {
+                                              obj['subjects'].map((e)=>{
+                                                return <li>{e}</li>
+                                              })
+                                           }
+                                        </ol>
+                                     </li>
+                                })
+                            }
+                       </ol>
+           ReactDOM.render(jsxlist,document.getElementById('d1'))
+                
+    </script>
+
+</body>
+</html>

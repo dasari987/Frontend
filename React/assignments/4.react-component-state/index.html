@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <DIV id="root">
+        
+    </DIV>
+   
+    <script type="text/babel"> 
+
+    // 1.Rendering React component
+
+    //   var Jsxcomp = function (){
+    //       return <div>
+    //                   <h1>Welcome to react component</h1>
+    //              </div>
+    //   }
+
+    //   ReactDOM.render(<Jsxcomp />, document.getElementById('root'))
+         
+
+
+    // 2. Evaluate expression in React component
+
+    // var Reacomp = function (){
+    //     return <div>
+    //                  {12+12}
+    //            </div>
+    // }
+    // ReactDOM.render(<Reacomp/>,document.getElementById('root'))
+
+
+    // 3. Evaluate string concatenation in React component
+
+    // var ReacComp = function(){
+    //     return <h1>
+    //                  {"Ram"+"Krishna"}
+    //            </h1>
+    // }
+    // ReactDOM.render(<ReacComp></ReacComp>,document.getElementById('root'))
+
+
+
+    // 4. Evaluate logical expression in React component
+
+    // var ReacComp = function(){
+    //     return (
+    //             <h1>
+    //                 {false || "Krishna"}
+    //            </h1>
+    //            )
+    // }
+    //ReactDOM.render(<ReacComp></ReacComp>,document.getElementById('root'))
+
+
+
+    // 5. Print array of numbers in React component
+
+    // let ar = [22,23,24,25,26,27]
+    // var ReacComp = function (){
+    //     return <div>
+    //                  {
+    //                     ar.map((e)=>{
+    //                         return <h1>{e}</h1>
+    //                     })
+    //                  }
+    //            </div>
+    // }
+    // ReactDOM.render(<ReacComp/>,document.getElementById('root'))
+
+
+
+    // 6. Print first two character of array values in React component
+
+
+    // let ar = ['sai','rishab','sharath']
+    // var ReacComp = function (){
+    //     return <div>
+    //                  {
+    //                     ar.map((e)=>{
+    //                         return <h1>{e.slice(0,2)}</h1>
+    //                     })
+    //                  }
+    //            </div>
+    // }
+    // ReactDOM.render(<ReacComp/>,document.getElementById('root'))
+
+
+
+    // 7.  Print square root of 14 in React component
+
+    // var ReacComp = function (){
+    //     return <h1>
+    //                 {Math.sqrt(14)}
+    //            </h1>
+    // }
+    // ReactDOM.render(<ReacComp/>,document.getElementById('root'))
+
+
+    // 8. Print integer part of the number 134.42 in React component
+
+    // var ReacComp = function (){
+    //     return <h1>
+    //                 {parseInt(134.42)}
+    //            </h1>
+    // }
+    // ReactDOM.render(<ReacComp/>,document.getElementById('root'))
+
+
+    // 9. Print string praveen in uppercase in React component
+
+    // var x = 'dasari'
+    // var ReacComp = function (){
+    //     return <h1>
+    //                 {x.toUpperCase()}
+    //            </h1>
+    // }
+    // ReactDOM.render(<ReacComp/>,document.getElementById('root'))
+
+
+    // 10. Print string length of praveen in React component
+
+    // var x = 'dasari'
+    // var ReacComp = function (){
+    //     return <h1>
+    //                 {x.length}
+    //            </h1>
+    // }
+    // ReactDOM.render(<ReacComp/>,document.getElementById('root'))
+
+
+    // 11. Print reverse of string praveen in React component
+
+    // var x = 'dasari'
+    // var ReacComp = function (){
+    //     return <h1>
+    //                 {x.split("").reverse().join("")}
+    //            </h1>
+    // }
+    // ReactDOM.render(<ReacComp/>,document.getElementById('root'))
+
+
+    // 12. Evaluate addition of two variable values in React component
+
+    // var x = 12;
+    // var y = 13;
+    // var ReacComp = function (){
+    //     return <h1>
+    //                 {x+y}
+    //            </h1>
+    // }
+    // ReactDOM.render(<ReacComp/>,document.getElementById('root'))
+
+
+    // 13. Display greatest of two variable values in React component
+
+    // var x = 12;
+    // var y = 13;
+    // var ReacComp = function (){
+    //     return <h1>
+    //                 {(x>y)?x:y}
+    //            </h1>
+    // }
+    // ReactDOM.render(<ReacComp/>,document.getElementById('root'))
+
+
+
+    // 14. Display variable value is even or odd in React component
+
+    // var x = +prompt();
+    // var ReacComp = function (){
+    //     return <h1>
+    //                 {(x%2==0)?"even":"odd"}
+    //            </h1>
+    // }
+    // ReactDOM.render(<ReacComp/>,document.getElementById('root'))
+
+
+
+    // 15. Display variable value is positive or negative in React component
+
+    // var x = +prompt();
+    // var ReacComp = function (){
+    //     return <h1>
+    //                 {(x>=0)?"positive":"negative"}
+    //            </h1>
+    // }
+    // ReactDOM.render(<ReacComp/>,document.getElementById('root'))
+
+
+    // 16. Display greatest variable value of three in React component
+
+
+
+
+
+
+
+    // 17. Display different elements conditionally React component
+
+    // var x = +prompt();
+    // var ReacComp = function (){
+    //     return <h1>
+    //                 {(x%2==0)?<h1>Even</h1>:<h1>Odd</h1>}
+    //            </h1>
+    // }
+    // ReactDOM.render(<ReacComp/>,document.getElementById('root'))
+
+
+
+    // 18. Display different images conditionally React component
+
+
+    // var x = +prompt();
+    // var ReacComp = function (){
+    //     return <div>
+    //                 {(x%2==0)?<img src="https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492__340.jpg"/>:<img src="https://cdn.pixabay.com/photo/2017/09/25/13/12/puppy-2785074__340.jpg"/>}
+    //            </div>
+    // }
+    // ReactDOM.render(<ReacComp/>,document.getElementById('root'))
+
+
+
+    // 19. Conditionally apply url to image in React component
+
+    // var x = +prompt();
+    // var ReacComp = function (){
+    //     return <div>
+    //                 <img src={(x%2==0)?"https://cdn.pixabay.com/photo/2017/09/25/13/12/puppy-2785074__340.jpg":"https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492__340.jpg"}/>
+    //            </div>
+    // }
+    // ReactDOM.render(<ReacComp/>,document.getElementById('root'))
+
+
+
+    // 20. Print array strings ol and ul in React component
+
+    // var ar = ['Cat','Dog','Rat','Elephant','Tiger']
+
+    // var ReacComp = function (){
+    //      return <div>
+    //                <ol>
+    //                 {
+    //                  ar.map((e)=>{
+    //                     return <li>{e}</li>
+    //                  })
+    //                 }
+    //                </ol>
+
+    //                <ul>
+    //                  {
+    //                   ar.map((e)=>{
+    //                     return <li>{e}</li>
+    //                   })
+    //                  }
+    //                </ul>
+    //             </div>
+    //  }
+    //  ReactDOM.render(<ReacComp/>,document.getElementById('root'))
+
+
+
+
+
+    //21. Print array strings ol of uppercase and ul of lowercase strings in React component
+
+
+    // var ar = ['Cat','Dog','Rat','Elephant','Tiger']
+
+    // var ReacComp = function (){
+    //      return <div>
+    //                <ol>
+    //                 {
+    //                  ar.map((e)=>{
+    //                     return <li>{e.toUpperCase()}</li>
+    //                  })
+    //                 }
+    //                </ol>
+
+    //                <ul>
+    //                  {
+    //                   ar.map((e)=>{
+    //                     return <li>{e.toLowerCase()}</li>
+    //                   })
+    //                  }
+    //                </ul>
+    //             </div>
+    //  }
+    //  ReactDOM.render(<ReacComp/>,document.getElementById('root'))
+
+
+
+
+    // 22. Print array values in React component
+
+    // var ar = [22,23,24,25,26,27,28]
+    // var ReacComp = function (){
+    //     return <div>
+    //                  {
+    //                     ar.map((e)=>{
+    //                         return <h1>{e}</h1>
+    //                     })
+    //                  }
+    //            </div>
+    // }
+    // ReactDOM.render(<ReacComp/>,document.getElementById('root'))
+
+
+
+    // 23. Print squared array values in list items in React component
+
+
+    // var ar = [22,23,24,25,26,27,28]
+    // var ReacComp = function (){
+    //     return <ul>
+    //                  {
+    //                     ar.map((e)=>{
+    //                         return <li>{e*e}</li>
+    //                     })
+    //                  }
+    //            </ul>
+    // }
+    // ReactDOM.render(<ReacComp/>,document.getElementById('root'))
+
+
+
+    // 24. Print merged array values of given two arrays in React component
+
+    // var ar = [22,23,24,]
+    // var br = [31,32,33,34,35]
+    // var ReacComp = function (){
+    //     return <div>
+    //                  {
+    //                     ar.concat(br).map((e)=>{
+    //                         return <li>{e}</li>
+    //                     })
+    //                  }
+    //            </div>
+    // }
+    // ReactDOM.render(<ReacComp/>,document.getElementById('root'))
+
+
+
+    // 25. Print merged array values in sorted order of given two arrays in React component
+
+    // var ar = [4,2,9,1,3]
+    // var br = [12,16,13,18,14]
+
+    // var ReacComp = function (){
+    //     return <div>
+    //                  {
+    //                     ar.concat(br).sort((a,b)=>{return (a<b)? -1: 1}).map((e)=>{
+    //                         return <li>{e}</li>
+    //                     })
+    //                  }
+    //            </div>
+    // }
+    // ReactDOM.render(<ReacComp/>,document.getElementById('root'))
+
+
+    // 26. Print only the even numbers of array of numbers in list items in React component
+
+
+    // var ar = [22,23,24,31,32,33,34,35]
+    // var ReacComp = function (){
+    //     return <div>
+    //                  {
+    //                     ar.map((e)=>{
+    //                         return (e%2===0)?<li>{e}</li> : null
+    //                     })
+    //                  }
+    //            </div>
+    // }
+    // ReactDOM.render(<ReacComp/>,document.getElementById('root'))
+
+
+
+
+    // 27. Print only the odd numbers of array of numbers in list items in React component
+
+
+    // var ar = [22,23,24,31,32,33,34,35]
+    // var ReacComp = function (){
+    //     return <div>
+    //                  {
+    //                     ar.map((e)=>{
+    //                         return (e%2!=0)?<li>{e}</li> : null
+    //                     })
+    //                  }
+    //            </div>
+    // }
+    // ReactDOM.render(<ReacComp/>,document.getElementById('root'))
+
+    
+
+
+
+    // 28. Print only the numbers of array greater than 25 of numbers in list items copy in React component
+
+    // var ar = [22,23,24,31,32,33,34,35]
+    // var ReacComp = function (){
+    //     return <div>
+    //                  {
+    //                     ar.map((e)=>{
+    //                         return (e>25)?<li>{e}</li> : null
+    //                     })
+    //                  }
+    //            </div>
+    // }
+    // ReactDOM.render(<ReacComp/>,document.getElementById('root'))
+
+
+
+    // 29. Print even numbers in italics and odd numbers in bold in list in React component
+
+    // var ar = [22,23,24,31,32,33,34,35]
+    // var ReacComp = function (){
+    //     return <ul>
+    //                  {
+    //                     ar.map((e)=>{
+    //                         return (e%2==0)?<li><i>{e}</i></li> : <li><b>{e}</b></li>
+    //                     })
+    //                  }
+    //            </ul>
+    // }
+    // ReactDOM.render(<ReacComp/>,document.getElementById('root'))
+
+
+
+    // 30. Print the sum of all numbers of array in React component
+
+    // var ar = [1,2,3,4,5,6,7,8,9,10]
+    // var ReacComp = function (){
+    //     return <div>
+    //                  {
+    //                     ar.reduce((a,b)=>{
+    //                         return a+b;
+    //                     })
+    //                  }
+    //            </div>
+    // }
+    // ReactDOM.render(<ReacComp/>,document.getElementById('root'))
+
+
+    
+
+    // 31. Print array strings sorted order in list items in React component
+
+    // var ar = ['sai','abhi','arjun','parvez','cherry']
+
+    // var ReacComp = function (){
+    //     return <ul>
+    //                  {
+    //                     ar.sort((a,b)=>{return (a<b)?-1:1}).map(e=>{
+    //                         return <li>{e}</li>
+    //                     })
+    //                  }
+    //            </ul>
+    // }
+    // ReactDOM.render(<ReacComp/>,document.getElementById('root'))
+
+
+
+    //32. Print array strings length in list items in React component
+
+    // var ar = ['sai','abhi','arjun','parvez','cherry']
+
+    // var ReacComp = function (){
+    //     return <ul>
+    //                  {
+    //                     ar.map(e=>{
+    //                         return <li>{e.length}</li>
+    //                     })
+    //                  }
+    //            </ul>
+    // }
+    // ReactDOM.render(<ReacComp/>,document.getElementById('root'))
+
+
+
+    // 33. Print array values in list items in React component
+
+
+    // var ar = [12,15,13,89,900]
+
+    // var ReacComp = function (){
+    //     return <ul>
+    //                  {
+    //                     ar.map(e=>{
+    //                         return <li>{e}</li>
+    //                     })
+    //                  }
+    //            </ul>
+    // }
+    // ReactDOM.render(<ReacComp/>,document.getElementById('root'))
+
+
+
+    // 34. Print array strings in list items in React component
+
+
+
+
+
+
+
+
+
+
+
+
+    // 35. Print a table for the given array of students in React component
+
+    // var students = [
+    //             {
+    //                 firstname: "Praveen",
+    //                 lastname: "Gubbala",
+    //                 age: 40
+    //             },
+    //             {
+    //                 firstname: "Rohit",
+    //                 lastname: "Sharma",
+    //                 age: 35
+    //             },
+    //             {
+    //                 firstname: "Sachin",
+    //                 lastname: "Tendulkar",
+    //                 age: 50
+    //             }
+    //         ];
+
+
+    // var ReacComp = function (){
+    //     return <table border='1px solid'>
+    //                 <thead>
+    //                     <td>FirstName</td>
+    //                     <td>LastName</td>
+    //                     <td>Age</td>
+    //                 </thead>
+    //                 <tbody>
+    //                      {
+    //                      students.map((stu)=>{
+    //                      return(
+    //                         <tr>
+    //                          <td>{stu['firstname']}</td>
+    //                          <td>{stu['lastname']}</td>
+    //                          <td>{stu['age']}</td>
+    //                      </tr>
+    //                      )
+    //                     })
+    //                     }
+    //                 </tbody>
+    //            </table>
+    // }
+    // ReactDOM.render(<ReacComp/>,document.getElementById('root'))
+
+
+
+
+
+    // 36. Print student details along with gender image in React component
+
+
+    //  var students = [
+    //  {
+    //       firstname:"Praveen",
+    //       lastname:"Gubbala",
+    //       age:40,
+    //       gender:"male"
+    //     },
+    //     {
+    //       firstname:"Smrithi",
+    //       lastname:"mandana",
+    //       age:25,
+    //       gender:'female'
+    //     },
+    //     {
+    //       firstname:"mithali",
+    //       lastname:"raj",
+    //       age:39,
+    //       gender:'female'
+    //     },
+    //     {
+    //       firstname:"Rohit",
+    //       lastname:"Sharma",
+    //       age:35,
+    //       gender:'male'
+    //     },
+    //     {
+    //       firstname:"Sachin",
+    //       lastname:"Tendulkar",
+    //       age:50,
+    //       gender:'male'
+    //     },
+    //         ];
+
+    //     let maleimg = "https://i.pinimg.com/736x/2a/4e/8d/2a4e8dab6791ed643d5180bc72167f6d.jpg"
+    //     let femimg = 'https://cdn.pixabay.com/photo/2014/04/02/14/10/female-306407_640.png'
+
+
+    // var ReacComp = function (){
+    //     return <table border='1px solid'>
+    //                 <thead>
+    //                     <td>FirstName</td>
+    //                     <td>LastName</td>
+    //                     <td>Age</td>
+    //                     <td>Gender</td>
+    //                     <td>Image</td>
+    //                 </thead>
+    //                 <tbody>
+    //                      {
+    //                      students.map((stu)=>{
+    //                      return(
+    //                       <tr>
+    //                          <td>{stu['firstname']}</td>
+    //                          <td>{stu['lastname']}</td>
+    //                          <td>{stu['age']}</td>
+    //                          <td>{stu['gender']}</td>
+    //                          <td><img src= {(stu['gender']=="male")?maleimg:femimg} style={{width:"150px"}} /></td>
+    //                      </tr>
+    //                      )
+    //                     })
+    //                     }
+    //                 </tbody>
+    //            </table>
+    // }
+    // ReactDOM.render(<ReacComp/>,document.getElementById('root'))
+
+
+
+
+    // 37.  Print array values in sorted order in list items in React component
+
+
+
+
+
+
+    // 38. Print flatten array of Multi-dimensional array in React component
+
+
+
+
+
+
+
+    // 39. Print only first character of array values in React component
+
+    // let ar = ['sai','rishab','sharath']
+    // var ReacComp = function (){
+    //     return <div>
+    //                  {
+    //                     ar.map((e)=>{
+    //                         return <h1>{e.slice(0,1)}</h1>
+    //                     })
+    //                  }
+    //            </div>
+    // }
+    // ReactDOM.render(<ReacComp/>,document.getElementById('root'))
+
+
+
+
+    // 40. Print only the numbers of array less than 25 of numbers in React component
+
+    //   var ar = [22,15,90,24,31,3,10,200]
+    // var ReacComp = function (){
+    //     return <div>
+    //                  {
+    //                     ar.map((e)=>{
+    //                         return (e<25)?<li>{e}</li> : null
+    //                     })
+    //                  }
+    //            </div>
+    // }
+    // ReactDOM.render(<ReacComp/>,document.getElementById('root'))
+    
+
+
+
+    // 41. Print array strings in lowercase in list items in React component
+
+
+    // var ar = ['Cat','Dog','Rat','Elephant','Tiger']
+
+    // var ReacComp = function (){
+    //      return <div>
+    //                <ul>
+    //                  {
+    //                   ar.map((e)=>{
+    //                     return <li>{e.toLowerCase()}</li>
+    //                   })
+    //                  }
+    //                </ul>
+    //             </div>
+    //  }
+    //  ReactDOM.render(<ReacComp/>,document.getElementById('root'))
+
+
+
+     // 42. Print array strings reverse in list items in React component
+
+
+    //  var ar = ['Cat','Dog','Rat','Elephant','Tiger']
+
+    //   var ReacComp = function (){
+    //       return <div>
+    //            <ul>
+    //              {
+    //               ar.map((e)=>{
+    //                 return <li>{e.split("").reverse().join("")}</li>
+    //               })
+    //              }
+    //            </ul>
+    //         </div>
+    //    }
+    //    ReactDOM.render(<ReacComp/>,document.getElementById('root'))
+
+
+
+
+     // 43. Print the images from array of image urls in React component
+
+
+    //  var ar = ['https://cdn.pixabay.com/photo/2023/04/08/01/23/mom-7908059_1280.jpg','https://cdn.pixabay.com/photo/2015/01/07/11/31/tigers-591359_1280.jpg','https://cdn.pixabay.com/photo/2015/04/23/22/01/mountains-736886_1280.jpg']
+    //     var ReacComp = function (){
+    //       return <div>
+    //              {
+    //               ar.map((e)=>{
+    //                 return <img src = {e} style={{width:'200px'}}/>
+    //               })
+    //              }
+    //         </div>
+    //    }
+    //    ReactDOM.render(<ReacComp/>,document.getElementById('root'))
+
+
+
+
+    // 44. Print the images as list items from array of image urls in React component
+
+
+    //     var ar = ['https://cdn.pixabay.com/photo/2023/04/08/01/23/mom-7908059_1280.jpg','https://cdn.pixabay.com/photo/2015/01/07/11/31/tigers-591359_1280.jpg','https://cdn.pixabay.com/photo/2015/04/23/22/01/mountains-736886_1280.jpg']
+    //     var ReacComp = function (){
+    //       return <ul>
+    //              {
+    //               ar.map((e)=>{
+    //                 return<li> <img src = {e} style={{width:'200px'}}/> </li>
+    //               })
+    //              }
+    //         </ul>
+    //    }
+    //    ReactDOM.render(<ReacComp/>,document.getElementById('root'))
+
+
+
+    // 45. Print the images as table cells from array of image urls in React component
+
+
+    //     var ar = ['https://cdn.pixabay.com/photo/2023/04/08/01/23/mom-7908059_1280.jpg','https://cdn.pixabay.com/photo/2015/01/07/11/31/tigers-591359_1280.jpg','https://cdn.pixabay.com/photo/2015/04/23/22/01/mountains-736886_1280.jpg']
+    //     var ReacComp = function (){
+    //       return <table border='1px solid'>
+    //                    <thead>
+    //                            {
+    //                             ar.map(e=>{
+    //                                 return <td><img src={e} style={{width:'200px'}}/></td>
+    //                             })
+    //                            }
+    //                    </thead>
+    //             </table>
+    //    }
+    //    ReactDOM.render(<ReacComp/>,document.getElementById('root'))
+    
+
+    
+
+    // 46.Print the object properties in React component
+
+    // var obj = {
+    //             firstname: "Praveen",
+    //             lastname: "Gubbala",
+    //             age: 40
+    //           }
+
+    //     var ReacComp = function (){
+    //       return <div>
+    //                    <h1>Firstname:{obj['firstname']}</h1>
+    //                    <h1>Lastname:{obj['lastname']}</h1>
+    //                    <h1>Age:{obj['age']}</h1>
+    //             </div>
+    //    }
+    //    ReactDOM.render(<ReacComp/>,document.getElementById('root'))
+
+    
+
+    // 47. Print the string object property values in Uppercase in React component
+
+
+    //     var obj = {
+    //             firstname: "Praveen",
+    //             lastname: "Gubbala",
+    //             age: 40
+    //           }
+
+    //     var ReacComp = function (){
+    //       return <div>
+    //                    <h1>Firstname:{obj['firstname'].toUpperCase()}</h1>
+    //                    <h1>Lastname:{obj['lastname'].toUpperCase()}</h1>
+    //                    <h1>Age:{obj['age']}</h1>
+    //             </div>
+    //    }
+    //    ReactDOM.render(<ReacComp/>,document.getElementById('root'))
+
+
+
+
+
+    // 48. Print each object in a seperate list for a given array of student objects in React component
+
+
+    // var students = [
+    //             {
+    //                 firstname: "Praveen",
+    //                 lastname: "Gubbala",
+    //                 age: 40
+    //             },
+    //             {
+    //                 firstname: "Rohit",
+    //                 lastname: "Sharma",
+    //                 age: 35
+    //             },
+    //             {
+    //                 firstname: "Sachin",
+    //                 lastname: "Tendulkar",
+    //                 age: 50
+    //             },
+    //         ]
+
+    //     var ReacComp = function (){
+    //       return <div>
+    //                    {
+    //                     students.map(obj=>{
+    //                         return <ul>
+    //                                     <li>{obj['firstname']}</li>
+    //                                     <li>{obj['lastname']}</li>
+    //                                     <li>{obj['age']}</li>
+    //                                </ul>
+    //                     })
+    //                    }
+    //             </div>
+    //    }
+    //    ReactDOM.render(<ReacComp/>,document.getElementById('root'))
+
+
+
+
+
+    // 49. Print array strings in list items in React component
+    
+
+
+
+
+
+
+
+    // 50. Print the given array of students in cards in React component
+
+
+    //  var students = [
+    //             {
+    //                 firstname: "Praveen",
+    //                 lastname: "Gubbala",
+    //                 age: 40
+    //             },
+    //             {
+    //                 firstname: "Rohit",
+    //                 lastname: "Sharma",
+    //                 age: 35
+    //             },
+    //             {
+    //                 firstname: "Sachin",
+    //                 lastname: "Tendulkar",
+    //                 age: 50
+    //             },
+    //         ]
+
+    //     var ReacComp = function (){
+    //       return <div>
+    //                    {
+    //                     students.map(obj=>{
+    //                         return <div style={{border:'1px solid',marginBottom:'9px', padding:'10px'}}>
+    //                                     <h2>{obj['firstname'] + obj['lastname']}</h2>
+    //                                     <h3>{obj['age']}</h3>
+    //                                </div>
+    //                     })
+    //                    }
+    //             </div>
+    //    }
+    //    ReactDOM.render(<ReacComp/>,document.getElementById('root'))
+
+
+
+
+
+    // 51. Generate galleries using in React component
+
+    var gr = [
+          [
+            "https://cdn.pixabay.com/photo/2017/09/25/13/12/puppy-2785074_1280.jpg",
+            "https://cdn.pixabay.com/photo/2016/12/13/05/15/puppy-1903313_1280.jpg",
+            "https://cdn.pixabay.com/photo/2016/05/09/10/42/weimaraner-1381186_1280.jpg"
+          ],
+          [
+            "https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492_1280.jpg",
+            "https://cdn.pixabay.com/photo/2017/11/09/21/41/cat-2934720_1280.jpg",
+            "https://cdn.pixabay.com/photo/2014/04/13/20/49/cat-323262_1280.jpg",
+            "https://cdn.pixabay.com/photo/2015/03/27/13/16/maine-coon-694730_1280.jpg",
+            "https://cdn.pixabay.com/photo/2016/02/10/16/37/cat-1192026_1280.jpg"
+          ]
+        ]
+
+
+        var ReacComp = function (){
+          return <div style={{padding:'15px',backgroundColor:'skyblue'}}> 
+                       <h1>Gallery of animals</h1>
+                       {
+                        gr.map(arr=>{
+                            return <div style={{backgroundColor:'white',marginBottom: '10px', paddingLeft: '15px'}}>
+                                        <h1>Slide</h1>
+                                        {
+                                            arr.map(link=>{
+                                                return <img src = {link} style={{width:'150px', height:'90px'}}/>
+                                            })
+                                        }
+                                   </div>
+                        })
+                       }
+                </div>
+       }
+       ReactDOM.render(<ReacComp/>,document.getElementById('root'))
+
+
+
+
+    </script>
+</body>
+</html>

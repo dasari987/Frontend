@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+        var obj = {
+            "dum nam": "funny",
+            fName: "sai",
+            lName: "babu",
+            age: 23,
+            gender: "male",
+            7: "yes"
+        }
+
+        // console.log(obj[fName])
+        // console.log(obj["dum nam"])
+        // console.log(obj["fName"]);
+        // console.log(obj["fName"]+" "+obj["lName"]);
+
+
+
+        // var a = obj["fName"];
+        // var b = obj["lName"];
+        // console.log(a+b)
+
+
+
+        // var c = "fName";
+        // var d = "lName";
+        // console.log(obj[c]+" "+obj[d])
+
+
+        // console.log(obj);
+        // for(var i in obj){
+        //     console.log(i)
+        // }
+
+
+        // for(var i in obj){
+        //     console.log(obj[i])
+        // }
+
+
+
+        /////////////////////////////////////////////////
+
+        // var person = {
+        //     firstName: "Harry",
+        //     lastName: "potter",
+        //     age: 30,
+        //     gender: "male",
+        //     skill: "ReactJS",
+        //     expertise:"Beginner"
+        // }
+
+        //1.Print the firstname.
+
+        // console.log(person["firstName"])
+        // console.log(person[firstName])
+        // console.log(person.firstName);
+
+
+
+
+        // Print the lastname.
+
+        // console.log(person["lastName"])
+        // console.log(person.lastName);
+
+
+
+
+        // Print the fullname("Harry Potter").
+
+        // var fName = person["firstName"];
+        // var lName = person["lastName"];
+        // console.log(fName+" "+lName);
+
+        // console.log(person["firstName"]+" "+ person["lastName"]);
+        // console.log(person.firstName+" "+person.lastName);
+
+
+
+
+
+        // If the age is less than 18, then print "false". If the age is more than 18, then print "true".
+
+
+
+        // if(person["age"]<18){
+        //     console.log(false);
+        // }
+        // else{
+        //     console.log(true);
+        // }
+
+
+
+
+        // if(person.age<18){
+            // console.log("false")
+        // }
+        // else{
+            // console.log("true")
+        // }
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+       
+
+
+
+            // var marks = {
+            //    maths : 34,
+            //    english : 56,
+            //    science: 32,
+            //    hindi : 75,
+            //    social_science: 65
+            // };
+
+
+            // 1.Print the marks of all the subjects.
+
+            // console.log(marks);
+
+
+
+
+         
+            // 2.Print the names of all the subjects from the given object.
+
+            // for(var i in marks){
+            //     console.log(i)
+            // }
+
+
+            // var keys = Object.keys(marks);
+            // for(i=0;i<keys.length;i++){
+            //     console.log(keys[i]);
+            // }
+
+
+
+
+
+
+            //3. Count the number of subjects from the given object.
+
+
+            // var count = 0;
+            // for(var i in marks){
+            //     count++;
+            // }
+            // console.log(count);
+
+
+
+            // var subjects = Object.keys(marks);
+            // console.log(subjects.length)
+
+
+
+
+
+
+            //4.Print the percentage of the marks of the student.
+
+            // var count = 0;
+            // var sum = 0;
+            // for(var i in marks){
+            //     count++;
+            //     sum = sum+marks[i]
+            // }
+            // console.log(count)
+            // console.log(sum)
+            // console.log(Math.round((sum/(count*100))*100) + "%");
+
+
+
+            // var total = marks.maths + marks.english + marks.science + marks.hindi + marks.social_science;
+            // console.log("marks percentage ="+ Math.round((total/500)*100)+"%");
+
+
+
+
+
+
+
+            // 5.Print only those subjects where the student scored more than 35.
+
+            // for(var i in marks){
+            //     if(marks[i]>35){
+            //         console.log(i)
+            //     }
+            // }
+
+
+
+
+            //6. Print the pass/fail status of the subjects provided 35 is the pass mark.
+
+            // for(var i in marks){
+            //     if(marks[i]>35){
+            //         console.log(i +":"+"Pass")
+            //     }
+            //     else{
+            //         console.log(i +":"+"fail")
+            //     }
+            // }
+
+
+
+
+
+
+
+            // 7.Print only the passed subjects.
+
+            // for(var i in marks){
+            //     if(marks[i]>35){
+            //         console.log(i)
+            //     }
+            // }
+
+
+
+
+            //8.Count the number of passed subjects.
+
+
+            // var count = 0;
+            // for(var i in marks){
+            //     if(marks[i]>35){
+            //         count++
+            //     }
+            // }
+            // console.log(count);
+
+
+
+
+            //9.Print only the failed subjects.
+
+            // for(var i in marks){
+            //     if(marks[i]<35){
+            //         console.log(i)
+            //     }
+            // }
+
+
+
+            //10.Count the number of failed subjects.
+
+            // var count = 0;
+            // for(var i in marks){
+            //     if(marks[i]<35){
+            //          count++;
+            //     }
+            // }
+            // console.log(count);
+
+
+            
+
+            // 11.Print the least scored subject.
+
+
+            // var smallest = +Infinity
+            // var subject = "";
+            // for(var i in marks){
+            //     if(marks[i]<smallest){
+            //         smallest = marks[i];
+            //         subject = i
+            //     }
+            // }
+
+            // console.log(subject+":"+smallest);
+
+
+
+
+
+
+            //12. Print the highest scored subject.
+
+            // var highest = -Infinity;
+            // var subject = "";
+            // for(var i in marks){
+            //     if(marks[i]>highest){
+            //         highest=marks[i];
+            //         subject=i;
+            //     }
+            // }
+
+            // console.log(subject+":"+highest)
+
+
+
+
+
+
+            // 14.Take the subject name from the student through prompt box and print the subject marks and pass/fail status.
+
+
+    
+
+            // var subject = prompt();
+
+            // if(marks[subject]>35){
+            //     console.log(marks[subject]+":"+"pass")
+            // }
+            // else{
+            //     console.log(marks[subject]+":"+"fail")
+            // }
+
+
+            
+
+            
+
+
+    </script>
+</body>
+</html>

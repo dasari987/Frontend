@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <style>
+          button{
+            background-color: antiquewhite;
+          }
+    </style>
+
+    <button id="one" onclick="alert('hii'); console.log(event);">Welcome to event listeners</button>
+    <button onClick="var x =45+45; alert(x)">Button</button>
+    <button onclick="abc()">function call</button>
+
+    <p style="border: 2px solid; padding: 20px;" onclick="console.log(event)">hello world</p>
+
+    <button onclick="bc(event)">event</button>
+    
+    <script>
+
+        function abc(){
+            alert("iam abc function")
+        }
+
+        function bc(e){
+            // alert("iam ab function")
+            console.log(e.target)
+            console.log(e)
+            e.target.style.borderColor='green'
+            e.target.style.borderStyle='dotted'
+        
+        }
+
+    </script>
+</body>
+</html>

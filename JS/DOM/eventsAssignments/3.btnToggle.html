@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="changeColor(event)">white</button>
+    <script>
+        function changeColor(e){
+            if(e.target.innerHTML==="white"){
+                console.log(e)
+                e.target.innerHTML="green"
+                e.target.style.backgroundColor = "green"
+                e.target.style.color = 'white'
+            }
+            else{
+                e.target.innerHTML='white'
+                e.target.style.backgroundColor = "white"
+                e.target.style.color = 'black'
+            }
+        }
+    </script>
+</body>
+</html>

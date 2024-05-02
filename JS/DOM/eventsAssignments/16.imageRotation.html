@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="text-align: center; margin-top: 20px;">
+      <img src="" alt="loading" id="image" onclick="changeImage(event,srcArr)" style="width: 600px; border-radius: 5px;">
+   </div> 
+    <script>
+         var img = document.getElementById("image")
+        //  console.log(img)
+        //  console.log(img.src)
+        var srcArr = ["https://cdn.pixabay.com/photo/2020/05/03/13/09/puppy-5124947_640.jpg",
+                      "https://cdn.pixabay.com/photo/2015/11/17/13/13/puppy-1047521_640.jpg",
+                      "https://cdn.pixabay.com/photo/2016/02/18/18/37/puppy-1207816_640.jpg"
+                ]
+        var i = 0;
+        img.src = srcArr[i]
+        function changeImage(event,arr){
+            // console.log(event)
+            // console.log(event.target)
+           if(i==srcArr.length-1){
+            i = 0;
+            event.target.src = srcArr[i]
+           }
+           else{
+              i = i+1;
+              event.target.src = srcArr[i]
+            }
+
+        }
+
+        // https://cdn.pixabay.com/photo/2020/05/03/13/09/puppy-5124947_640.jpg
+        // https://cdn.pixabay.com/photo/2015/11/17/13/13/puppy-1047521_640.jpg
+        // https://cdn.pixabay.com/photo/2016/02/18/18/37/puppy-1207816_640.jpg
+
+         
+    </script>
+</body>
+</html>

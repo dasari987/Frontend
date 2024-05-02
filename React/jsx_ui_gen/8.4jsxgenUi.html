@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="d1">
+
+    </div>
+
+    <div id="d2">
+
+    </div>
+
+    <script type="text/babel">
+         //8.3. Display only those people in a table who are having salaries more than 20000.
+
+           var people = [
+                        {
+                        "firstname": "praveen",
+                        "lastname": "gubbala",
+                        "age": 36,
+                        "gender": "male",
+                        "city": "hyd",
+                        "salary": 10000
+                        },
+                        {
+                        "firstname": "srikanth",
+                        "lastname": "gubbala",
+                        "age": 32,
+                        "gender": "male",
+                        "city": "bengaluru",
+                        "salary": 20000
+                        },
+                        {
+                        "firstname": "pradeep",
+                        "lastname": "reddy",
+                        "age": 21,
+                        "gender": "male",
+                        "city": "hyd",
+                        "salary": 30000
+                        },
+                        {
+                        "firstname": "mounika",
+                        "lastname": "mudiraj",
+                        "age": 20,
+                        "gender": "female",
+                        "city": "nalgonda",
+                        "salary": 30000
+                        },
+                        {
+                        "firstname": "nikhil",
+                        "lastname": "m",
+                        "age": 22,
+                        "gender": "male",
+                        "city": "guntur",
+                        "salary": 2000
+                        },
+                        {
+                        "firstname": "riya",
+                        "lastname": "bhadouria",
+                        "age": 14,
+                        "gender": "female",
+                        "city": "indore",
+                        "salary": 40000
+                        }
+                        ];
+
+
+            var filarr = people.filter(obj=>{
+                return obj['gender']=='male' && obj['age']>25
+            })
+
+            console.log(filarr)
+
+
+            var jsxSTable = <table border='1px solid' cellspacing= '0px' cellpadding='10px'>
+                                      <thead>
+                                          <td>FirstName</td>
+                                          <td>LastName</td>
+                                          <td>age</td>
+                                          <td>gender</td>
+                                          <td>city</td>
+                                          <td>Salary</td>
+                                      </thead>
+                                      <tbody>
+                                             {
+                                                filarr.map(obj=>{
+                                                    return <tr>
+                                                              <td>{obj['firstname']}</td>
+                                                              <td>{obj['lastname']}</td>
+                                                              <td>{obj['age']}</td>
+                                                              <td>{obj['gender']}</td>
+                                                              <td>{obj['city']}</td>
+                                                              <td>{obj['salary']}</td>
+                                                           </tr>
+                                                })
+                                             }
+                                      </tbody>
+                                 </table>
+            
+
+           ReactDOM.render(jsxSTable,document.getElementById('d1'))
+
+          
+    </script>
+</body>
+</html>

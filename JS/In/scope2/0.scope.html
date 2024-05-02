@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var ar = function(){
+        //     console.log("hii")
+        // }
+        // ar()
+
+
+        // var ar = [function(){console.log("hii")},function(){console.log("hello")}]
+        // ar[0]();
+        // ar[1]();
+
+
+        // var ar = []
+        // for(var i = 1; i<=4; i++){
+        //     ar.push(i)
+        // }
+        // console.log(ar)
+
+
+        // var ar = []
+        // for(var i = 1; i<=4; i++){
+        //     ar.push(function() {console.log("hii")},function(){console.log(i)})
+        // }
+        // console.dir(ar)
+        // console.log(ar)
+
+
+        ///////////////////////////////////////////
+
+        // var ar = [];
+        // for(var i = 1; i<=4; i++){
+        //     ar.push(function(){console.log(i)})
+        // }
+        // console.log(ar)
+        // ar[0]()
+        // ar[1]()
+
+
+
+
+        // var ar = [];
+        // for(let i = 1; i<=4; i++){
+        //     ar.push(function(){console.log(i)})
+        // }
+        // console.dir(ar)
+        // console.log(ar)
+        // ar[1]()
+        // ar[3]()
+        // ar[2]()
+
+
+
+        var  ar = [11,22,33,44]
+        var br = []
+        ar.forEach(function (num,i) {
+            br.push(function(){console.log(num,i)})
+        })
+
+        console.log(br)
+        br[0]()
+
+
+
+
+        // function outer() {
+        //     var a = 10
+        //     function inner(){
+        //         console.log(a)
+        //     }
+        //     inner()
+        // }
+        // outer()
+        
+
+    </script>
+
+
+</body>
+</html>

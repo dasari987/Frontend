@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="text-align: center; background-color: antiquewhite; font-size: 20px;">
+    
+    <style>
+        img{
+            height: 300px;
+            width: 300px;
+            margin-right: 7px;
+            margin-top: 7px;
+            border-radius: 5px;
+        }
+        input{
+            margin-bottom: 10px;
+        }
+    </style>
+  <div style=" margin-top: 100px;">
+        <h1 style="color: red;">Printing Table</h1>
+
+        <label for="" style="margin-right: 7px;">First Name:   &nbsp</label>
+        <input id="fName" type="text" style="height: 20px; width: 190px; outline: none;">
+        <br>
+        <label for="">Last Name:  &nbsp &nbsp</label>
+        <input id="lName" type="text" style="height: 20px; width: 190px; outline: none;">
+        <br>
+        <label for="" style="margin-right: 73px;">Age: </label>
+        <input id="age" type="number" style="height: 20px; width: 190px; outline: none;">
+         <br>
+        <label for="" style="margin-right: 55px;">city:  &nbsp &nbsp</label>
+        <input id="city" type="text" style="height: 20px; width: 190px; outline: none;">
+        <br>
+        <button id="btn1" onclick="tableCreation()" style="margin-left: 52px; background-color: orange; border: 0px; border-radius: 3px; padding: 7px 20px; margin-right: 15px; margin-top: 19px;">Create Table</button>
+
+        <div style="text-align: center; margin-top: 20px;">
+              <table border="1px solid" cellspacing = 0px cellpadding="10px" style="margin-left: 600px;">
+                 <thead>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Age</th>
+                    <th>City</th>
+                 </thead>
+
+                 <tbody id="tbdy">
+
+                 </tbody>
+              </table>
+        </div>
+  </div>
+    <script>
+
+    //////////////////  better method
+        
+      
+    var tableArr = []
+     function tableCreation(){
+        var tableData = {}
+        var fname = document.getElementById('fName').value
+        var lname = document.getElementById('lName').value
+        var age = document.getElementById('age').value
+        var city = document.getElementById('city').value
+
+        tableData.fName = fname;
+        tableData.lName = lname;
+        tableData.age = age;
+        tableData.city = city;
+        tableArr.push(tableData)
+        console.log(tableArr)
+         
+
+        document.getElementById('tbdy').innerHTML = ""
+         genUI(tableArr)
+
+    }
+
+
+    function genUI(ar) {
+        ar.forEach(function(obj){
+            var tr = document.createElement('tr')
+            for(var key in obj){
+            var td = document.createElement('td')
+            td.innerHTML = obj[key];
+            tr.appendChild(td)
+            }
+            document.getElementById('tbdy').appendChild(tr)
+        })
+        document.getElementById("fName").value = ""
+        document.getElementById('lName').value = ""
+        document.getElementById('age').value= ""
+        document.getElementById('city').value=""
+    }
+           
+    
+
+    </script>
+</body>
+</html>

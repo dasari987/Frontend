@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+     <div id="root">
+
+     </div>
+
+     <script type="text/babel">
+           
+           function Appcomponent(){
+               var [cnt1,setCnt1] = React.useState(1)
+               var [cnt2,setCnt2] = React.useState(9)
+
+               function inc1() {
+                  setCnt1(cnt1+1)
+               }
+               function dec1() {
+                  setCnt1(cnt1-1)
+               }
+
+
+               function inc2() {
+                  setCnt2(cnt2+1)
+               }
+               function dec2() {
+                  setCnt2(cnt2-1)
+               }
+
+              return(
+                  <div style={{border:'1px solid',padding:'10px'}}>
+                      <div>
+                        <h1>App....</h1>
+                        <Childcomp1 incre={inc1} decre={dec1} val = {cnt1}></Childcomp1>
+                        <Childcomp2 incre={inc2} decre={dec2} val = {cnt2}></Childcomp2>
+                      </div>
+                  </div>
+              )
+           }
+
+
+           function Childcomp1(props) {
+              return(
+                 <div style={{border:'1px solid',padding:'10px',marginBottom:'9px'}}>
+                    <h3>Count:{props.val}</h3>
+                    <button onClick={()=>{props.incre()}}>Increment</button>
+                    <button onClick={()=>{props.decre()}}>Decrement</button>
+                 </div>
+              )
+           }
+
+           function Childcomp2(props) {
+              return(
+                 <div style={{border:'1px solid',padding:'10px'}}>
+                    <h3>H1Count:{props.val}</h3>
+                    <button  onClick={()=>{props.incre()}}>Increment</button>
+                    <button  onClick={()=>{props.decre()}}>Decrement</button>
+                 </div>
+              )
+           }
+
+
+           ReactDOM.render(<Appcomponent></Appcomponent>,document.getElementById('root'))
+
+     </script>
+</body>
+</html>

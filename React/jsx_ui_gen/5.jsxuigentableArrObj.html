@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <!-- 5. Take an array of objects and create a table form it. -->
+
+    <div id="d1">
+
+    </div>
+
+
+    <script type="text/babel">
+     var people = [
+                        {
+                        "firstname": "praveen",
+                        "lastname": "gubbala",
+                        "age": 36,
+                        "gender": "male",
+                        "city": "hyd",
+                        "salary": 10000
+                        },
+                        {
+                        "firstname": "srikanth",
+                        "lastname": "gubbala",
+                        "age": 32,
+                        "gender": "male",
+                        "city": "bengaluru",
+                        "salary": 20000
+                        },
+                        {
+                        "firstname": "pradeep",
+                        "lastname": "reddy",
+                        "age": 21,
+                        "gender": "male",
+                        "city": "hyd",
+                        "salary": 30000
+                        },
+                        {
+                        "firstname": "mounika",
+                        "lastname": "mudiraj",
+                        "age": 20,
+                        "gender": "female",
+                        "city": "nalgonda",
+                        "salary": 30000
+                        },
+                        {
+                        "firstname": "nikhil",
+                        "lastname": "m",
+                        "age": 22,
+                        "gender": "male",
+                        "city": "guntur",
+                        "salary": 2000
+                        },
+                        {
+                        "firstname": "riya",
+                        "lastname": "bhadouria",
+                        "age": 14,
+                        "gender": "female",
+                        "city": "indore",
+                        "salary": 40000
+                        }
+            ];
+        
+
+        var jsxh1 = <table>
+                      <thead>
+                         <td>FName</td>
+                         <td>LName</td>
+                         <td>Age</td>
+                         <td>Gender</td>
+                         <td>City</td>
+                         <td>Salary</td>
+                      </thead>
+                      <tbody id="tbdy">
+                           {
+                             people.map((obj)=>{
+                                return <tr>
+                                            <td>{obj['firstname']}</td>
+                                            <td>{obj['lastname']}</td>
+                                            <td>{obj['age']}</td>
+                                            <td>{obj['gender']}</td>
+                                            <td>{obj['city']}</td>
+                                            <td>{obj['salary']}</td>
+                                       </tr>
+                             })
+                           }
+                      </tbody>
+                     </table>
+        ReactDOM.render(jsxh1,document.getElementById('d1'))
+    </script>
+
+</body>
+</html>

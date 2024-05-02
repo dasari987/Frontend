@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="text-align: center; background-color: antiquewhite; font-size: 20px">
+    
+    <div style="margin-top: 100px">
+      <form onsubmit="handleSubmit(event)">
+        <label for="">First Name: </label>
+         <input type="text" name="firstname">
+         <br>
+         <label for="">Last Name: </label>
+         <input type="text" name = "lastname">
+         <br>
+         <button type="submit">Submit</button>
+      </form>
+
+
+      <script>
+          var userDetails = {}
+         function handleSubmit(e){
+            e.preventDefault();
+            var myForm = new FormData(e.target);
+            console.log(myForm)
+            // myForm.forEach(function(x,y){
+            //     console.log(x,y)
+            // })
+           
+            for(var [key,value] of myForm.entries()){
+                userDetails[key] = value;
+            }
+            console.log(userDetails)
+         }
+      </script>
+    </div>
+  </body>
+</html>

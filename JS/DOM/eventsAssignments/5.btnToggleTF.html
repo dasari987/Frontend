@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="text-align: center; background-color: antiquewhite; font-size: 20px;">
+    <div style="text-align: center; margin-top: 100px;">
+        <h1 style="color: red;">Toggle button to show true/false</h1>
+        <button onclick="toggle()" style="margin-right: 7px; background-color: orange; border: 0px; border-radius: 3px; padding: 7px 15px;">Toggle</button>
+        <span id="text" style="color: rgb(238, 67, 67);"></span>
+    </div>
+    <script>
+
+        var x = false;
+        var text = document.getElementById('text')
+        text.innerHTML = x;
+        function toggle(){
+                x = !x
+                text.innerHTML = x
+            } 
+
+
+
+
+
+
+// 2nd method
+        //  var text = document.getElementById('text')
+        //  text.innerHTML = false                   //  console.log(text.innerHTML) //  console.log(typeof(text.innerHTML)) //  console.log(typeof(false))
+        //     function toggle(){
+        //         if(text.innerHTML == 'false'){
+        //              text.innerHTML = true
+        //          }
+
+        //          else{
+        //             text.innerHTML = false
+        //          }
+        //     } 
+        //     // console.log(false==0)
+
+
+        
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+<!-- // console.log(true);
+        // console.log(false)
+        // console.log(typeof(false))
+        // console.log(false==0)
+        // console.log(true==100)
+        // console.log(true==1) -->
+
+<!-- //   console.log(text)
+//   console.dir(text)
+//   console.log(text.id)
+//   console.log(text.innerHTML)
+//   console.log(text.tagName) -->

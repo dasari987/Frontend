@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: black;
+            font-family: sans-serif;
+        }
+         .listStyle{
+            background-color: burlywood;
+            padding: 10px;
+            margin-bottom: 20px;
+            font-size: 20px;
+            margin-left: 40px;
+            margin-right: 40px;
+         }
+         .tdeditbtn{
+            padding: 4px;
+            width: 50px;
+            border-radius: 3px;
+            border: none;
+            margin-right: 10px;
+            margin-left: 30px;
+         }
+
+         .statusbtn{
+            padding: 4px;
+            width: 60px;
+            border-radius: 3px;
+            border: none;
+            margin-right: 10px;
+         }
+
+         .tdlidelbtn{
+            padding: 4px;
+            width: 50px;
+            border-radius: 3px;
+            border: none;
+            color: red;
+         }
+
+        
+    </style>
+
+    <div style="text-align: center;">
+       <input type="text" id="inp" style="width: 250px; height: 27px; outline: none; border-radius: 5px;">
+       <button onclick="AddTodo()" id="addtodo" style="height: 28px; width: 110px; background-color: aliceblue; border-radius: 3px; margin-top: 20px;">Add Todo's</button>
+       <button onclick="updateTodo()" id="updatetodo" style="display: none; height: 28px; width: 110px; background-color: aliceblue; border-radius: 3px;">Update Todo's</button>
+   </div>
+
+   <ol id="listItems">
+         
+   </ol>
+    <script>
+        var ar = []
+        var tdol = document.getElementById('listItems')
+        var index = 0;
+
+           function AddTodo(){
+             var text =  document.getElementById('inp').value
+             var obj = {
+                "task": text,
+                "status": 'pending'
+             }
+             ar.push(obj)
+             console.log(ar);
+             document.getElementById('inp').value = ""
+             genTodo()
+            }
+
+
+            function updateTodo() {
+               var updatedTodo =  document.getElementById('inp').value
+               ar[index]["task"] = updatedTodo
+               console.log(ar)
+               genTodo()
+               document.getElementById('inp').value = ""
+               document.getElementById('addtodo').style.display = "inline-block"
+               document.getElementById('updatetodo').style.display = "none"
+            }
+
+
+
+        function genTodo() {
+            document.getElementById('listItems').innerHTML = ""
+
+             ar.forEach(function(todo,i){
+                var tdli = document.createElement('li')
+                tdli.className = "listStyle"
+                tdli.innerHTML = todo['task']
+                tdol.appendChild(tdli)
+                if(todo.status==='pending')tdli.style.backgroundColor='burlywood'
+                else{
+                todo.status?tdli.style.backgroundColor='#45b043':tdli.style.backgroundColor='#e64040'
+                if(todo.status){
+                    tdli.style.textDecoration = "line-through"
+                }
+                }
+               
+                var tdliedit = document.createElement('button')
+                tdliedit.innerHTML = 'Edit'
+                tdli.appendChild(tdliedit)
+                tdliedit.className = "tdeditbtn"
+
+                var statusbtn1 = document.createElement('button')
+                statusbtn1.innerHTML = "Done"
+                tdli.appendChild(statusbtn1)
+                statusbtn1.style.display = "inline-block"
+                statusbtn1.className = 'statusbtn'
+
+                var statusbtn2 = document.createElement('button')
+                statusbtn2.innerHTML = "unDone"
+                tdli.appendChild(statusbtn2)
+                statusbtn2.style.display = "none"
+                statusbtn2.className = 'statusbtn'
+
+                var tdlidel = document.createElement('button')
+                tdlidel.innerHTML = 'X'
+                tdli.appendChild(tdlidel)
+                tdlidel.className = 'tdlidelbtn'
+
+                tdlidel.onclick = function(){
+                    ar.splice(i,1)
+                    genTodo()
+                    console.log(ar)
+                    document.getElementById('inp').value = ""
+                }
+
+                tdliedit.onclick = function(){
+                   document.getElementById('inp').value = todo['task']
+                   index = i
+                   console.log(index)
+                   document.getElementById('addtodo').style.display = "none"
+                   document.getElementById('updatetodo').style.display = "inline-block"
+                }
+
+                statusbtn1.onclick = function(){
+                    statusbtn1.style.display = "none"
+                    statusbtn2.style.display = "inline-block"
+                    todo.status=true
+                    console.log(ar)
+                    tdli.style.backgroundColor='#45b043'
+                    tdli.style.textDecoration='line-through'
+                }
+
+                statusbtn2.onclick = function(){
+                    statusbtn1.style.display = "inline-block"
+                    statusbtn2.style.display = "none"
+                    todo.status=false
+                    console.log(ar)
+                    tdli.style.backgroundColor='#e64040'
+                    tdli.style.textDecoration='none'
+                }
+
+             })
+        }
+           
+
+
+        
+    </script>
+</body>
+</html>

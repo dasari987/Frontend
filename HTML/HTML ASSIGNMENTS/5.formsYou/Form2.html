@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="http://localhost:8080/Form2.html" enctype="multipart/form-data" method="post">
+        <label for="fn">First Name: </label>
+        <input type="text" id="fn" name="Fname" required/>
+        <br> 
+        <label for="ln">Last Name: </label>
+        <input type="text" id="ln" name="Lname" minlength="5"/>
+        <br>
+        <label for="em">Email:</label>
+        <input type="email" id="em" name="Email">
+        <br>
+        <label for="">Password</label>
+        <input type="password" name="Pass" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
+        <br>
+        <label for="">Number</label>
+        <input type="number" min="5">
+        <br>
+        <label for="">DOB</label>
+        <input type="date" name="dob">
+        <br>
+        <label for="">Profile pic</label>
+        <input type="file" name="pic">
+        <br>
+        <label for="gen">Gender: </label>
+        Male <input type="radio" name="gender" value="male">
+        Female <input type="radio" name="gender" value="female">
+        others <input type="radio" name="gender" value="others">
+        <br>
+        <select name="country" id="">
+            <option value="">country</option>
+            <option value="India">India</option>
+            <option value="Pakisthan">Pakisthan</option>
+            <option>Australia</option>
+        </select>
+        <br>
+        <br>
+        <button type="submit">submit</button>
+    </form>
+</body>
+</html>

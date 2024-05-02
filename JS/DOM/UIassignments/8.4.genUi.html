@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <!-- // // 4.Display only the male people who are above the age of 25. -->
+
+
+    <table border="1px solid black" cellspacing="0px" cellpadding="15px" style="margin-left: 450px; margin-top: 160px; background-color: antiquewhite;">
+        <thead id="head" align="left" valign="top">
+            <th>First-Name</th>
+            <th>Lasst-Name</th>
+            <th valign="bottom">Age</th>
+            <th>Gender</th>
+            <th>City</th>
+            <th>Salary</th>
+        </thead>
+
+        <tbody id="body">
+              
+        </tbody>
+    </table>
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////// -->
+    
+
+    <script>
+        var people = [
+                        {
+                        "firstname": "praveen",
+                        "lastname": "gubbala",
+                        "age": 36,
+                        "gender": "male",
+                        "city": "hyd",
+                        "salary": 10000
+                        },
+                        {
+                        "firstname": "srikanth",
+                        "lastname": "gubbala",
+                        "age": 32,
+                        "gender": "male",
+                        "city": "bengaluru",
+                        "salary": 20000
+                        },
+                        {
+                        "firstname": "pradeep",
+                        "lastname": "reddy",
+                        "age": 21,
+                        "gender": "male",
+                        "city": "hyd",
+                        "salary": 30000
+                        },
+                        {
+                        "firstname": "mounika",
+                        "lastname": "mudiraj",
+                        "age": 20,
+                        "gender": "female",
+                        "city": "nalgonda",
+                        "salary": 30000
+                        },
+                        {
+                        "firstname": "nikhil",
+                        "lastname": "m",
+                        "age": 22,
+                        "gender": "male",
+                        "city": "guntur",
+                        "salary": 2000
+                        },
+                        {
+                        "firstname": "riya",
+                        "lastname": "bhadouria",
+                        "age": 14,
+                        "gender": "female",
+                        "city": "indore",
+                        "salary": 40000
+                        }
+                        ];
+
+
+        // 4.Display only the male people who are above the age of 25.
+
+        var ar = people.filter(function(obj){
+             if(obj["gender"]=="male" && obj["age"]>25)
+               return true;
+        })
+
+
+        function tableCreation(filArr){
+            filArr.forEach(function(obj){
+            var tableRow = document.createElement('tr');
+            for(var data in obj){
+                var tabledata = document.createElement('td');
+                tabledata.innerHTML = obj[data]
+                // console.log(tabledata);
+                tableRow.appendChild(tabledata)
+            }
+            document.getElementById('body').appendChild(tableRow)
+        })
+       }
+
+       tableCreation(ar)
+
+        ///////////////////////////////////////////////////////////////////////////////////////////
+    </script>
+</body>
+</html>

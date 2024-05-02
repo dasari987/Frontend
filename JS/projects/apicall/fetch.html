@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div id="left">
+          <div>MyStore</div>
+          <input type="text" id="inp">
+        </div>
+  
+        <div id="right">
+          
+        </div>
+      </nav>
+
+      <div id = 'd1'>
+
+      </div>
+
+    <style>
+       
+
+         /* .star{
+            
+         } */
+
+        
+
+    </style>
+
+
+
+    <script>
+        fetch('https://fakestoreapi.com/products')
+        .then(function(data){
+            console.log(data)
+           data.json()
+           .then(function(res){
+             console.log(res)
+
+             res.forEach(function(product){
+                var ndiv = document.createElement('div')
+                document.getElementById('d1').appendChild(ndiv)
+
+                var nh3 = document.createElement('h3')
+                 nh3.innerHTML = product['title']
+                 ndiv.appendChild(nh3)
+
+                 var nimg = document.createElement('img')
+                 nimg.src = product['image']
+                 ndiv.appendChild(nimg)
+
+                 var nspan = document.createElement('span')
+                 nspan.innerHTML = "$"+product['price']
+                 ndiv.appendChild(nspan)
+                 
+
+                 var nrating = document.createElement('span')
+                 nrating.id = "rating"
+                 nrating.innerHTML = product['rating']['rate']
+                 ndiv.appendChild(nrating)
+
+                var icon = document.createElement('span');
+                icon.id = 'star'
+                icon.innerHTML = '<i class="bi bi-star"></i>'
+                nrating.appendChild(icon)
+
+                //  var icon = document.createElement('i');
+                //  icon.setAttribute('class',"bi bi-star");
+                //  nrating.appendChild(icon)
+                 
+
+                //  var ncount = document.createElement('span')
+                //  ncount.innerHTML = "("+product['rating']['count']+")"
+                //  ndiv.appendChild(ncount)
+                //  console.log(ndiv)
+             })
+           })
+           })
+        .catch(function(err){
+            console.log(err)
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="d1">
+
+    </div>
+
+    <div id="d2">
+
+    </div>
+
+    <script type="text/babel">
+                                                      // two ways to create react elements 1) using jsx syntax 2) using React to create element
+         var jsxele1 = <h1>Welcome to JSX1</h1>
+         ReactDOM.render(jsxele1, document.getElementById('d1'))
+
+        //  var jsxele2 = React.createElement('h1',null,'Welcome to JSX2')
+        //  ReactDOM.render(jsxele2,document.getElementById('d1'))
+    </script>
+
+</body>
+</html>

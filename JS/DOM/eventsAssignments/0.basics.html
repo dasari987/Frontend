@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <!-- event
+  eventlistener  + eventhandler = eventbinding
+  eventhandler
+  eventhandling   is diff in html, react and angular
+  eventbinding -->
+
+    <!-- pointerevent object              ***************
+  element object  -- html element  *************** -->
+
+    <!-- Note: Remember that "click" is an event and "onclick" is the corresponding event listener. -->
+
+    <!-- onclick --- is eventListener -->
+    <!-- click ----- is event -->
+
+    <!-- eventhandler is called whenever we perform event -->
+
+    <!-- <button onclick="abc(event)"> hiii </button> -->
+    <!-- "abc(event)"  is event handler -->
+
+    <!-- ///////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <!-- /////////   /////////////// -->
+
+    <!-- <input id="d1" type="text">
+    <script>
+        var val = document.getElementById('d1');
+        val.innerHTML = "sai"
+        val.value = "babu"
+        // console.log(val)
+        console.dir(val)
+        // console.log(val.innerHTML)
+        // console.log(val.textContent)
+        console.log(val.value);
+    </script> -->
+
+    <!-- //////////////////////////////////////////////////////////////////////////// -->
+
+
+         <!-- <button onclick="abc(event)">inline EventListener</button>
+
+         <script>
+         function abc(e){
+            console.log(e.target.innerHTML);
+         }
+         </script> -->
+
+
+        <!-- ////////////////////////////////////// -->
+
+
+        <!-- <button id="btn">inline EventListener</button>
+         <script>
+          var x = document.getElementById('btn')
+          x.onclick = function (e){
+            console.log(event.target.innerHTML)
+          }
+         </script> -->
+
+
+        <!-- ////////////////////////////////////////////// -->
+
+
+        <!-- <button id="btn">inline EventListener</button>
+        <script>
+        var x = document.getElementById('btn')
+        x.onclick = function abc(e){
+        console.log(event.target.innerHTML)
+        }
+        </script> -->
+
+
+
+        <!-- //////////////////////////////////////////// -->
+
+
+
+        <!-- <button id="btn">inline EventListener</button>
+        <script>
+        var x = document.getElementById('btn')
+        x.onclick = abc;
+
+        function abc(e){
+        console.log(event.target.innerHTML)
+        }
+        </script> -->
+
+
+
+
+        <!-- //////////////////////////////////////////////////// -->
+
+
+        <!-- <button id="btn">inline EventListener</button>
+        <script>
+        var x = document.getElementById('btn')
+        x.addEventListener('click',abc)
+
+        function abc(e){
+        console.log(event.target.innerHTML)
+        }
+        </script> -->
+
+
+        <!-- ///////////////////////////////////////////////////////// -->
+
+
+        <!-- <button id="btn">inline EventListener</button>
+
+        <script>
+
+        var x = document.getElementById('btn')
+        x.addEventListener('click',function abc(e){
+        console.log(event.target.innerHTML)
+        })
+
+        </script> -->
+
+
+        <!-- /////////////////////////////////////////////////////////////// -->
+
+
+        <!-- <button id="btn">inline EventListener</button>
+
+        <script>
+
+        var x = document.getElementById('btn')
+        x.addEventListener('click',function (e){
+        console.log(event.target.innerHTML)
+        })
+
+        </script> -->
+
+
+
+    <!-- /////////////////////////////////////////////////////////////////////////// -->
+
+    <!-- ////////////  first type --- Using inline event handlers //////////////////// -->
+
+    <!-- <button onclick="alert('hii')"> hiii </button>
+    <button onclick="abc(event)"> hiii </button>
+    <button onclick="abc(event)"> hello </button>
+    <button onclick="abc(event)"> welcome </button>
+
+    <script>
+        function abc(e){
+            console.log(e)           // gives pointerEvent object
+            console.log(e.target)    // gives element object which is inside pointerEvent object
+            console.log(e.target.innerHTML)  // gives innerHTML of element 
+        }
+    </script> -->
+
+    <!-- ///////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <!-- //////////// second-type --- Event handling using element properties  //////////////// -->
+
+    <!-- <button id="d1">hiii</button>
+    <script>
+        var x = document.getElementById('d1');
+        x.onclick = function abc() {
+            console.log("hiiiiiiiiiiiiiiiii");
+        }
+    </script> -->
+
+    <!-- ////////////// -->
+
+    <!-- <button id="d1">hiii</button>
+    <script>
+        var x = document.getElementById('d1');
+        x.onclick = function abc(event) {
+            console.log(event);
+            console.log(event.target);
+            console.log(event.target.innerHTML);
+        }
+    </script> -->
+
+    <!-- //////////////// -->
+
+    <!-- <button id="d1">hiii</button>
+<script>
+    var x = document.getElementById('d1');
+    x.onclick = function abc(e) {
+        console.log(e);
+        console.log(e.target);
+        console.log(e.target.innerHTML);
+    }
+</script> -->
+
+    <!-- ///////////////////// -->
+<!-- 
+    <button id="d1">no event argument</button>
+<script>
+    var x = document.getElementById('d1');
+    x.onclick = function abc() {
+        console.log(event);
+        console.log(event.target);
+        console.log(event.target.innerHTML);
+    }
+</script> -->
+
+    <!-- /////////////////////// -->
+
+    <!-- <button id="d1">e as argument</button>
+<script>
+    var x = document.getElementById('d1');
+    x.onclick = function abc(e) {
+        console.log(event);
+        console.log(event.target);
+        console.log(event.target.innerHTML);
+    }
+</script> -->
+
+    <!-- /////////// -->
+
+    <!-- <button id="d1">event as argument</button>
+<script>
+    var x = document.getElementById('d1');
+    x.onclick = function abc(event) {
+        console.log(e);
+        console.log(e.target);
+        console.log(e.target.innerHTML);
+    }
+</script> -->
+
+    <!-- <button id="d1">e as argument</button>
+<script>
+    var x = document.getElementById('d1');
+    x.onclick = function abc(e) {
+        console.log(e);
+        console.log(e.target);
+        console.log(e.target.innerHTML);
+    }
+</script> -->
+
+    <!-- ///////////// -->
+
+    <!-- <button id="d1">hiii</button>
+    <script>
+        var x = document.getElementById('d1');
+        x.onclick = abc;
+
+
+        function abc() {
+            console.log("hiiiiiiiiiiiiiiiii");
+        }
+    </script> -->
+
+    <!-- //////////// -->
+
+    <!-- <button id="d1">Edupoly</button>
+   <script>
+       var x = document.getElementById('d1');
+       x.onclick = abc;
+
+    
+       function abc(e) {
+        // console.log(e)
+        // console.log(e.target)
+        console.log(e.target.innerHTML)
+        console.log("hiiiiiiiiiiiiiiiii");
+       }
+   </script> -->
+
+    <!-- ////////// -->
+
+    <!-- ////////////////////////  THIRD TYPE   ///////////////////////////////////// -->
+    <!-- /////////////////////   Event handling using addEventListener     //////// -->
+
+    <!-- <button id="d1">add eventListener</button>
+   <script>
+    var x = document.getElementById('d1');
+    x.addEventListener('click',function(e){
+        console.log(event)         // gives pointerEvent object
+        console.log(event.target)  // gives element object inside pointerEvent
+        console.log('hiii')
+    })
+   </script> -->
+
+    <!-- //////////////// -->
+
+    <!-- <button id="d1">add eventListener</button>
+   <script>
+    var x = document.getElementById('d1');
+    x.addEventListener('click',function(e){
+        console.log(event)      // gives pointerEvent object
+        console.log(event.target)  // gives element object inside pointerEvent
+        console.log(event.target.innerHTML);
+    })
+   </script> -->
+
+    <!-- //////////////////////// -->
+
+    <!-- <button id="d1">add eventListener</button>
+   <script>
+    var x = document.getElementById('d1');
+    x.addEventListener('click',abc);
+
+        function abc(e){
+        console.log(event)      // gives pointerEvent object
+        console.log(event.target)  // gives element object inside pointerEvent
+        console.log(event.target.innerHTML);
+       }
+   </script> -->
+
+    <!-- ///////////////////////////// -->
+
+    <!-- <button id="d1">add eventListener</button>
+   <script>
+    var x = document.getElementById('d1');
+    x.addEventListener('click',abc);
+
+        function abc(e){
+        console.log(event)      // gives pointerEvent object
+        console.log(event.target)  // gives element object inside pointerEvent
+        console.log(event.target.innerHTML);
+       }
+   </script> -->
+
+    <!-- //////////////////////////////////// -->
+  </body>
+</html>

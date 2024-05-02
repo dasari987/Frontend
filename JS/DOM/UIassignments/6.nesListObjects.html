@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="d1"></ul>
+    <script>
+      var students = [
+        {
+          name: "jaya",
+          gender: "female",
+          place: "gachibowli",
+        },
+        {
+          name: "dasu",
+          gender: "male",
+          place: "kphb",
+        },
+        {
+          name: "swati",
+          gender: "female",
+          place: "pune",
+        },
+        {
+          name: "pallavi",
+          gender: "female",
+          place: "assam",
+        },
+        {
+          name: "kiran",
+          gender: "male",
+          place: "kondapur",
+        },
+        {
+          name: "thirumala",
+          gender: "male",
+          place: "madhapur",
+        },
+        {
+          name: "priya",
+          gender: "female",
+          place: "hitech",
+        },
+      ];
+
+      
+
+      students.forEach(function (obj) {
+        var ul1 = document.getElementById("d1");
+        var li1 = document.createElement("li");
+        li1.innerHTML = obj["name"];
+
+        var ul2 = document.createElement("ul");
+
+        var li2 = document.createElement("li");
+        li2.innerHTML = obj["gender"];
+        ul2.appendChild(li2);
+
+        var li3 = document.createElement("li");
+        li3.innerHTML = obj["place"];
+        ul2.appendChild(li3);
+
+        li1.appendChild(ul2);
+
+        document.getElementById("d1").appendChild(li1);
+
+        if(obj['gender']=='female'){
+            li1.style.backgroundColor = 'pink'
+        }
+        else{
+            li1.style.backgroundColor = 'skyblue'
+        }
+      });
+    </script>
+  </body>
+</html>

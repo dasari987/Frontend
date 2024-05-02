@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+
+  <body>
+    <h1 style="color: aqua; background-color: antiquewhite;">this is static html element</h1>
+    <!-- declarative statement -->
+    <div id="s1">
+
+    </div>
+
+    <div id="s2">
+
+    </div>
+
+    <div id="s3">
+
+    </div>
+
+    <div id="jsdiv"></div>
+
+    <div id="d1">
+
+    </div>
+
+    <div id="d2">
+
+    </div>
+
+    <style>
+        .myboxshadow{
+            box-shadow: 10px 10px 10px grey;
+        }
+    </style>
+
+    <script type="text/babel">
+                               // babel converts jsx element to react element and is stored in jsxh1
+      var jsxh1 = <h1>hello jsx syntax</h1>; 
+      ReactDOM.render(jsxh1, document.getElementById('s1'))
+      console.dir(jsxh1);
+
+      var newh1 = document.createElement("h1"); // imperative statement
+      newh1.innerHTML = "this is created by js. this is called DOM element";
+      newh1.style.color = "green";
+      document.getElementById("jsdiv").appendChild(newh1);
+      console.dir(newh1);
+      console.log(newh1);
+
+
+      var rh1 = React.createElement("h1",null,"This is created by react, this is react element");   // React creates only react elements
+      ReactDOM.render(rh1, document.getElementById("d1"));       // ReactDOM work is to insert react elements into dom
+
+      var rh2 = React.createElement("h1",{style:{color:'red',backgroundColor: 'skyblue'},className:"myboxshadow"},"This is created by react, this is react element");   // React creates only react elements
+      ReactDOM.render(rh2, document.getElementById("d2"));  
+
+
+      console.log(newh1)  // dom element object
+      console.log(rh1)    // react element
+      console.log(jsxh1)  // react element
+
+
+
+      var jsx2h1 = <h1 style={{color:'blue',backgroundColor:'yellow'}} className="myboxshadow">This is created by jsx</h1>
+      ReactDOM.render(jsx2h1,document.getElementById('s2'))
+
+
+    //   var jsx3h1 = <h1>This is created by jsx...{100+10}</h1>
+    //   ReactDOM.render(jsx3h1,document.getElementById('s3'))
+
+    //   var jsx3h1 = <h1>This is created by jsx...{100>200?'Hello':'sai'}</h1>
+    //   ReactDOM.render(jsx3h1,document.getElementById('s3'))
+
+
+     var ar = [12,23,34,56]
+     var obj = {name:'sai'}
+
+    //   var jsx3h1 = <h1>This is created by jsx...{ar.map((a)=>{return a})}</h1>
+    //   ReactDOM.render(jsx3h1,document.getElementById('s3'))
+
+    // var jsx3h1 = <h1>This is created by jsx...{ar}</h1>
+    // ReactDOM.render(jsx3h1,document.getElementById('s3'))
+
+    //  var jsx3h1 = <h1>This is created by jsx...{obj}</h1>
+    //   ReactDOM.render(jsx3h1,document.getElementById('s3'))
+
+
+    var e1 = <b> This is India </b>
+    var e2 = <input type='text' value = 'hii'/>
+    var e3 = <a href='/asd'>click here</a>
+
+    var br = [e1,e2,e3]
+    console.log(br)
+
+      var jsx3h1 = <h1>This is created by jsx...{br}</h1>
+      ReactDOM.render(jsx3h1,document.getElementById('s3'))
+
+
+
+
+
+
+      // var x = 123
+      // var y = 'praveen'
+      // var z = true
+      // var w = 12+34
+      // var h = [1,2,3,4]
+      // var f = {fn: 'sai'}
+      // var d = function () {
+      //     console.log('hii')
+      // }
+
+      // var s = <h1>Hello world</h1>
+    </script>
+  </body>
+</html>

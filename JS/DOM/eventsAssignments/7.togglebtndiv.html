@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1 id="txt" style="border: 3px solid; width: 340px; height: 220px; padding-top: 15px; padding-left: 15px; font-size: 35px;">Iam Everything</h1>
+        <button onclick="boolfnc()" style="padding: 8px;">True/False</button>
+    </div>
+    <script>
+
+        var text = document.getElementById('txt')
+        var x = false;
+          function boolfnc() {
+            x = !x
+            text.innerHTML = x
+           }
+    </script>
+</body>
+</html>

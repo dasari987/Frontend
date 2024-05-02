@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+     <div id="one" style = " width:600px; height: 500px;">
+
+     </div>
+
+    
+<body>
+    <script type="text/babel">
+
+        function Comp1() {
+            var [ar1, setar1] = React.useState([
+            {
+                num: 1,
+                status: false
+            },
+            {
+                num: 2,
+                status: false
+            },
+            {
+                num: 3,
+                status: false
+            },
+            {
+                num: 4,
+                status: false
+            },
+            {
+                num: 5,
+                status: false
+            },
+            {
+                num: 6,
+                status: false
+            },
+            {
+                num: 7,
+                status: false
+            },
+
+        ])
+
+            
+
+        var [ar2, setar2] = React.useState([
+
+        ])
+
+        function del(index) {
+            ar1[index].status = true;
+            var delVal = ar1.splice(index,1)
+            ar2.push(delVal[0])
+            setar1([...ar1])
+            
+        }
+
+            return <div>
+                     <div style={{display:'flex',flexWrap:'wrap',height:'45px', padding:'5px', border:'1px solid',marginBottom:'10px'}}>
+                        {
+                            ar1.map((obj,i)=>{
+                                return <div onClick={()=>{del(i)}} style={{border:'1px solid',backgroundColor: 'red', borderRadius: '50%', marginRight:'20px',marginBottom:'15px', padding: '5px'}}>{obj.num}</div>
+                            })
+                           
+                        }
+                    </div>
+
+                    <div style={{display:'flex',flexWrap:'wrap', padding:'5px', border:'1px solid',height:'45px'}}>
+                          {
+                            ar2?.map((ob,i)=>{
+                                return <div  style={{border:'1px solid',backgroundColor: 'grey', borderRadius: '50%', marginRight:'20px',marginBottom:'15px', padding: '5px'}}>{ob.num}</div>
+                             })
+                         }
+                    </div>
+
+                        
+                   </div>
+        }
+
+        ReactDOM.render(<Comp1/>,document.getElementById('one'))
+
+        
+
+            
+    </script>
+</body>
+</html>

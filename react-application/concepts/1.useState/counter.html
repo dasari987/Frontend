@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+
+    <div id="root">
+       
+    </div>
+    
+    <script type="text/babel">
+
+        // var c = 0
+        // function Counter(){
+        //     return(
+        //         <div>
+        //              <h1>Counter:{c}</h1>
+        //              <button onClick={inc}>Increment</button>
+        //         </div>
+        //     )
+        // }
+
+        // function inc(){
+        //     c=c+1
+        //     console.log(c)
+        // }
+
+        // ReactDOM.render(<Counter></Counter>,document.getElementById('root'))
+
+
+        ///////////////////////////////////////////////////////////////////////////////////////
+
+
+
+        
+        function Counter(){
+            var [c,setc] =  React.useState(0);
+
+            return(
+                <div>
+                     <h1>Counter:{c}</h1>
+                     <button onClick={inc}>Increment</button>
+                     <button onClick={dec}>Decrement</button>
+                </div>
+            )
+
+            function inc(){
+
+            // setc(c+1)
+            // setc((oldval)=>{return oldval+1})
+            // setc((oldval)=>oldval+1)
+
+            // for(var i = 1; i<=3; i++){               // setc(c+1) (0+1)
+            //     setc(c+1)                            // setc(c+1) (0+1)
+            // }                                        // setc(c+1) (0+1)
+
+            // setc(c+1) //setc(0+1)
+            // setc(c+1) //setc(0+1)
+            // setc(c+1) //setc(0+1)
+            // setc(c+1) //setc(0+1)
+
+
+            // setc((oldval)=>{return oldval+1})
+            // setc((oldval)=>{return oldval+1})
+            // setc((oldval)=>{return oldval+1})
+            // setc((oldval)=>{return oldval+1})
+
+            console.log(c)
+            }
+
+            function dec(){
+            setc(c-1)
+            }
+        }
+
+
+        ReactDOM.render(<Counter></Counter>,document.getElementById('root'))
+
+       
+        
+    </script>
+</body>
+</html>

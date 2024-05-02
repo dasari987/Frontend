@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+
+    <div id="root">
+       
+    </div>
+    
+    <script type="text/babel">
+     
+     
+        function Todolist(){
+            var [todo, setTodo] = React.useState(['Eat','sleep','repeat']);
+            var [idx, setidx] = React.useState()
+
+            function addTODo(){
+                if(document.getElementById('inp').value){
+                var newToDo = document.getElementById('inp').value
+                setTodo([...todo,newToDo])
+                document.getElementById('inp').value=""
+                }
+            }
+
+            function delet(index){
+               todo.splice(index,1)
+               setTodo([...todo])
+               document.getElementById('addtodo').style.display='inline'
+               document.getElementById('upd').style.display='none'
+            }
+
+            function edit(index){
+                setidx(idx=index)
+                document.getElementById('inp').value=todo[index]
+                document.getElementById('addtodo').style.display='none'
+                document.getElementById('upd').style.display='inline'
+            }
+
+            function update() {
+                console.log(idx)
+                var updToDo = document.getElementById('inp').value
+                todo[idx] = updToDo
+                setTodo([...todo])
+                document.getElementById('addtodo').style.display='inline'
+                document.getElementById('upd').style.display='none'
+                document.getElementById('inp').value=""
+            }
+
+            
+            return (
+                <div>
+                     <input type="text" id='inp'/>
+                     <button id='addtodo' onClick={addTODo}>Add To-Do</button>
+                     <button id='upd' onClick={update} style={{display:'none'}}>Update-To-Do</button>
+                     {
+                        todo.map((e,i)=>{
+                            return <List dta={e} del={()=>{delet(i)}} edt={()=>{edit(i)}}></List>
+                        })
+                     }
+                </div>
+            )
+        }
+
+
+        function List(props){
+                return <li>{props.dta}<button onClick={props.del}>Del</button><button onClick={props.edt}>Edit</button></li>
+        }
+     
+
+        ReactDOM.render(<Todolist></Todolist>,document.getElementById('root'))
+
+
+    
+      
+    </script>
+</body>
+</html>

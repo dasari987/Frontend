@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <h1 style="color: azure; background-color: black;">this is created bt HTML {10+20}</h1>
+    <div id="root">
+
+    </div>
+
+    <div id="main">
+
+    </div>
+    <input type="color" onchange="changeColor(event)">
+    <script type="text/babel">
+        var jh1 = <h1 style={{color:'red',backgroundColor:'yellow'}}> welcome to jsx world </h1>
+        ReactDOM.render(jh1,document.getElementById("main"))
+
+
+        //conditional styling
+        // var a = +prompt();
+        // var jh1 = <h1 style={a%2==0?{color:'red',backgroundColor:'yellow'}:{color:'yellow',backgroundColor:'black'}}> welcome to jsx world </h1>
+        // ReactDOM.render(jh1,document.getElementById("main"))
+
+        // styling using a variable
+        // var c = 'blue'
+        // var jh1 = <h1 style={{color:c}}> welcome to jsx world </h1>
+        // ReactDOM.render(jh1,document.getElementById("main"))
+
+
+        // styling using prompt
+        // var c = prompt()
+        // var jh1 = <h1 style={{color:c}}> welcome to jsx world </h1>
+        // ReactDOM.render(jh1,document.getElementById("main"))
+
+
+        // styling dynamically
+        // var c = 'green'
+        // var jh1 = <h1 style={{color:c}}> welcome to jsx world </h1>
+        // ReactDOM.render(jh1,document.getElementById("main"))
+
+        // function changeColor(e){
+        //     console.log(e.target.value)
+        //     var jh1 = <h1 style={{color:e.target.value}}> welcome to jsx world </h1>
+        //     ReactDOM.render(jh1,document.getElementById("main"))
+        // }
+
+
+
+    </script>
+</body>
+</html>

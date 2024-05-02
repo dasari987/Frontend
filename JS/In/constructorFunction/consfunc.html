@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //  https://www.javascripttutorial.net/javascript-constructor-function/
+
+
+        // console.log(this)
+
+
+        // function abc() {  //this={}  // new will asign empty object to this
+        //     console.log(this)
+        //     this.fname='sai';
+        // }// return this
+        // abc()
+        // new abc()
+
+        // var ob = new abc()
+        // console.log(ob)
+
+        // var ob1 = new abc()
+        // console.log(ob)
+
+
+        //////////////////////////////////////////////////////////////////////////////
+
+
+        // function abc(n,c) {      //this={}     // new will asign empty object to this
+        //     this.fname=n;
+        //     this.class=c;
+        // }
+
+        // abc()
+        
+        // var stu1 = new abc('sai',5)
+        // console.log(stu1)
+
+        // var stu2 = new abc('varun',8)
+        // console.log(stu2)
+
+        // console.log(abc.fname)
+
+        // In this case, the abc just executes like a regular function. Therefore, the this inside the abc function doesn’t bind to the abc variable but the global object.
+        // If you attempt to access the fname or lname property, you’ll get an error: undefined
+
+        ///////////////////////////////////////////////////////////////////////////////
+
+
+        // function Mobile(model,price,ostype,version,maker,discount) {
+        //     this.model = model;
+        //     this.price = price;
+        //     this.ostype = ostype;
+        //     this.version = version;
+        //     this.maker = maker;
+        //     this.discount = discount;
+        //     // this.getFinalPrice = function(){          // if we write methods like this 400 methods are create for 400 students
+        //     //     return this.price-(this.price*0.01*this.discount)
+        //     // }
+        // }
+
+        // Mobile.prototype.getFinalPrice = function(){        // if we write methods like this only one method is created in prototype and can be used for every user
+        //         return this.price-(this.price*0.01*this.discount)
+        // }
+
+        // var saimbl = new Mobile('one+',34000,'android',15,'oppo',20)
+        // var rishabmbl = new Mobile('iphone',84000,'ios',15,'apple',3)
+        //  console.log(saimbl)
+        //  console.log(saimbl.getFinalPrice())
+        //  console.log(rishabmbl)
+        //  console.log(rishabmbl.getFinalPrice())
+
+
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+        // var str = new String("sai")
+        // console.log(str)
+        // console.log(typeof(str))
+        // console.log(String('sai'))
+        // console.log(typeof(String('sai')))
+        // console.log(String())
+
+        // var num = new Number(9)
+        // console.log(num)
+        // console.log(typeof(num))
+        // console.log(Number(2))
+        // console.log(typeof(Number(2)))
+        // console.log(Number())
+
+        // var bol = new Boolean(true)
+        // console.log(bol)
+        // console.log(typeof(bol))
+        // console.log(Boolean(false))
+        // console.log(typeof(Boolean(false)))
+        // console.log(Boolean())
+
+        // var ar = new Array(1,2,3)
+        // console.log(ar)
+        // console.log(typeof(ar))
+        // console.log(Array(4,5,6))
+        // console.log(Array())
+        
+
+        // var ob = new Object(23)
+        // console.log(ob)
+        // console.log(Object())
+
+
+        // var ob = {
+        //     name: "sai"
+        // }
+        // console.log(ob)
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<html>
+    <head></head>
+    <body>
+        <!-- 6. Take an array of image urls and display the images in browser. -->
+
+        <style>
+            section{
+                text-align: center;
+            }
+            img{
+                height: 350px;
+                width: 300px;
+                margin-top: 20px;
+                margin-right: 19px;
+                box-shadow: 2px 2px 6px 1px rgb(162, 150, 150);
+                border-radius: 5px;
+            }
+        </style>
+
+       <section>
+
+       </section>
+
+
+       <script>
+        var images = [
+        "https://thumbs.dreamstime.com/b/golden-retriever-dog-sitting-white-24750790.jpg",
+
+        "https://hips.hearstapps.com/hmg-prod/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=0.752xw:1.00xh;0.175xw,0&resize=1200:*",
+
+        "https://t3.ftcdn.net/jpg/05/59/27/48/360_F_559274893_O9iSRQwTKIkAooNTglilMgx2yMcXK9Or.jpg",
+
+        "https://wallpapers.com/images/featured/dog-wj7msvc5kj9v6cyy.jpg",
+
+        "https://images.saymedia-content.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cq_auto:eco%2Cw_1200/MTk3MjI5OTczMDA0NjI0OTc5/cute-pet-names.png",
+
+        "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F47%2F2020%2F06%2F26%2Ftiny-white-kitten-873941684-2000.jpg",
+
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQTh8xZTfjHMcVL2f_TpxwvpiXW9u0lI24FwW6mAhR7UZgp9xjJ07L6WpLU8_3jdj8XXQ&usqp=CAU",
+
+        "https://i.pinimg.com/736x/55/ab/16/55ab1628666d1125e7aae69b45f7fe6a.jpg",
+
+        ]
+
+        var sec = document.querySelector('section');
+        
+        images.forEach(e=>{
+            let image = document.createElement('img')
+            image.src=e
+            sec.appendChild(image)
+        })
+
+
+        // for(var i = 0; i<= images.length-1; i++){
+        //     var image = document.createElement('img')
+        //     // console.log(image)
+        //     image.src = images[i]
+        //     // console.log(image)
+        //     sec.appendChild(image)
+        // }
+
+
+    </script>
+
+
+    </body>
+</html>

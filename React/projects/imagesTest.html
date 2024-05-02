@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+     <div id="root">
+
+     </div>
+
+     <script type="text/babel">
+
+        function Gamecomponent() {
+              let [images,setimages] = React.useState([
+                {
+                    img: 'https://thumbs.dreamstime.com/b/red-apple-isolated-clipping-path-19130134.jpg',
+                    name: 'apple'
+                },
+                {
+                    img: 'https://i.pinimg.com/736x/10/42/de/1042deed77f4a7b9859b39a9c95d14a0.jpg',
+                    name: 'mango'
+                },
+                {
+                    img: 'https://img.freepik.com/premium-photo/fresh-guava-fruit-with-leaf-isolated_147493-1301.jpg',
+                    name: 'guava'
+                },
+                {
+                    img: 'https://media.istockphoto.com/id/185284489/photo/orange.jpg?s=612x612&w=0&k=20&c=m4EXknC74i2aYWCbjxbzZ6EtRaJkdSJNtekh4m1PspE=',
+                    name: 'orange'
+                },
+                {
+                    img: 'https://images.unsplash.com/photo-1528825871115-3581a5387919?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmFuYW5hfGVufDB8fDB8fHww',
+                    name: 'banana'
+                },
+                
+
+            ])
+
+              let [names,setnames] = React.useState(['GUAVA','BANANA','MANGO','ORANGE','APPLE'])
+              let [index,setindex] = React.useState(0)
+              let [correct,setcorrect] = React.useState(0)
+              let [incorrect,setincorrect] = React.useState(0)
+              let [result,setresult] = React.useState(0)
+
+
+              function check(e) {
+                let fruit = e.target.innerHTML.toLowerCase()
+                if(fruit==images[index].name){
+                    setcorrect(correct+1)
+                }
+                else{
+                    setincorrect(incorrect+1)
+                }
+                if(index==images.length-1){
+                    setresult(correct)
+                    document.getElementById('end').innerHTML=`your score is: ${result}`
+                    setindex(0)
+                    setcorrect(0)
+                    setincorrect(0)
+                }
+                else{
+                    setindex(index+1)
+                }
+              }
+
+
+            return <div>
+               <div style={{display:'flex', columnGap:'20px'}}>
+                        <div style={{border:'1px solid',height:'320px'}}>
+                             <img src={images[index].img} alt="loading" style={{height:'300px',width:'300px',ObjectFit:'contain'}}/>
+                        </div>
+
+                        <div style={{border:'1px solid',height:'320px',padding:'0px 30px'}}> 
+                              {
+                                names.map((fruit)=>{
+                                    return <h3 onClick={(e)=>{check(e)}}>{fruit}</h3>
+                                })
+                              }
+                        </div>
+                  </div>
+                   <div>
+                      <h2>correct:{correct}</h2>
+                      <h2>wrong:{incorrect}</h2>
+                   </div>
+                   <h1 id='end'></h1>
+                </div>
+        }
+
+        ReactDOM.render(<Gamecomponent></Gamecomponent>,document.getElementById('root'))
+
+     </script>
+</body>
+</html>
